@@ -1,0 +1,403 @@
+[
+    {
+        "pregunta": "___ is your favorite subject?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you do over the weekend?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ time is it?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is the capital of France?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is the tallest animal in the world?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you get here?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ do you usually go to school?",
+        "respuesta": "When"
+    },
+    {
+        "pregunta": "___ did you go to the movies with?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ is your favorite color?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you feel when you won the game?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ do you think will win the election?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you learn in class today?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you visit on your vacation?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ do you like to do in your free time?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your teacher's name?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you want to be when you grow up?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you go on your last vacation?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ did you celebrate your last birthday?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your favorite song?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you learn in school today?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite book?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you do if you're bored?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you eat for breakfast this morning?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you get that toy?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ do you usually have for dinner?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you think of this movie?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite animal?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you like to do with your friends?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ time do you go to bed on school nights?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite sport?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you want for your birthday?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite food?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you do yesterday?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite subject in school?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite hobby?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you like to do on weekends?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite book?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your name?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your age?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ do you live?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ is your favorite color?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your best friend?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ do you want to be when you grow up?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you like to do in your free time?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ many siblings do you have?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ did you do last weekend?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite sport?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ tall are you?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your favorite food?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you go on vacation last year?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ is your father's job?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you learn in school today?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite animal?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you usually eat for breakfast?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite place to go?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ did you meet your best friend?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ is your favorite TV show?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ do you want to do when you finish school?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you get that toy?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ did you get that scar?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ do you want for your birthday?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your favorite subject in school?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you learn to ride a bike?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ do you like to play with?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ do you usually go on vacation?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ did you meet your favorite teacher?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ do you think about the weather today?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ many pets do you have?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your best friend?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you go last summer?",
+        "respuesta": "Where"
+    },
+
+    {
+        "pregunta": "___ do you feel today?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your teacher?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you learn to swim?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your favorite singer?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you go on vacation?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ are you feeling sad?",
+        "respuesta": "Why"
+    },
+    {
+        "pregunta": "___ is your birthday?",
+        "respuesta": "When"
+    },
+    {
+        "pregunta": "___ is your favorite place to go?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ did you lose your keys?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ is your favorite book?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ is your brother's name?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you go to the party?",
+        "respuesta": "Why"
+    },
+    {
+        "pregunta": "___ is your favorite holiday?",
+        "respuesta": "When"
+    },
+    {
+        "pregunta": "___ is your teacher?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you decide to study English?",
+        "respuesta": "Why"
+    },
+    {
+        "pregunta": "___ is your favorite actor?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you arrive home yesterday?",
+        "respuesta": "When"
+    },
+    {
+        "pregunta": "___ is the library?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ did you buy that shirt?",
+        "respuesta": "Why"
+    },
+    {
+        "pregunta": "___ can you solve this math problem?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your mother's name?",
+        "respuesta": "Who"
+    },
+    {
+        "pregunta": "___ did you go on vacation?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ are you feeling today?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ did you start learning English?",
+        "respuesta": "Why"
+    },
+    {
+        "pregunta": "___ did you get that idea?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your favorite color?",
+        "respuesta": "What"
+    },
+    {
+        "pregunta": "___ did you meet your best friend?",
+        "respuesta": "How"
+    },
+    {
+        "pregunta": "___ is your favorite restaurant?",
+        "respuesta": "Where"
+    },
+    {
+        "pregunta": "___ is your sister's birthday?",
+        "respuesta": "When"
+    },
+    {
+        "pregunta": "___ is your dream job?",
+        "respuesta": "What"
+    }
+]

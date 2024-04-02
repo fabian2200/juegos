@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../bootstrap/all.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <script src="../../bootstrap/jquery.min.js"></script>
+	<link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+	<script src="../../bootstrap/sweetalert.js"></script>    
+    <link rel="stylesheet" href="style.css"></link>    
+</head>
+<body>
+    <div style="display: none" class="overlay">
+        <div class="nube">
+            <p class="borde2" id="bienvenida"></p>
+        </div>
+        <div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;">
+            <button onclick="cerrar_anuncio()" id="btnomitir"  class="btn btn-warning" style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div style="display: none; text-align: center;" id="final" class="final">
+        <h1 style="font-size: 25pt; padding-top: 326pt" class="borde2" id="texto_final"></h1>
+        <hr>
+        <div class="row">
+            <div class="col-12" style="padding-bottom: 10pt"> <h1 style="font-size: 25pt;" class="borde2">¿Quieres jugar nuevamente?</h1> </div>
+            <div class="col-3"></div>
+            <div class="col-3 text-center">
+                <button  style="width: 80%;border-radius: 20pt;" onclick="window.location.reload(1)" class="btn btn-success">Si, jugar</button>
+            </div>
+            <div class="col-3 text-center">
+                <button style="width: 80%; border-radius: 20pt;" onclick="history.back()" class="btn btn-danger">No, salir</button>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <div id="principal" class="container" style="margin-top: 15px">
+        <div class="row"> 
+            <div class="col-9 text-left">
+                <h2 class="borde" style="color: white;"> WH - questions</h2>
+                <h3 class="borde" style="color: white;">Write: what, when, where, who, why</h3>
+            </div>
+            <div class="col-1" style="display: flex; align-items: center"><button  onclick="window.location.reload(1)" class="btn btn-warning"><i class="fa fa-refresh" aria-hidden="true"></i></button></div>
+            <div class="col-1" style="display: flex; align-items: center"><button onclick="pista()" class="btn btn-primary">?</button></div>
+            <div class="col-1" style="display: flex; align-items: center"><button onclick="history.back()" class="btn btn-danger"><i class="fa-solid fa-arrow-left"></i></button></div>
+        </div>
+        <hr>
+        <div class="row"> 
+            <div class="col-12 text-center" style="margin-top: 0px !important">
+                <h1 id="pregunta_ingles" class="borde" style="color: white; margin-top: 40px;">Pregunta...</h1>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 45pt">
+        
+            <div class="col-4" style="padding: 20px">
+                <div class="respuesta"  style="background-color: #4494d0; color: white;" onclick="respuesta('What', this)">
+                    What
+                </div>
+            </div>
+            <div class="col-4" style="padding: 20px">
+                <div class="respuesta"  style="background-color: #e83867; color: white;" onclick="respuesta('When', this)">
+                    When
+                </div>
+            </div>
+            <div class="col-4" style="padding: 20px">
+                <div class="respuesta"  style="background-color: #f18313; color: white;" onclick="respuesta('Where', this)">
+                    Where
+                </div>
+            </div>
+            <div class="col-4" style="padding: 20px">
+                <div class="respuesta"  style="background-color: #662483; color: white;" onclick="respuesta('Who', this)">
+                    Who
+                </div>
+            </div>
+            <div class="col-4" style="padding: 20px">
+                <div class="respuesta"  style="background-color: #4494d0; color: white;" onclick="respuesta('Why', this)">
+                    Why
+                </div>
+            </div>
+            <div class="col-4" style="padding: 20px">
+                <div class="respuesta"  style="background-color: #e83867; color: white;" onclick="respuesta('How', this)">
+                    How
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+                <h2 style="text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000; color: white">Pregunta <span id="pregunta_actual"></span> de 10</h2>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

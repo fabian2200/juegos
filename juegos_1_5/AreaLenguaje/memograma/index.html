@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memorama</title>
+
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/all.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <script src="../../bootstrap/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- CSS -->
+    <!-- efectos visuales -->
+    <style>
+        :root {
+            --w: calc(70vw / 6);
+            --h: calc(70vh / 4);
+        }
+
+        * {
+            transition: all 0.5s;
+        }
+
+
+        body {
+            padding: 0;
+            margin: 0;
+            -webkit-perspective: 1000;
+            background: url(img/fondo.png);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #fff;
+            height: 100vh;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: calibri;
+            overflow: hidden;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        .area-tarjeta,
+        .tarjeta,
+        .cara {
+            cursor: pointer;
+            width: var(--w);
+            min-width: 185px;
+            height: var(--h);
+            margin-bottom: 12px;
+        }
+
+        .tarjeta {
+            position: relative;
+            transform-style: preserve-3d;
+            animation: iniciar 5s;
+        }
+
+        .cara {
+            position: absolute;
+            backface-visibility: hidden;
+            font-size: 500%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .trasera {
+            transform: rotateY(180deg);
+        }
+
+        .nuevo-juego {
+            cursor: pointer;
+            background: linear-gradient(#94c4e4 , #4494d4 );
+            padding: 9px;
+            border-radius: 50px;
+            border: white 5px solid;
+            font-size: 107%;
+            color: white !important;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+
+        .volver {
+            cursor: pointer;
+            background: linear-gradient(#eb3c63  , #ee0d3e  );
+            padding: 9px;
+            border-radius: 50px;
+            border: white 5px solid;
+            font-size: 107%;
+            color: white !important;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+
+        .opciones {
+            width: 100%;
+            padding: 19px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            color: #8c330a;
+            border: 2px solid #8c330a
+        }
+
+        @keyframes iniciar {
+
+            20%,
+            90% {
+                transform: rotateY(180deg);
+            }
+
+            0%,
+            100% {
+                transform: rotateY(0deg);
+            }
+        }
+    </style>
+
+    <!-- HTML -->
+    <!-- estructura visual -->
+    <div class="row">
+        <div class="col-lg-10">
+            <div id="tablero"></div>
+        </div>
+        <div class="col-lg-2" style="margin: 0px;padding: 0px;padding-right: 37px;">
+            <div class="opciones">
+                <h3 style="font-weight: bold">Opciones</h3>
+                <hr>
+                <div class="nuevo-juego" onclick="generarTablero()">
+                    Nuevo Juego
+                </div>
+                <br>
+                <div onclick="history.back()" class="volver">
+                    Volver
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <!-- parte lógica -->
+    <script>
+
+        let iconos = []
+        let selecciones = []
+
+        generarTablero()
+
+        function cargarIconos() {
+            iconos = [
+                '<img style="width: 130px;" src="img/caracol.png" alt="">',
+                '<img style="width: 130px;" src="img/cerdo.png" alt="">',
+                '<img style="width: 130px;" src="img/gallina.png" alt="">',
+                '<img style="width: 130px;" src="img/leon.png" alt="">',
+                '<img style="width: 130px;" src="img/oveja.png" alt="">',
+                '<img style="width: 130px;" src="img/pato.png" alt="">',
+                '<img style="width: 130px;" src="img/tucan.png" alt="">',
+                '<img style="width: 130px;" src="img/tortuga.png" alt="">',
+                '<img style="width: 130px;" src="img/perro.png" alt="">',
+                '<img style="width: 130px;" src="img/mariquita.png" alt="">',
+            ]
+        }
+
+        function generarTablero() {
+            cargarIconos()
+            selecciones = []
+            let tablero = document.getElementById("tablero")
+            let tarjetas = []
+            for (let i = 0; i < 20; i++) {
+                tarjetas.push(`
+                <div class="area-tarjeta" onclick="seleccionarTarjeta(${i})">
+                    <div class="tarjeta" id="tarjeta${i}">
+                        <div class="cara trasera" id="trasera${i}">
+                            ${iconos[0]}
+                        </div>
+                        <div class="cara superior">
+                            <img style="width: 130px;" src="img/cara.png" alt="">
+                        </div>
+                    </div>
+                </div>        
+                `)
+                if (i % 2 == 1) {
+                    iconos.splice(0, 1)
+                }
+            }
+            tarjetas.sort(() => Math.random() - 0.5)
+            tablero.innerHTML = tarjetas.join(" ")
+        }
+
+        function seleccionarTarjeta(i) {
+            let tarjeta = document.getElementById("tarjeta" + i)
+            if (tarjeta.style.transform != "rotateY(180deg)") {
+                tarjeta.style.transform = "rotateY(180deg)"
+                selecciones.push(i)
+            }
+            if (selecciones.length == 2) {
+                deseleccionar(selecciones)
+                selecciones = []
+            }
+        }
+
+        function deseleccionar(selecciones) {
+            setTimeout(() => {
+                let trasera1 = document.getElementById("trasera" + selecciones[0])
+                let trasera2 = document.getElementById("trasera" + selecciones[1])
+                if (trasera1.innerHTML != trasera2.innerHTML) {
+                    let tarjeta1 = document.getElementById("tarjeta" + selecciones[0])
+                    let tarjeta2 = document.getElementById("tarjeta" + selecciones[1])
+                    tarjeta1.style.transform = "rotateY(0deg)"
+                    tarjeta2.style.transform = "rotateY(0deg)"
+                }
+            }, 1000);
+        }
+
+    </script>
+
+</body>
+
+</html>

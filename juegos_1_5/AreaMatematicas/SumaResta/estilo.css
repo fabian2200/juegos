@@ -1,0 +1,436 @@
+@import url('../bootstrap/font.css?family=Nunito:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+}
+
+h1 {
+    color: white;
+    padding: 50px;
+}
+
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 3px 3px 10px #ffffff;
+    width: 650px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+body {
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    color: #262626;
+}
+
+
+.overlay {
+    background-image: url(../../images/normal1.gif);
+    background-size: 90% 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: fixed;
+    left: -200px;
+    /* Empieza fuera de la pantalla */
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.overlay::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("../../images/normal1.gif") url("../../images/normal2.gif")
+}
+
+@keyframes moverDerecha {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes moverIzquierda {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+
+    to {
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+.borde2 {
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    font-weight: bold;
+    color: #fff !important;
+    font-size: 19px;
+}
+
+.borde {
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.borde3 {
+    font-weight: bold;
+    color: rgb(0, 0, 0) !important;
+}
+
+#bienvenida {
+    width: 55%;
+    padding-left: 40pt;
+    font-size: 21px !important;
+    text-align: justify;
+}
+
+.nube {
+    background-image: url(../../images/nube.png);
+    background-size: 100% 100%;
+    width: 558pt;
+    height: 456pt;
+    position: absolute;
+    z-index: 1000;
+    bottom: -362pt;
+    left: 422pt;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    animation-duration: 2.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moverArriba {
+    from {
+        bottom: -362pt;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 147pt;
+        opacity: 1;
+    }
+}
+
+.overlay .btn-warning {
+    padding: 16px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.overlay .btn-warning:hover {
+    color: #fff !important;
+}
+
+.overlay .btn-warning:hover i {
+    color: #fff !important;
+}
+
+.overlay .btn-warning::after {
+    content: "";
+    background: #4195d1;
+    color: #fff !important;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.3s ease;
+}
+
+.overlay .btn-warning:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(-45deg) scale(1, 1);
+}
+
+@keyframes moverabajo {
+    from {
+        bottom: 147pt;
+        opacity: 1;
+    }
+
+    to {
+        bottom: -362pt;
+        opacity: 0;
+    }
+}
+
+.final {
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.904);
+}
+
+.overlay .btn-warning {
+    padding: 16px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.overlay .btn-warning:hover {
+    color: #fff !important;
+}
+
+.overlay .btn-warning:hover i {
+    color: #fff !important;
+}
+
+.overlay .btn-warning::after {
+    content: "";
+    background: #4195d1;
+    color: #fff !important;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.3s ease;
+}
+
+.overlay .btn-warning:hover::after {
+    transition: all 0.3s ease-out;
+    transform: skewX(-45deg) scale(1, 1);
+}
+
+.canon {
+    position: absolute;
+    width: 150px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.base {
+    width: 94px;
+    height: 124px;
+    background-image: url(base.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    z-index: 2;
+}
+
+.base2 {
+    width: 94px;
+    height: 124px;
+    background-image: url(base.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 46px;
+    right: 20px;
+    z-index: 2;
+}
+
+#trompa1 {
+    width: 116px;
+    height: 65px;
+    position: absolute;
+    z-index: 1;
+    background-image: url(trompa.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 11px;
+    left: 38px;
+    transform-origin: center left;
+}
+
+@keyframes rotateHand {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
+
+#trompa2 {
+    width: 116px;
+    height: 65px;
+    position: absolute;
+    z-index: 1;
+    background-image: url(trompa2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 11px;
+    right: 41px;
+    transform: rotate(30deg);
+    transform-origin: center right;
+}
+
+@keyframes rotateHand2 {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+#trompa3 {
+    width: 116px;
+    height: 65px;
+    position: absolute;
+    z-index: 1;
+    background-image: url(trompa.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 11px;
+    left: 38px;
+    transform-origin: center left;
+}
+
+@keyframes rotateHand3 {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+#trompa4 {
+    width: 116px;
+    height: 65px;
+    position: absolute;
+    z-index: 1;
+    background-image: url(trompa2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 11px;
+    right: 41px;
+    transform: rotate(30deg);
+    transform-origin: center right;
+}
+
+@keyframes rotateHand4 {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.pregunta {
+    width: 105px;
+    height: 127px;
+    background-image: url(globo.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 45%;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    flex-direction: column;
+    padding: 29px;
+}
+
+.opcion {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 23%;
+}
+
+#principal {
+    background: url(fondo.png);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bala {
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    transform: rotate(0deg);
+}
+
+#centrodiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro de fondo */
+    display: none;
+}
+
+#centeredImg {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    height: 300px;
+}

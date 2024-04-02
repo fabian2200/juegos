@@ -1,0 +1,273 @@
+{
+    "clasificacion_estructura": [
+        [
+          "vertebrado",
+          "Animales con columna vertebral."
+        ],
+        [
+          "anfibio",
+          "Animal que vive tanto en tierra como en agua."
+        ],
+        [
+          "invertebrado",
+          "Animales sin columna vertebral."
+        ],
+        [
+          "mamifero",
+          "Animal que alimenta a sus crías con leche."
+        ],
+        [
+          "ave",
+          "Animal con alas y plumas."
+        ],
+        [
+          "reptil",
+          "Animal que se arrastra y tiene piel seca y escamosa."
+        ],
+        [
+          "crustaceo",
+          "Animal acuático con cuerpo cubierto de caparazón."
+        ],
+        [
+          "aracnido",
+          "Animal con 8 patas y cuerpo dividido en cefalotórax y abdomen."
+        ],
+        [
+          "molusco",
+          "Animal con cuerpo blando y a menudo protegido por una concha."
+        ],
+        [
+          "jirafa",
+          "Es un animal vertebrado muy alto con un cuello largo."
+        ],
+        [
+          "elefante",
+          "Es un animal vertebrado muy grande con una trompa larga."
+        ],
+        [
+          "tigre",
+          "Es un animal vertebrado grande y peligroso con rayas naranjas y negras."
+        ],
+        [
+          "ballena",
+          "Es un animal vertebrado marino muy grande que respira aire."
+        ],
+        [
+          "pingüino",
+          "Es un ave que no puede volar y vive en zonas frías."
+        ],
+        [
+          "mariposa",
+          "Es un insecto con alas de colores que se alimenta de néctar."
+        ],
+        [
+          "araña",
+          "Es un arácnido con muchas patas y produce telarañas."
+        ],
+        [
+          "caracol",
+          "Es un molusco con una concha en espiral y se mueve muy lento."
+        ],
+        [
+          "medusa",
+          "Es un celentéreo con tentáculos venenosos que flota en el mar."
+        ],
+        [
+          "gusano",
+          "Es un animal largo y delgado que vive en la tierra o el agua."
+        ],
+        [
+          "rana",
+          "Es un anfibio con patas traseras largas que salta."
+        ],
+        [
+          "salamandra",
+          "Es un anfibio con piel húmeda y cola larga."
+        ],
+        [
+          "tritón",
+          "Es un anfibio con piel rugosa y cola puntiaguda."
+        ],
+        [
+          "águila",
+          "Es un ave grande y fuerte que caza en las montañas."
+        ],
+        [
+          "colibrí",
+          "Es un ave pequeña y rápida que se alimenta de néctar."
+        ],
+        [
+          "loro",
+          "Es un ave colorida que puede imitar sonidos."
+        ],
+        [
+          "búho",
+          "Es un ave nocturna con ojos grandes y redondos."
+        ],
+        [
+          "cocodrilo",
+          "Es un reptil grande y peligroso que vive en el agua."
+        ],
+        [
+          "tortuga",
+          "Es un reptil con una concha que se esconde adentro para protegerse."
+        ],
+        [
+          "iguana",
+          "Es un reptil con escamas y una cresta en la cabeza."
+        ],
+        [
+          "lagarto",
+          "Es un reptil con patas y una cola larga."
+        ],
+        [
+          "serpiente",
+          "Es un reptil sin patas y puede ser venenosa."
+        ]
+    ],
+    "clasificacion_alimentacion": [
+        [
+          "carnivoro",
+          "Animal que se alimenta principalmente de carne."
+        ],
+        [
+          "herbivoro",
+          "Animal que se alimenta principalmente de plantas."
+        ],
+        [
+          "omnivoro",
+          "Animal que se alimenta tanto de carne como de plantas."
+        ],
+        [
+          "zooplancton",
+          "Pequeños animales acuáticos que se alimentan de otros organismos en el agua."
+        ],
+        [
+          "fitoplancton",
+          "Pequeñas plantas acuáticas que son la base de la cadena alimentaria acuática."
+        ],
+        [
+          "león",
+          "Es un felino grande y feroz que caza en manada."
+        ],
+        [
+          "tigre",
+          "Es un felino grande y peligroso con rayas naranjas y negras."
+        ],
+        [
+          "oso",
+          "Es un mamífero grande y peludo que vive en los bosques."
+        ],
+        [
+          "águila",
+          "Es un ave rapaz que se alimenta de otros animales."
+        ],
+        [
+          "cocodrilo",
+          "Es un reptil grande y peligroso que vive en el agua."
+        ],
+        [
+          "jirafa",
+          "Es un animal herbivoro con cuello largo y manchas marrones en su pelaje."
+        ],
+        [
+          "elefante",
+          "Es un herbivoro grande y pesado con una trompa larga."
+        ],
+        [
+          "cebra",
+          "Es un animal herbivoro con rayas negras y blancas que vive en la sabana."
+        ],
+        [
+          "conejo",
+          "Es un animal herbivoro pequeño y peludo que come zanahorias."
+        ],
+        [
+          "ciervo",
+          "Es un animal herbivoro con astas que vive en los bosques."
+        ],
+        [
+          "oso hormiguero",
+          "Es un animal omnivoro con una lengua larga que come hormigas y termitas."
+        ],
+        [
+          "cerdo",
+          "Es un animal omnivoro rosa y gordo que come de todo."
+        ],
+        [
+          "mapache",
+          "Es un animal omnivoro con una máscara negra en su cara que come frutas y animales pequeños."
+        ],
+        [
+          "ardilla",
+          "Es un animal omnivoro pequeño y peludo que come nueces y semillas."
+        ]
+    ],
+    "clasificacion_reproduccion": [
+        [
+          "oviparo",
+          "Animal que pone huevos."
+        ],
+        [
+          "viviparo",
+          "Animal que da a luz a crías vivas."
+        ],
+        [
+          "metamorfosis",
+          "Proceso de desarrollo de algunos animales que implica cambios drásticos en su forma."
+        ],
+        [
+          "sexual",
+          "Tipo de reproducción que implica la unión de células sexuales masculinas y femeninas."
+        ],
+        [
+          "asexual",
+          "Tipo de reproducción que no implica la unión de células sexuales."
+        ],
+        [
+          "Rana",
+          "Este animal nace de un huevo y pasa por una etapa acuática antes de convertirse en adulto. Es conocido por saltar y por su piel resbaladiza."
+        ],
+        [
+          "Ballena",
+          "Este animal tiene crías dentro de su cuerpo y las alimenta con leche materna. Vive en el mar y puede ser uno de los animales más grandes del mundo."
+        ],
+        [
+          "Tiburón",
+          "Este animal pone huevos que están dentro de una cápsula y después nacen las crías. Tiene muchas filas de dientes afilados y es un depredador formidable en el océano."
+        ],
+        [
+          "Mariposa",
+          "Este animal pasa por una transformación en la que se convierte en una crisálida antes de volar como adulto. Tiene alas coloridas y puede ser encontrado en jardines y campos de todo el mundo."
+        ],
+        [
+          "Cocodrilo",
+          "Este animal pone huevos y las crías nacen como reptiles terrestres. Son conocidos por sus grandes mandíbulas y su piel escamosa."
+        ],
+        [
+          "Canguro",
+          "Este animal es un marsupial, lo que significa que tiene una bolsa en su cuerpo donde las crías se desarrollan después de nacer. Pueden ser encontrados en Australia y pueden saltar largas distancias."
+        ],
+        [
+          "Ave",
+          "Este grupo de animales pone huevos y la mayoría tienen alas. Hay una gran variedad de aves, desde las pequeñas y coloridas hasta las grandes y poderosas."
+        ],
+        [
+          "Serpiente",
+          "Este animal pone huevos y las crías nacen como pequeñas serpientes. Pueden ser encontradas en todo el mundo y son conocidas por su piel escamosa y su capacidad para deslizarse sin patas."
+        ],
+        [
+          "Orangután",
+          "Este animal es un primate que tiene crías vivas. Viven en los bosques tropicales de Asia y son conocidos por su gran inteligencia y habilidad para usar herramientas."
+        ],
+        [
+          "Hormiga",
+          "Este animal tiene un ciclo de vida interesante. Comienza como un huevo, se convierte en larva, pupa y finalmente se convierte en adulto. Son muy trabajadoras y pueden ser encontradas en todo el mundo."
+        ],
+        [
+          "Ratón",
+          "Este animal es un mamífero que tiene crías vivas. Son conocidos por ser pequeños y rápidos, y pueden ser encontrados en todo el mundo."
+        ]
+    ]
+}
+  

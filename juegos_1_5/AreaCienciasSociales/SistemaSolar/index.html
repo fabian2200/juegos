@@ -1,0 +1,144 @@
+<!doctype html>
+    <html
+    class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+        <link rel="stylesheet" href="../../bootstrap/all.css">
+        <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+        <script src="../../bootstrap/jquery.min.js"></script>
+        <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+        <script src="../../bootstrap/sweetalert.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+     
+    </head>
+
+
+    <body>
+
+        <div id="principal" style="padding-top: 20px;">
+            <div class="row">
+                <div class="col-10" style="display: flex;align-items: center;justify-content: center;">
+                    <h1 style="font-size: 1.7rem;" class="borde" id="categoria"></h1>
+                </div>
+                <div class="col-2">
+                    <button style="display: flex;align-items: center;justify-content: center;" onclick="history.back()" class="btn btn-danger">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                </div>
+    
+            </div>
+    
+            <div id="opcion1" class="row" style="display: none;">
+                <div class="col-12 text-center">
+                    <div class="centra-sistema">
+                        <div id="sistemaSolar">
+                            <div id="punto1_1" class="puntoCate1">
+                                <li data-id="mercurio" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto2_1" class="puntoCate1">
+                                <li data-id="venus" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto3_1" class="puntoCate1">
+                                <li data-id="tierra" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto4_1" class="puntoCate1">
+                                <li data-id="marte" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto5_1" class="puntoCate1">
+                                <li data-id="jupiter" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto6_1" class="puntoCate1">
+                                <li data-id="saturno" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto7_1" class="puntoCate1">
+                                <li data-id="urano" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto8_1" class="puntoCate1">
+                                <li data-id="neptuno" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+    
+                            <div id="planetaSistemaSolar"></div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="opcion2" class="row" style="display: none;">
+                <div class="col-12 text-center">
+                    <div class="centra-sistema">
+                        <div id="sistemaSolar2">
+                            <div id="punto1_2" class="puntoCate2">
+                                <li data-id="mercurio" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto2_2" class="puntoCate2">
+                                <li data-id="venus" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto3_2" class="puntoCate2">
+                                <li data-id="tierra" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto4_2" class="puntoCate2">
+                                <li data-id="marte" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto5_2" class="puntoCate2">
+                                <li data-id="jupiter" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto6_2" class="puntoCate2">
+                                <li data-id="saturno" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto7_2" class="puntoCate2">
+                                <li data-id="urano" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="punto8_2" class="puntoCate2">
+                                <li data-id="neptuno" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+    
+                            <div id="planetaSistemaSolar2"></div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <div style="display: none" class="overlay">
+        <div class="nube">
+            <p class="borde2" id="bienvenida"></p>
+        </div>
+        <div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;">
+            <button onclick="cerrar_anuncio()" id="btnomitir"  class="btn btn-warning" style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+    </div>
+  
+    <div style="display: none; background-color: rgba(255, 255, 255, 0.664); width: 100%; height: 100%; position: fixed; z-index: 100;" id="fondo_blanco"></div>
+  
+    <div style="display: none; text-align: center;" id="final" class="final">
+        <h1 style="font-size: 25pt; padding-top: 240pt" class="borde2" id="texto_final"></h1>
+        <hr>
+        <div class="row">
+            <div class="col-12" style="padding-bottom: 10pt">
+                <h1 style="font-size: 25pt;" class="borde2">¿Quieres jugar nuevamente?</h1>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3 text-center">
+                <button style="width: 80%;border-radius: 20pt;" onclick="window.location.reload(1)" class="btn btn-success">Si, jugar</button>
+            </div>
+            <div class="col-3 text-center">
+                <button style="width: 80%; border-radius: 20pt;" onclick="history.back()" class="btn btn-danger">No, salir</button>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+  
+  
+
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

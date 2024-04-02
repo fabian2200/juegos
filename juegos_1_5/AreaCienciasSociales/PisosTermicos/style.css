@@ -1,0 +1,624 @@
+body {
+  background-color: #ffffff;
+  background-image: url("img/fondo.png");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+@font-face {
+  font-family: nunito_bold;
+  src: url(../../nunito/Nunito-ExtraBold.ttf);
+}
+
+* {
+  font-family: nunito_bold;
+}
+
+
+.btn{
+  width: 55px;
+  height: 50px;
+  font-size: 23px;
+  border-radius: 50%;
+  border: 4px solid white;
+  border: 3px solid black;
+}
+
+.imagen_Termico {
+  width: 80%;
+  cursor: pointer;
+  height: auto;
+
+}
+
+.swal2-modal {
+  width: 60% !important
+}
+
+.swal2-html-container {
+  overflow: hidden !important;
+}
+
+.seleccionado {
+  pointer-events: none;
+}
+
+.partes {
+  --bg-color: #4396CC;
+  --text-color-hover: #4c5656;
+  --box-shadow-color: rgba(252, 255, 189, 0.762);
+}
+
+.cate {
+  --bg-color: #E23564;
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(255, 202, 152, 0.48);
+}
+.cuida {
+  --bg-color: #5A1777;
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(255, 202, 152, 0.48);
+}
+
+.card {
+  width: 220px;
+  height: 321px;
+  background: #fff;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card:hover .cor__cobertura {
+  transform: scale(4) translateZ(0);
+}
+
+.card:hover .circulo {
+  background: var(--bg-color);
+  border: 2px dotted var(--bg-color-light);
+}
+
+.card:hover .circulo:after {
+  background: var(--bg-color-light);
+}
+
+.card:hover p {
+  color: var(--text-color-hover);
+}
+
+.card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+  font-size: 17px;
+  color: #4c5656;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+.circulo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.circulo:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.3s ease-out;
+}
+
+.circulo img {
+  width: 200px;
+  z-index: 10000;
+  transform: translateZ(0);
+}
+
+.cor__cobertura {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+.divopciones{
+  display: flex;
+  justify-content: center;
+}
+
+#pisoTermicoCat1 {
+  background-image: url("img/categoria1/fondo.png");
+  background-size: cover;
+  height: 500px;
+  width: 900px;
+  position: relative;
+  border: white 3px solid;
+  box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 2);
+ 
+}
+#pisoTermicoCat2 {
+  background-image: url("img/categoria2/fondo.png");
+  background-size: cover;
+  height: 500px;
+  width: 900px;
+  position: relative;
+  border: white 3px solid;
+  box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 2);
+ 
+}
+
+
+.centra-habitad{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.puntoCate1 {
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: red;
+}
+.puntoCate2 {
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: red;
+}
+
+/* Puntos Categoria 1 */
+
+#puntoCat1_1 {
+  top: 94px;
+  left: 491px;
+}
+#puntoCat1_2 {
+  top: 172px;
+  left: 541px;
+}
+#puntoCat1_3 {
+  top: 254px;
+  left: 590px;
+}
+
+#puntoCat1_4 {
+  top: 330px;
+  left: 639px;
+}
+
+#puntoCat1_5 {
+  top: 417px;
+  left: 701px;
+}
+
+/* Puntos Categoria 2 */
+
+#puntoCat2_1 {
+  top: 121px;
+  left: 429px;
+}
+#puntoCat2_2 {
+  top: 121px;
+  left: 489px;
+}
+#puntoCat2_3 {
+  top: 197px;
+  left: 407px;
+}
+
+#puntoCat2_4 {
+  top: 201px;
+  left: 488px;
+}
+
+#puntoCat2_5 {
+  top: 276px;
+  left: 383px;
+}
+#puntoCat2_6 {
+  top: 278px;
+  left: 508px;
+}
+#puntoCat2_7 {
+  top: 344px;
+  left: 398px;
+}
+#puntoCat2_8 {
+  top: 351px;
+  left: 561px;
+}
+#puntoCat2_9 {
+  top: 417px;
+  left: 338px;
+}
+#puntoCat2_10 {
+  top: 428px;
+  left: 566px;
+}
+
+
+.nombreCat1 {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+}
+.nombreCat2 {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+}
+
+/* Nombres Categoria 1 */
+
+#nombreCat1_1 {
+  top: 0px;
+  left: 193px;
+}
+#nombreCat1_2 {
+  top: 0px;
+  left: 312px;
+}
+#nombreCat1_3 {
+  top: 0px;
+  left: 432px;
+}
+#nombreCat1_4 {
+  top: 0px;
+  left: 551px;
+}
+#nombreCat1_5 {
+  top: 0px;
+  left: 671px;
+}
+
+/* Nombres Categoria 2 */
+
+#nombreCat2_1 {
+  top: 0px;
+  left: 152px;
+}
+#nombreCat2_2 {
+  top: 0px;
+  left: 214px;
+}
+#nombreCat2_3 {
+  top: 0px;
+  left: 285px;
+}
+#nombreCat2_4 {
+  top: 0px;
+  left: 348px;
+}
+#nombreCat2_5 {
+  top: 0px;
+  left: 404px;
+}
+#nombreCat2_6 {
+  top: 0px;
+  left: 459px;
+}
+#nombreCat2_7 {
+  top: 0px;
+  left: 520px;
+}
+#nombreCat2_8 {
+  top: 0px;
+  left: 593px;
+}
+#nombreCat2_9 {
+  top: 0px;
+  left: 665px;
+}
+#nombreCat2_10 {
+  top: 0px;
+  left: 727px;
+}
+
+.divGenio {
+
+  position: absolute;
+  bottom: 50px;
+  right: 86px;
+  animation: divGenio 1s forwards;
+  width: 20%;
+}
+
+@keyframes divGenio {
+  from {
+    left: -48px;
+  }
+
+  to {
+    left: -37px;
+  }
+}
+
+
+
+.overlay {
+  background-image: url(../../images/normal1.gif);
+  background-size: 90% 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1000;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: fixed;
+  left: -200px; /* Empieza fuera de la pantalla */
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.overlay::before{
+  position:absolute; 
+  width:0; 
+  height:0; 
+  overflow:hidden; 
+  z-index:-1;
+  content:url("../../images/normal1.gif")
+          url("../../images/normal2.gif")
+}
+
+@keyframes moverDerecha {
+  from { left: -100%; opacity: 0;}
+  to { left: 0; opacity: 1;}
+}
+
+@keyframes moverIzquierda {
+  from { left: 0; opacity: 1;}
+  to { left: -100%; opacity: 0;}
+}
+
+.borde2 {
+  text-shadow: 1px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+  1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  font-weight: bold;
+  color: #4399D7 !important;
+  font-size: 19px;
+}
+
+.borde3 {
+  text-shadow: 1px 0 rgb(255, 255, 255), -2px 0 rgb(255, 255, 255), 0 2px rgb(255, 255, 255), 0 -2px #fff,
+  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  font-weight: bold;
+}
+
+#bienvenida{
+  line-height: 1.5;
+}
+
+#bienvenida {
+  width: 55%;
+  padding-left: 40pt;
+  font-size: 20px !important;
+  text-align: justify;
+}
+
+.nube {
+  background-image: url(../../images/nube.png);
+  background-size: 100% 100%;
+  width: 558pt;
+  height: 456pt;
+  position: absolute;
+  z-index: 1000;
+  bottom: -362pt;
+  left: 422pt;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation-duration: 2.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moverArriba {
+  from { bottom: -362pt; opacity: 0;}
+  to { bottom: 147pt; opacity: 1;}
+}
+
+.overlay .btn-warning {
+  padding: 16px 20px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.overlay .btn-warning:hover {
+  color: #fff !important;
+}
+
+.overlay .btn-warning:hover i {
+  color: #fff !important;
+}
+
+.overlay .btn-warning::after {
+  content: "";
+  background: #4195d1;
+  color: #fff !important;
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.3s ease;
+}
+
+.overlay .btn-warning:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+@keyframes moverabajo {
+  from { bottom: 147pt; opacity: 1;}
+  to { bottom: -362pt; opacity: 0;}
+}
+
+.final {
+  background-size: 42%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.904);
+}
+
+@media screen and (max-width: 1600px) {
+  .puntoCate1{
+    width: 200px;
+    height: 100px;
+  }
+
+  .puntoCate2{
+    width: 70px;
+    height: 70px;
+  }
+
+  #puntoCat1_1 {
+    top: 64px;
+    left: 491px;
+  }
+  #puntoCat1_2 {
+    top: 142px;
+    left: 541px;
+  }
+  #puntoCat1_3 {
+    top: 224px;
+    left: 590px;
+  }
+  
+  #puntoCat1_4 {
+    top: 300px;
+    left: 639px;
+  }
+  
+  #puntoCat1_5 {
+    top: 387px;
+    left: 701px;
+  }
+
+
+
+
+
+  #puntoCat2_1 {
+    top: 91px;
+    left: 379px;
+  }
+
+  #puntoCat2_2 {
+    top: 91px;
+    left: 470px;
+  }
+
+  #puntoCat2_3 {
+    top: 166px;
+    left: 366px;
+  }
+  
+  #puntoCat2_4 {
+    top: 166px;
+    left: 491px;
+  }
+  
+  #puntoCat2_5 {
+    top: 241px;
+    left: 338px;
+  }
+
+  #puntoCat2_6 {
+    top: 242px;
+    left: 528px;
+  }
+
+  #puntoCat2_7 {
+    top: 321px;
+    left: 305px;
+  }
+  #puntoCat2_8 {
+    top: 322px;
+    left: 560px;
+  }
+
+  #puntoCat2_9 {
+    top: 395px;
+    left: 271px;
+  }
+
+  #puntoCat2_10 {
+    top: 397px;
+    left: 611px;
+  }
+}
+
+.hide {
+  display: none;
+}

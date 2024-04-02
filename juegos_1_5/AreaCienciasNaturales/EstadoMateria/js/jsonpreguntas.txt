@@ -1,0 +1,14 @@
+{
+  "preguntas": [
+    {
+      "pregunta": "¿Cuáles son los tres estados fundamentales de la materia?",
+      "opciones": [
+        {"opcion": "Sólido, líquido y gaseoso", "correcta": true},
+        {"opcion": "Sólido, líquido y plasma", "correcta": false},
+        {"opcion": "Líquido, gaseoso y plasma", "correcta": false},
+        {"opcion": "Sólido, líquido y sólido amorfo", "correcta": false}
+      ]
+    },
+
+]
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link rel="stylesheet" href="bootstrap/all.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/jquery.min.js"></script>
+    <style>
+        .col-lg-3 {
+            height: 230px;
+            cursor: pointer;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #suma {
+            background-color: transparent !important;
+            border-radius: 10px;
+            padding: 10px;
+            height: 100%;
+        }
+
+        #suma p {
+            font-weight: bold;
+            font-size: 25px;
+            color: #612e82;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        body {
+            background: url('iconos/fondo.png');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #fff;
+            height: 100vh;
+        }
+
+        .juego:hover {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            transform: scale(1.5);
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .btn-flotante {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 50%;
+            letter-spacing: 2px;
+            background-color: #E91E63;
+            padding: 18px 30px;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            transition: all 300ms ease 0ms;
+            z-index: 99;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 10px solid white;
+        }
+
+        .btn-flotante:hover {
+            background-color: #5851DB;
+            /* Color de fondo al pasar el cursor */
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-7px);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media only screen and(max-width: 600px) {
+            .btn-flotante {
+                font-size: 14px;
+                padding: 12px 20px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="ListJuegos"></div>
+        <a style="cursor: pointer" type="button" onclick="history.back()" class="btn-flotante">
+            <img style="width: 40px;" src="images/atras.png" /></a>
+    </div>
+
+
+    <script>
+        function ListJueegos() {
+            var sParameterName;
+            var sPageURL = window.location.search.substring(1);
+
+            var sURLVariables = sPageURL.split('&');
+
+            var ParaArea = sURLVariables[0].split('=');
+            var ParaGrad = sURLVariables[1].split('=');
+
+            var ListadoJuegos = "";
+
+            var list = document.getElementById("ListJuegos");
+
+
+            let datos = [
+                {
+                    "grado": "1",
+                    "juego": "Encuentra el Habitat",
+                    "ruta": "AreaCienciasNaturales/habitat/index.html",
+                    "area": "CN",
+                    "icono": "iconos/habitat.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Eco-Desafío",
+                    "ruta": "AreaCienciasNaturales/EcoDesafio/index.html",
+                    "area": "CN",
+                    "icono": "iconos/ecodesafio.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "La Materia",
+                    "ruta": "AreaCienciasNaturales/LaMateria/index.html",
+                    "area": "CN",
+                    "icono": "iconos/LaMateria.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Identifica ",
+                    "ruta": "AreaCienciasNaturales/Identifica/index.html",
+                    "area": "CN",
+                    "icono": "iconos/IdentifiaCN.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Mi cuerpo",
+                    "ruta": "AreaCienciasNaturales/Cuerpo/index.html",
+                    "area": "CN",
+                    "icono": "iconos/Cuerpo.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Seres Vivos",
+                    "ruta": "AreaCienciasNaturales/SeresVivos/index.html",
+                    "area": "CN",
+                    "icono": "iconos/seresVivos.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Aprende a contar",
+                    "ruta": "AreaMatematicas/AprendeaContar/index.html",
+                    "area": "M",
+                    "icono": "iconos/AprendeaContar.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Identifica figuras en objetos",
+                    "ruta": "AreaMatematicas/IdentificaFiguras2/index.html",
+                    "area": "M",
+                    "icono": "iconos/IdentificaFiguras2.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Identifica figuras",
+                    "ruta": "AreaMatematicas/IdentificaFiguras/index.html",
+                    "area": "M",
+                    "icono": "iconos/IdentificaFiguras.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "+ y - Challenge",
+                    "ruta": "AreaMatematicas/SumaResta/index.html",
+                    "area": "M",
+                    "icono": "iconos/SumaResta.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Cuenta y compara",
+                    "ruta": "AreaMatematicas/CuentayCompara/index.html",
+                    "area": "M",
+                    "icono": "iconos/CuentayCompara.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Ordena y gana",
+                    "ruta": "AreaMatematicas/OrdenyGana/index.html",
+                    "area": "M",
+                    "icono": "iconos/OrdenyGana.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Donde Vives",
+                    "ruta": "AreaCienciasSociales/DondeVives/index.html",
+                    "area": "CS",
+                    "icono": "iconos/DondeVives.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Identifica profesiones",
+                    "ruta": "AreaCienciasSociales/Identifica/index.html",
+                    "area": "CS",
+                    "icono": "iconos/Identifica.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Mi familia",
+                    "ruta": "AreaCienciasSociales/MiFamilia/index.html",
+                    "area": "CS",
+                    "icono": "iconos/MiFamilia.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Mi Transporte",
+                    "ruta": "AreaCienciasSociales/MiTransporte/index.html",
+                    "area": "CS",
+                    "icono": "iconos/MiTransporte.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Mi Entorno",
+                    "ruta": "AreaCienciasSociales/MiEntorno/index.html",
+                    "area": "CS",
+                    "icono": "iconos/MiEntorno.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "what is this?",
+                    "ruta": "AreaLenguaje/WhatIsThis/index.html",
+                    "area": "LC",
+                    "icono": "iconos/WhatIsThis.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Las vocales",
+                    "ruta": "AreaLenguaje/Lasvocales/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Lasvocales.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Las consonantes",
+                    "ruta": "AreaLenguaje/LasConsonantes/index.html",
+                    "area": "LC",
+                    "icono": "iconos/LasConsonantes.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Escucha",
+                    "ruta": "AreaLenguaje/Escucha/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Escucha.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Letras",
+                    "ruta": "AreaLenguaje/Letras/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Letras.png"
+                },
+                {
+                    "grado": "1",
+                    "juego": "Relaciona",
+                    "ruta": "AreaLenguaje/Relaciona/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Relaciona.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "The kingdoms",
+                    "ruta": "AreaCienciasNaturales/IdentificaReino/index.html",
+                    "area": "CN",
+                    "icono": "iconos/IdentificaReino.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Las Plantas",
+                    "ruta": "AreaCienciasNaturales/LasPlantas/index.html",
+                    "area": "CN",
+                    "icono": "iconos/LasPlantas.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "La Materia",
+                    "ruta": "AreaCienciasNaturales/LaMateriaSdo/index.html",
+                    "area": "CN",
+                    "icono": "iconos/LaMateria.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Recta Numérica",
+                    "ruta": "AreaMatematicas/RectaNumerica/index.html",
+                    "area": "M",
+                    "icono": "iconos/RectaNumerica.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Tipos de Linea",
+                    "ruta": "AreaMatematicas/TiposDeLinea/index.html",
+                    "area": "M",
+                    "icono": "iconos/TiposDeLinea.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "+ y - Challenge",
+                    "ruta": "AreaMatematicas/SumaResta2/index.html",
+                    "area": "M",
+                    "icono": "iconos/SumaResta.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "x y % Challenge",
+                    "ruta": "AreaMatematicas/MultiplicayDivide/index.html",
+                    "area": "M",
+                    "icono": "iconos/MultiplicayDivide.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "D10",
+                    "ruta": "AreaMatematicas/D10/index.html",
+                    "area": "M",
+                    "icono": "iconos/D10.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Los Relieves",
+                    "ruta": "AreaCienciasSociales/LosRelieves/index.html",
+                    "area": "CS",
+                    "icono": "iconos/LosRelieves.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Dime la Hora",
+                    "ruta": "AreaCienciasSociales/DimelaHora/index.html",
+                    "area": "CS",
+                    "icono": "iconos/DimeLaHora.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Ubicalo",
+                    "ruta": "AreaCienciasSociales/Ubicalo/index.html",
+                    "area": "CS",
+                    "icono": "iconos/Ubicalo.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Antonimos",
+                    "ruta": "AreaLenguaje/Antonimos/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Antonimos.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Uso de la mayuscula",
+                    "ruta": "AreaLenguaje/UsoMayuscula/index.html",
+                    "area": "LC",
+                    "icono": "iconos/UsoMayuscula.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Parts Of The Body",
+                    "ruta": "AreaLenguaje/PartsOfTheBody/index.html",
+                    "area": "LC",
+                    "icono": "iconos/PartsOfTheBody.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "what is this?",
+                    "ruta": "AreaLenguaje/IdentificaObjetosIng/index.html",
+                    "area": "LC",
+                    "icono": "iconos/IdentificaObjetosIng.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Sinonimos y Antonimos",
+                    "ruta": "AreaLenguaje/SinonimosyAntonimos/index.html",
+                    "area": "LC",
+                    "icono": "iconos/SinonimosyAntonimos.png"
+                },
+                {
+                    "grado": "2",
+                    "juego": "Sopa de letra",
+                    "ruta": "AreaLenguaje/SopadeLetraSdo/index.html?Area=LG",
+                    "area": "LC",
+                    "icono": "iconos/SopadeLetraSdo.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Encuentra el Habitad",
+                    "ruta": "AreaCienciasNaturales/EncuentraelHabitad/index.html",
+                    "area": "CN",
+                    "icono": "iconos/EncuentraelHabitad.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Magnitudes",
+                    "ruta": "AreaCienciasNaturales/Magnitudes/index.html",
+                    "area": "CN",
+                    "icono": "iconos/Magnitudes.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Sopa de letra",
+                    "ruta": "AreaCienciasNaturales/SopadeLetra/index.html?Area=CN",
+                    "area": "CN",
+                    "icono": "iconos/SopadeLetra.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "+ y - Challenge",
+                    "ruta": "AreaMatematicas/SumaRestaTro/index.html",
+                    "area": "M",
+                    "icono": "iconos/SumaResta.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "x y % Challenge",
+                    "ruta": "AreaMatematicas/MultiplicayDivideCompleta/index.html",
+                    "area": "M",
+                    "icono": "iconos/MultiplicayDivide.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Fracciones",
+                    "ruta": "AreaMatematicas/Fracciones/index.html",
+                    "area": "M",
+                    "icono": "iconos/Fracciones.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Pisos Termicos",
+                    "ruta": "AreaCienciasSociales/PisosTermicos/index.html",
+                    "area": "CS",
+                    "icono": "iconos/PisosTermicos.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Mi Geografia",
+                    "ruta": "AreaCienciasSociales/MiGeografia/index.html",
+                    "area": "CS",
+                    "icono": "iconos/MiGeografia.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Ubicalo",
+                    "ruta": "AreaCienciasSociales/UbicaloTro/index.html",
+                    "area": "CS",
+                    "icono": "iconos/Ubicalo.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Adivina la Palabra",
+                    "ruta": "AreaLenguaje/AdivinalaPalabra/index.html",
+                    "area": "LC",
+                    "icono": "iconos/AdivinalaPalabra.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Ordena y Gana",
+                    "ruta": "AreaLenguaje/OrdenayGanaLenguaje/index.html",
+                    "area": "LC",
+                    "icono": "iconos/OrdenayGanaLenguaje.png"
+                },
+                {
+                    "grado": "3",
+                    "juego": "Letter's Soup",
+                    "ruta": "AreaLenguaje/SopadeLetraTercero/index.html?Area=IG",
+                    "area": "LC",
+                    "icono": "iconos/SopadeLetraTercero.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "EstadoMateria",
+                    "ruta": "AreaCienciasNaturales/EstadoMateria/index.html",
+                    "area": "CN",
+                    "icono": "iconos/EstadoMateria.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Los Reinos",
+                    "ruta": "AreaCienciasNaturales/LosReinos/index.html",
+                    "area": "CN",
+                    "icono": "iconos/LosReinos.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Propiedades de la Materia",
+                    "ruta": "AreaCienciasNaturales/PropiedadesMateria/index.html",
+                    "area": "CN",
+                    "icono": "iconos/PropiedadesMateria.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Completa la Operación",
+                    "ruta": "AreaMatematicas/CompletalaOperacion/index.html",
+                    "area": "M",
+                    "icono": "iconos/CompletalaOperacion.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Equivalencias",
+                    "ruta": "AreaMatematicas/Equivalencias/index.html",
+                    "area": "M",
+                    "icono": "iconos/Equivalencias.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Fracciones",
+                    "ruta": "AreaMatematicas/OperacionesFracciones/index.html",
+                    "area": "M",
+                    "icono": "iconos/Fracciones.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Sistema Solar",
+                    "ruta": "AreaCienciasSociales/SistemaSolar/index.html",
+                    "area": "CS",
+                    "icono": "iconos/SistemaSolar.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Los Contienentes",
+                    "ruta": "AreaCienciasSociales/LosContienentes/index.html",
+                    "area": "CS",
+                    "icono": "iconos/LosContienentes.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Mi Geografia",
+                    "ruta": "AreaCienciasSociales/MiGeografiaDep/index.html",
+                    "area": "CS",
+                    "icono": "iconos/MiGeografia.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Acentúalo",
+                    "ruta": "AreaLenguaje/Acentualo/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Acentualo.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Ortografia challenge",
+                    "ruta": "AreaLenguaje/OrtografiaChallenge/index.html",
+                    "area": "LC",
+                    "icono": "iconos/OrtografiaChallenge.png"
+                },
+                {
+                    "grado": "4",
+                    "juego": "Complete",
+                    "ruta": "AreaLenguaje/Complete/index.html",
+                    "area": "LC",
+                    "icono": "iconos/Complete.png"
+                },
+
+                {
+                    "grado": "5",
+                    "juego": "La Célula",
+                    "ruta": "AreaCienciasNaturales/LaCelula/index.html",
+                    "area": "CN",
+                    "icono": "iconos/LaCelula.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Sistema del Cuerpo Humano",
+                    "ruta": "AreaCienciasNaturales/SistemaCuerpoHumano/index.html",
+                    "area": "CN",
+                    "icono": "iconos/SistemaCuerpoHumano.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Clasificación Animal",
+                    "ruta": "AreaCienciasNaturales/ClasificacionAnimal/index.html",
+                    "area": "CN",
+                    "icono": "iconos/ClasificacionAnimal.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "x y % Challenge",
+                    "ruta": "AreaMatematicas/MultiplosyDivisores/index.html",
+                    "area": "M",
+                    "icono": "iconos/MD.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Estadistica",
+                    "ruta": "AreaMatematicas/Estadistica/index.html",
+                    "area": "M",
+                    "icono": "iconos/Estadistica.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Porcentaje",
+                    "ruta": "AreaMatematicas/Porcentaje/index.html",
+                    "area": "M",
+                    "icono": "iconos/Porcentaje.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Crucigrama",
+                    "ruta": "AreaCienciasSociales/CrucigramaColombia/index.html",
+                    "area": "CS",
+                    "icono": "iconos/CrucigramaColombia.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Los Presidentes",
+                    "ruta": "AreaCienciasSociales/LosPresidentes/index.html",
+                    "area": "CS",
+                    "icono": "iconos/LosPresidentes.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Mi Geografia",
+                    "ruta": "AreaCienciasSociales/SopaLetras/index.html",
+                    "area": "CS",
+                    "icono": "iconos/MiGeografia.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Identifica las Palabra",
+                    "ruta": "AreaLenguaje/IdentificaPalabras/index.html",
+                    "area": "LC",
+                    "icono": "iconos/IdentificaPalabras.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Ortografia challenge",
+                    "ruta": "AreaLenguaje/OrtografiaChallengeQuinto/index.html",
+                    "area": "LC",
+                    "icono": "iconos/OrtografiaChallenge5.png"
+                },
+                {
+                    "grado": "5",
+                    "juego": "Wh Questions",
+                    "ruta": "AreaLenguaje/WHQuetions/index.html",
+                    "area": "LC",
+                    "icono": "iconos/WHQuetions.png"
+                }
+            ];
+
+            let arrayJuegos = datos.filter((e) => e.grado == ParaGrad[1] && e.area == ParaArea[1]);
+
+            for (let itemJueg of arrayJuegos) {
+                ListadoJuegos += '<div onclick="ver_juego(\'' + itemJueg.ruta + '\')"  class="col-lg-4 juego pr-5">' + '<div id="suma">' + '<img src="' + itemJueg.icono + '" width="100%" alt=""><br>' + '</div>' + '</div>';
+            }
+
+            list.innerHTML = ListadoJuegos;
+        }
+
+        function ver_juego(ruta) {
+            var host = ruta;
+            console.log()
+            location.href = host;
+        }
+        ListJueegos();
+    </script>
+</body>
+
+</html>

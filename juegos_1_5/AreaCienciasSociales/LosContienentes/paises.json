@@ -1,0 +1,74 @@
+{
+    "Africa": [
+        "Nigeria",
+        "Egipto",
+        "Etiopía",
+        "Sudáfrica",
+        "Argelia",
+        "Kenia",
+        "Tanzania",
+        "Marruecos",
+        "Uganda",
+        "Sudán"
+    ],
+    "Asia": [
+        "China",
+        "Japón",
+        "India",
+        "Corea del Sur",
+        "Arabia Saudita",
+        "Turquía",
+        "Irán",
+        "Israel",
+        "Filipinas",
+        "Vietnam"
+    ],
+    "Europa": [
+        "España",
+        "Alemania",
+        "Francia",
+        "Rusia",
+        "Italia",
+        "Reino Unido",
+        "Países Bajos",
+        "Polonia",
+        "Suiza",
+        "Grecia"
+    ],
+    "Norteamerica": [
+        "Estados Unidos",
+        "Canadá",
+        "México",
+        "Costa Rica",
+        "Cuba",
+        "Jamaica",
+        "Haití",
+        "República Dominicana",
+        "Panamá",
+        "Guatemala"
+    ],
+    "Sudamerica": [
+        "Brasil",
+        "Argentina",
+        "Colombia",
+        "Chile",
+        "Perú",
+        "Ecuador",
+        "Venezuela",
+        "Uruguay",
+        "Paraguay",
+        "Bolivia"
+    ],
+    "Oceania": [
+        "Australia",
+        "Nueva Zelanda",
+        "Papúa Nueva Guinea",
+        "Fiyi",
+        "Samoa",
+        "Tonga",
+        "Micronesia",
+        "Islas Salomón",
+        "Vanuatu",
+        "Kiribati"
+    ]
+}

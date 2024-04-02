@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../../bootstrap/all.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <script src="../../bootstrap/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+    <script src="../../bootstrap/sweetalert.js"></script>
+    <link rel="stylesheet" href="css/style.processed.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="display: none" class="overlay">
+        <div class="nube">
+            <p class="borde2" id="bienvenida"></p>
+        </div>
+        <div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;">
+            <button onclick="cerrar_anuncio()" id="btnomitir"  class="btn btn-warning" style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div style="display: none; background-color: rgba(255, 255, 255, 0.664); width: 100%; height: 100%; position: fixed; z-index: 100;"
+        id="fondo_blanco">
+
+    </div>
+
+    <div style="display: none; text-align: center;" id="final" class="final">
+        <h1 style="font-size: 25pt; padding-top: 326pt; padding-bottom: 0px;" class="borde2" id="texto_final"></h1>
+        <hr>
+        <div class="row">
+            <div class="col-12" style="padding-bottom: 0pt; margin-top: 0px;">
+                <h1 style="font-size: 25pt; padding: 12px;" class="borde2">¿Quieres jugar nuevamente?</h1>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3 text-center">
+                <button style="width: 80% !important;border-radius: 20pt !important; font-size: 23px;" onclick="window.location.reload(1)"
+                    class="btn btn-success">Si, jugar</button>
+            </div>
+            <div class="col-3 text-center">
+                <button style="width: 80% !important; border-radius: 20pt !important; font-size: 23px;" onclick="history.back()"
+                    class="btn btn-danger">No,
+                    salir</button>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div id="principal" style="  padding-top: 20px;
+    ">
+        <svg display="none" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="svg-icon-close" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewbox="0 0 24 24" id=".5786439775930057" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+            </symbol>
+        </svg>
+        <div class="row" style="width: 100%">
+            <div class="col-10" style="display: flex;align-items: center;justify-content:center;">
+                <h1 class="borde">Lanza los dados y responde la pregunta</h1>
+            </div>
+            <div class="col-1">
+                <button style="display: flex;align-items: center;justify-content: center;" onclick="history.back()"
+                    class="btn btn-danger">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-1">
+                <button style="display: flex;align-items: center;justify-content: center;"
+                    onclick=" window.location.reload(1);" class="btn btn-warning">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <br>
+
+        <div class="row" style="align-items: center;">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 btn_lanza">
+                        <div>
+                            <button onclick="lanzarDados()" class="btn-lanzar">
+                                Lanzar Dados
+                            </button>
+                        </div>
+                    </div>
+                    <div class=" col-12 dados">
+                        <div id="dado1">
+                            <img src="img/1.png" id="dado1_1" class="opacidad" alt="">
+
+                        </div>
+                        <div id="dado1">
+                            <img src="img/1.png" id="dado1_2" class="opacidad" alt="">
+
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class='FlexContainer'>
+                            <input type="hidden" id="divAct" value="" />
+                            <div class="img-wrapper" id="div1" data-id="1"><img src="img/numeros/1.png" alt=""></div>
+                            <div class="img-wrapper" id="div2" data-id="2"><img src="img/numeros/2.png" alt=""></div>
+                            <div class="img-wrapper" id="div3" data-id="3"><img src="img/numeros/3.png" alt=""></div>
+                            <div class="img-wrapper" id="div4" data-id="4"><img src="img/numeros/4.png" alt=""></div>
+                            <div class="img-wrapper" id="div5" data-id="5"><img src="img/numeros/5.png" alt=""></div>
+                            <div class="img-wrapper" id="div6" data-id="6"><img src="img/numeros/6.png" alt=""></div>
+                            <div class="img-wrapper" id="div7" data-id="7"><img src="img/numeros/7.png" alt=""></div>
+                            <div class="img-wrapper" id="div8" data-id="8"><img src="img/numeros/8.png" alt=""></div>
+                            <div class="img-wrapper" id="div9" data-id="9"><img src="img/numeros/9.png" alt=""></div>
+                            <div class="img-wrapper" id="div10" data-id="10"><img src="img/numeros/10.png" alt=""></div>
+                            <div class="img-wrapper" id="div11" data-id="11"><img src="img/numeros/11.png" alt=""></div>
+                            <div class="img-wrapper" id="div12" data-id="12"><img src="img/numeros/12.png" alt=""></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="md" id="modal">
+            <div class="md-content">
+                <header class="md-header">
+                    <h2 class="md-title">Complete la frase con las letras que faltan</h2>
+                </header>
+                <div class="md-body">
+                    <div id="quizWrap"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="md-overlay"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

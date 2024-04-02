@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Juego de arrastrar nombres a diferentes puntos</title>
+    <link rel="stylesheet" href="../../bootstrap/all.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <script src="../../bootstrap/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+    <script src="../../bootstrap/sweetalert.js"></script>
+    <link rel="stylesheet" href="style/style.css"></head>
+        <link rel="stylesheet" href="css/style.css"></head>
+  </head>
+  <body>
+
+    <div id="principal">
+      <div class="row text-center">
+        <div class="col-10" style="display: flex;align-items: center;justify-content: center;">
+            <h1 style="color: #e23564;;">Arrastra los animales a su habitat correspondiente </h1>
+        </div>
+        <div class="col-2">
+          <button onclick="history.back()" class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <div class="centra-habitad">
+          <div id="paisaje">
+              <div id="punto1" class="punto"><li data-id="aire" class="fa-solid fa-bullseye"></li></div>
+              <div id="punto2"   class="punto"><li data-id="aire" class="fa-solid fa-bullseye"></li></div>
+              <div id="punto3"  class="punto"><li data-id="desierto"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto4"  class="punto"><li data-id="desierto"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto5"  class="punto"><li data-id="oceano"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto6"  class="punto"><li data-id="oceano"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto7"  class="punto"><li data-id="polar"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto8"  class="punto"><li data-id="polar"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto9"  class="punto"><li data-id="rios"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto10"  class="punto"><li data-id="rios"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto11"  class="punto"><li data-id="selvatica"  class="fa-solid fa-bullseye"></li></div>
+              <div id="punto12"  class="punto"><li data-id="selvatica"  class="fa-solid fa-bullseye"></li></div>
+              <div id="animales">
+              </div>
+            </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="divGenio">
+      <img width="300" id="img-mascota" src="../../images/ciencia/pensando.gif"></div>
+    
+    </div>
+
+    
+    <div style="display: none" class="overlay">
+      <div class="nube">
+          <p class="borde2" id="bienvenida"></p>
+      </div>
+      <div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;">
+        <button onclick="cerrar_anuncio()" id="btnomitir"  class="btn btn-warning" style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <div style="display: none; background-color: rgba(255, 255, 255, 0.664); width: 100%; height: 100%; position: fixed; z-index: 100;" id="fondo_blanco"></div>
+
+  <div style="display: none; text-align: center;" id="final" class="final">
+      <h1 style="font-size: 25pt; padding-top: 240pt" class="borde2" id="texto_final"></h1>
+      <hr>
+      <div class="row">
+          <div class="col-12" style="padding-bottom: 10pt">
+              <h1 style="font-size: 25pt;" class="borde2">¿Quieres jugar nuevamente?</h1>
+          </div>
+          <div class="col-3"></div>
+          <div class="col-3 text-center">
+              <button style="width: 80%;border-radius: 20pt;" onclick="window.location.reload(1)" class="btn btn-success">Si, jugar</button>
+          </div>
+          <div class="col-3 text-center">
+              <button style="width: 80%; border-radius: 20pt;" onclick="history.back()" class="btn btn-danger">No, salir</button>
+          </div>
+          <div class="col-3"></div>
+      </div>
+  </div>
+ 
+    <script src="js/script.js">
+      </script>
+
+  </body>
+</html>

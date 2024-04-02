@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Sopa de letras</title>
+
+<link rel="stylesheet" type="text/css" href="style.css"  media="all">
+<link rel="stylesheet" href="bootstrap.min.css" >
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+<link href="jquery.tagit.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="jquery.min.js"></script> 
+<script type="text/javascript" src="wordfind.js"></script> 
+<script type="text/javascript" src="wordfindgame.js"></script> 
+<script type="text/javascript" src="bootstrap.min.js" ></script>
+<script type="text/javascript" src="jquery-ui.min.js"  ></script>
+<script type="text/javascript" src="tag-it.js"></script>
+<script src="../bootstrap/sweetalert.js"></script>
+</head>
+<body>
+  <style media="print">.ocultar {display:none;}.col-md-3 { width: 25%;float: left;}.col-md-9 {width: 75%;float: left;}</style>
+
+<div class="container">
+  <div class="row"> 
+      <script type="text/javascript">
+        var mytag;
+        $(document).ready(function () {
+          mytag = $("#myTags").tagit({});
+        });
+    </script>
+  </div>
+  <div class="row text-center">
+    <div style="margin-top: 30px">
+      <div class="row">
+        <div class="panel panel-default" style="background-color: transparent; border-color: transparent;">
+          <div style="background-color: transparent; border-color: transparent" class="panel-heading ocultar"><h4 class="tit">Crea y resuelve la sopa de letras con palabras relacionadas a "<span id="tipo_sopa"></span>"</h4></div>
+          <hr>
+          <div class="panel-body">
+            <div class="row">
+              <div id="pal" class="col-md-3">
+                <h3>Palabras</h3>
+                <hr>
+                <div id='Palabras'>
+                 
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div id='juego' style="background-color: white"></div>
+              </div>
+              <div class="col-md-2">
+                <div class="opciones text-center">
+                  <h3 style="color: black">Opciones</h3>
+                  <hr>
+                  <button onclick="elegir();" class="btn btn-success btn-lg"> Crear Juego</button>
+                  <br>
+                  <button id='solve' class="btn btn-warning btn-lg" >  Resolver</button>
+                  <br>
+                  <button onclick="history.back();" class="btn btn-danger btn-lg"> Volver</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var words = [];
+        var gamePuzzle;
+        $(document).ready(function() {
+            elegir();
+        });
+
+        function elegir(){
+          Swal.fire({
+            title: 'Seleccione una Asignatura',
+            html: '<div class="row" style="overflow: hidden; padding-bottom: 20px">'+
+                    '<div class="col-md-6"><button onclick="Crear(1)" class="btn btn-success">Matematicas</button></div>'+
+                    '<div class="col-md-6"><button onclick="Crear(2)" class="btn btn-info">Naturales</button></div>'+
+                    '<div class="col-md-6"><button onclick="Crear(3)" class="btn btn-warning">Sociales</button></div>'+
+                    '<div class="col-md-6"><button onclick="Crear(4)" class="btn btn-primary">Castellano</button></div>'+
+                    '<div class="col-md-3"></div>'+
+                    '<div class="col-md-6"><button onclick="Crear(5)" class="btn btn-danger">Humanidades</button></div>'+
+                    '<div class="col-md-3"></div>'+
+                  '</div>',
+            icon: 'question',
+            showConfirmButton: false,
+          });
+        }
+
+        function Crear(tipo) {
+
+          swal.close();
+
+          var matematicas = ["suma","resta","multiplicacion","division","numeros","cuentas","calculo","ecuacion","formula","geometria","medida","angulo","perimetro","area","volumen","estadistica","probabilidad","grafico","tabla","datos","desigualdad","raiz","potencia","negativo","positivo","fraccion","decimal","porcentaje","unidad","variable","recta","circunferencia","triangulo","cuadrado","rectangulo","rombo","pentagono","hexagono","heptagono","octagono","paralelas","perpendiculares","poligono","coseno","seno","tangente","logaritmo","exponencial","funcion","grafica","matriz","determinante","vector","escalar"];
+          var naturales = ["naturaleza","ciencia","experimento","observacion","prediccion","clasificacion","animal","vegetal","hierbas","arboles", "flores","insectos","pajaros","mamiferos","reptiles","anfibios","peces","oceano","rio","lago","bosque","selva","desierto","montaña","ecosistema","habitat","alimentacion","adaptacion","extincion","genetica","hereditariedad","fotosintesis","clones","mutacion","atmosfera","clima","temperatura","precipitacion","viento","tierra","estructura","crusta","manto","nucleo","sismos","terremotos","erupciones","placas","rocas","minerales","petroleo","natural","carbon","energia","sol","planeta","sistema","galaxia","universo","estrella","nebulosa"];
+          var sociales = ["sociedad","cultura","historia","civilizacion","antigua","moderna","contemporanea","pais","nacion","estado","governo","democracia","dictadura","monarquia","republica","constitucion","derechos","justicia","ley","orden","delito","policia","juez","abogado","prision","rehabilitacion","economia","comercio","industria","recursos","trabajo","empleo","salario","impuestos","inflacion","deflacion","mercado","moneda","banco","credito","ahorro","inversion","tecnologia","informatica","internet","telecomunicaciones","transporte",,"reciclaje","contaminacion","proteccion","educacion","escuela","profesor","alumno","aprendizaje","tareas","examenes","notas","diploma","universidad","carrera","investigacion","arte","musica","teatro","literatura","cine","television"];
+          var lengua_castellana = ["palabra","frase", "oracion","verbo","sustantivo","adjetivo","pronombre","adverbio","preposicion","conjuncion","interjeccion","vocabulario","gramatica", "sintaxis", "puntuacion","letra","alfabeto", "silaba","ritmo", "sonido","acento","diccionario","significado","sinonimo","antonimo","ortografia","espacio","mayuscula","minuscula","narracion","descripcion", "dialogo","poema","cuento", "novela","ensayo","informe","redaccion","texto","escritura","lectura","comprension","memoria","imaginacion","creatividad","expresion","opinion","argumento","debate","discusion","charla","conversacion","entrevista","reunion","presentacion","lector","escritor","editor","libro","revista","periodico","carta","conjugar","mensaje","nota"];
+          var humanidades =  ["historia","arte","literatura","cultura","civilizacion","arqueologia","antiguedad","medieval","moderno","contemporaneo","artefacto","museo","exposicion","pintura","escultura","fotografia", "musica","danza","teatro","cine","libro","novela","poema","ensayo","dramaturgo","actor","director","musico","bailarin","compositor","filosofo","sociologo","antropologo", "psicologo", "economista","politico","ciudadano","derechos","justicia","igualdad","libertad","democracia","tolerancia","respeto","paz","solidaridad","cooperacion","amistad","familia","comunidad","tradicion","costumbre","valores","etica","moral","religion","fe","espiritualidad","filosofia","simbolo","mito","leyenda","cuento popular","arquitectura"]
+
+          var datos = [];
+          var tipo_letra = "";
+
+          switch (tipo) {
+            case 1:
+              datos = matematicas;
+              tipo_letra = "Matematicas";
+              break;
+            case 2:
+              datos = naturales;
+              tipo_letra = "Naturales";
+              break;
+            case 3:
+              datos = sociales;
+              tipo_letra = "Sociales";
+              break;
+            case 4:
+              datos = lengua_castellana;
+              tipo_letra = "Lengua Castellana";
+              break;
+            case 5:
+              datos = humanidades;
+              tipo_letra = "Humanidades";
+              break;
+            default:
+              break;
+          }
+
+          document.getElementById("tipo_sopa").innerHTML = tipo_letra;
+
+          datos = datos.sort(function() {return Math.random() - 0.5});
+
+          words = [];
+
+          for (i = 0; i < 10 ; i++) {
+            words.push(datos[i]);
+          }
+
+          $('#Juegos').show();
+          gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras');
+          var puzzle = wordfind.newPuzzle(words, { height: 18, width: 18, fillBlanks: false });
+          wordfind.print(puzzle);   
+        }
+
+        $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+      </script>
+    </div>
+  </div>
+</div>
+</body>
+</html>

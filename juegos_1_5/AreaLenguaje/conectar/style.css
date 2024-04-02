@@ -1,0 +1,50 @@
+.point {
+    width: 500px;
+    height: 70px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 13px;
+    border: 3px solid #662482;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+.point2 {
+    width: 300px;
+    height: 70px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 13px;
+    border: 3px solid #662482;
+    position: relative;
+    font-weight: bold;
+    color: #e83967;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    height:2px;
+    background-color: #4494d0;
+    transform-origin: left;
+    z-index: 0;
+}
+
+#columna1 {
+    position:absolute;
+    top:25px;
+    left:0px;
+    width:48%;
+    margin-top:10px;
+}
+
+#columna2 {
+    margin-left:65%;
+    margin-top:10px;
+}
+
+* {
+    margin:30px;
+    padding:0px;
+}

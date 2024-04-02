@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleJuego.css">
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="bootstrap/jquery.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <style>
+      .imagen_grado {
+        width: 180px; 
+        height: 180px; 
+        padding: 10px;
+        margin: 7px;
+        cursor: pointer;
+      }
+
+      #guardar_seleccion{
+        display: none;
+        transition: opacity 1.3s linear;
+      }
+
+      .imagen_flecha {
+        position: absolute;
+        height: 73px;
+        right: -59px;
+        top: 57px;
+        animation: animacion-img 1.5s infinite alternate;
+        transform: rotate(343deg);
+      }
+    </style>
+</head>
+<body style="overflow: hidden">
+  <div class="guardar_seleccion" id="guardar_seleccion" style="opacity: 0; z-index: 50; width: 100%; height: 100%; background-color: #000000d4; position: fixed; top: 0;">
+    <div style="position: absolute; right: 200px; top: 46px; text-align: center;">
+        <h2 style="font-weight: bold; color: white">Para cambiar el grado seleccionado<br> haga click en el siguiente botón</h2>
+        <img class="imagen_flecha" src="images/flecha.png" alt="">
+    </div>
+  </div>
+
+  <div style="text-align: center; width: 100%; position: absolute; top: 65px;">
+    <h2 class="borde">Juegos del grado <span id="grado"></span>º</h2>
+  </div>
+  <div class="container" style="margin-top: 0pt;">
+    <div class='menu'>
+      <input class='toggle' id='menu' type='checkbox'>
+      <label class='style box' for='menu' >
+        <i class="fa fa-bars" style="opacity: 0;" aria-hidden="true"></i>
+      </label>
+      <a class='tab' type="button" onclick="verJuegos('inicio.html?area=CN&')" >
+        <img style="width: 200px; height: 200px" src="images/primero.png" alt="">
+      </a>
+      <a class='tab' type="button" onclick="verJuegos('inicio.html?area=M&')">
+        <img style="width: 200px; height: 200px" src="images/segundo.png" alt="">
+      </a>
+      <a class='tab' type="button" onclick="verJuegos('inicio.html?area=LC&')">
+        <img style="width: 200px; height: 200px" src="images/cuarto.png" alt="">
+      </a>
+      <a class='tab'type="button" onclick="verJuegos('inicio.html?area=CS&')">
+        <img style="width: 200px; height: 200px" src="images/quinto.png" alt="">
+      </a>
+    </div><!-- menu -->
+  </div><!-- container -->   
+
+  <button  data-toggle="modal" data-target="#myModalGrados" class="btn btn-warning" style="border: 4px solid white; border-radius: 50%; width: 90px; height: 90px; position: absolute; right: 20px; top: 20px; z-index: 54;">
+    <i class="fas fa-graduation-cap fa-3x"></i>
+  </button>
+
+  <div class="modal fade" id="myModalGrados">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header text-center" style="display: block;" >
+          <h1 style="color: #dd265d;" class="modal-title">Selecciona un grado</h1>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body text-center">
+          <img onclick= 'ObtenerGrado(1)' class='imagen_grado' src='images/grados/primero.png' alt=''>
+          <img  onclick= 'ObtenerGrado(2)' class='imagen_grado' src='images/grados/segundo.png' alt=''>
+          <img  onclick= 'ObtenerGrado(3)' class='imagen_grado' src='images/grados/tercero.png' alt=''>
+          <img  onclick= 'ObtenerGrado(4)' class='imagen_grado' src='images/grados/cuarto.png' alt=''>
+          <img  onclick= 'ObtenerGrado(5)' class='imagen_grado' src='images/grados/quinto.png' alt=''>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var h2 = document.getElementById("grado");
+  var sParameterName = "1";
+  $(document).ready(function() {
+    sParameterName = localStorage.getItem('grado');
+    if (sParameterName == null) {
+      mostrarGuardar();
+      setTimeout(()=>{
+        $('#myModalGrados').modal({backdrop: 'static', keyboard: false})
+        $("#myModalGrados").modal("show");
+      }, 5000);
+    }else{
+      h2.innerText = sParameterName;
+    }
+  });
+
+  function ObtenerGrado(grado){
+    $("#myModalGrados").modal("hide");
+    sParameterName = grado;
+    localStorage.setItem('grado', grado);
+    h2.innerText = grado;
+    Swal.close();
+  }
+
+  function verJuegos(ruta){
+    let ruta_juegos = ruta+"grado="+sParameterName;
+    location.href = ruta_juegos;
+  }
+
+  function  mostrarGuardar(){
+    document.getElementById("guardar_seleccion").style.display = "block";
+    setTimeout(()=>{
+      document.getElementById("guardar_seleccion").style.opacity = 1;
+    }, 100)
+
+    setTimeout(()=>{
+      document.getElementById("guardar_seleccion").style.opacity = 0;
+      setTimeout(()=>{
+        document.getElementById("guardar_seleccion").style.display = "none";
+      }, 1300)
+    }, 4000)
+  }
+</script>
+</html>

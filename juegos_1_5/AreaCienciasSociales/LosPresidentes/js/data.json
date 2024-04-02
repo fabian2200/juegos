@@ -1,0 +1,226 @@
+[
+    {
+        "nombre": "Simón Bolívar",
+        "periodo": "1819-1830"
+    },
+    {
+        "nombre": "Francisco de Paula Santander",
+        "periodo": "1832-1837"
+    },
+    {
+        "nombre": "José Ignacio de Márquez Barreto",
+        "periodo": "1837-1841"
+    },
+    {
+        "nombre": "Pedro Alcántara Herrán",
+        "periodo": "1841-1845"
+    },
+    {
+        "nombre": "Tomás Cipriano de Mosquera",
+        "periodo": "1845-1849"
+    },
+    {
+        "nombre": "Tomás Cipriano de Mosquera",
+        "periodo": "1862-1863"
+    },
+    {
+        "nombre": "José Hidalgo López",
+        "periodo": "1849-1853"
+    },
+    {
+        "nombre": "José María Obando del Campo",
+        "periodo": "1853-1854"
+    },
+    {
+        "nombre": "Manuel María Mallarino",
+        "periodo": "1855-1857"
+    },
+    {
+        "nombre": "Mariano Ospina Rodríguez",
+        "periodo": "1857-1861"
+    },
+    {
+        "nombre": "Manuel Murillo Toro",
+        "periodo": "1864-1866"
+    },
+    {
+        "nombre": "Manuel Murillo Toro",
+        "periodo": "1872-1874"
+    },
+    {
+        "nombre": "Eustorgio Salgar",
+        "periodo": "1870-1872"
+    },
+    {
+        "nombre": "Santiago Pérez de Manosalbas",
+        "periodo": "1874-1876"
+    },
+    {
+        "nombre": "Aquileo Parra Gómez",
+        "periodo": "1876-1878"
+    },
+    {
+        "nombre": "Rafael Núñez Moledo",
+        "periodo": "1880-1882"
+    },
+    {
+        "nombre": "Francisco Javier Zaldúa y Racines",
+        "periodo": "1882-1884"
+    },
+    {
+        "nombre": "Rafael Núñez Moledo",
+        "periodo": "1884-1886"
+    },
+    {
+        "nombre": "Rafael Núñez Moledo",
+        "periodo": "1888-1892"
+    },
+    {
+        "nombre": "Miguel Antonio Caro Tovar",
+        "periodo": "1892-1898"
+    },
+    {
+        "nombre": "Manuel Antonio Sanclemente",
+        "periodo": "1898-1900"
+    },
+    {
+        "nombre": "José Manuel Marroquín ricaurte",
+        "periodo": "1900-1904"
+    },
+    {
+        "nombre": "Rafael Reyes prieto",
+        "periodo": "1904-1909"
+    },
+    {
+        "nombre": "Ramón González Valencia",
+        "periodo": "1909-1910"
+    },
+    {
+        "nombre": "Carlos Eugenio Restrepo",
+        "periodo": "1910-1914"
+    },
+    {
+        "nombre": "José Vicente Concha",
+        "periodo": "1914-1918"
+    },
+    {
+        "nombre": "Marco Fidel Suárez",
+        "periodo": "1918-1921"
+    },
+    {
+        "nombre": "Jorge Holguín Mallarino",
+        "periodo": "1921-1922"
+    },
+    {
+        "nombre": "Pedro Nel Ospina Vásquez",
+        "periodo": "1922-1926"
+    },
+    {
+        "nombre": "Miguel Abadía Méndez",
+        "periodo": "1926-1930"
+    },
+    {
+        "nombre": "Enrique Olaya Herrera",
+        "periodo": "1930-1934"
+    },
+    {
+        "nombre": "Alfonso López Pumarejo",
+        "periodo": "1934-1938"
+    },
+    {
+        "nombre": "Eduardo Santos",
+        "periodo": "1938-1942"
+    },
+    {
+        "nombre": "Alfonso López Pumarejo",
+        "periodo": "1942-1945"
+    },
+    {
+        "nombre": "Alberto Lleras Camargo",
+        "periodo": "1945-1946"
+    },
+    {
+        "nombre": "Mariano Ospina Pérez",
+        "periodo": "1946-1950"
+    },
+    {
+        "nombre": "Laureano Gómez Castro",
+        "periodo": "1950-1951"
+    },
+    {
+        "nombre": "Roberto Urdaneta Arbelaéz",
+        "periodo": "1951-1953"
+    },
+    {
+        "nombre": "Gustavo Rojas Pinilla",
+        "periodo": "1953-1957"
+    },
+    {
+        "nombre": "Alberto Lleras Camargo",
+        "periodo": "1958-1962"
+    },
+    {
+        "nombre": "Guillermo León Valencia",
+        "periodo": "1962-1966"
+    },
+    {
+        "nombre": "Carlos Lleras Restrepo",
+        "periodo": "1966-1970"
+    },
+    {
+        "nombre": "Misael EDUARDO PASTRANA BORRERO",
+        "periodo": "1970-1974"
+    },
+    {
+        "nombre": "Alfonso López Michelsen",
+        "periodo": "1974-1978"
+    },
+    {
+        "nombre": "Julio César Turbay Ayala",
+        "periodo": "1978-1982"
+    },
+    {
+        "nombre": "Belisario Betancur Cuartas",
+        "periodo": "1982-1986"
+    },
+    {
+        "nombre": "Virgilio Barco Vargas",
+        "periodo": "1986-1990"
+    },
+    {
+        "nombre": "César AUGUSTO GAVIRIA TRUJILLO",
+        "periodo": "1990-1994"
+    },
+    {
+        "nombre": "Ernesto Samper Pizano",
+        "periodo": "1994-1998"
+    },
+    {
+        "nombre": "Andrés Pastrana Arango",
+        "periodo": "1998-2002"
+    },
+    {
+        "nombre": "Álvaro Uribe Vélez",
+        "periodo": "2002-2010"
+    },
+    {
+        "nombre": "Juan Manuel Santos CALDERÓN",
+        "periodo": "2010-2018"
+    },
+    {
+        "nombre": "Iván Duque Márquez",
+        "periodo": "2018-2022"
+    },
+    {
+        "nombre": "Gustavo Petro Urrego",
+        "periodo": "2022-2026"
+    },
+    {
+      "nombre": "Rafael José Urdaneta",
+      "periodo": "1830-1831"
+    },
+    {
+      "nombre": "Julián Trujillo Largacha",
+      "periodo": "1878-1880"
+    }
+]

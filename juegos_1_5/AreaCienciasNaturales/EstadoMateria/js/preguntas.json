@@ -1,0 +1,297 @@
+var imagenes = new Array(
+    ["img/1.png", "1"],
+    ["img/2.png", "2"],
+    ["img/3.png", "3"],
+    ["img/4.png", "4"],
+    ["img/5.png", "5"],
+    ["img/6.png", "5"]
+);
+let curImage = 0;
+var img = "";
+var dad1;
+var dad2;
+function lanzarDados() {
+    rotarImagenes();
+    setTimeout(() => {
+        rotarImagenes();
+    }, 1000);
+}
+
+function rotarImagenes() {
+    // cambiamos la imagen y el alt
+
+    const imagen = document.getElementById("dado1_1");
+    const imagen2 = document.getElementById("dado1_2");
+    imagen.style.opacity = "1";
+    var dad1 = Math.floor(Math.random() * 6);
+    var dad2 = Math.floor(Math.random() * 6);
+    setTimeout(() => {
+        //imagen1
+{
+  "preguntas": [
+    {
+      "pregunta": "¿Cuáles son los tres estados fundamentales de la materia?",
+      "opciones": [
+        {"opcion": "Sólido, líquido y gaseoso", "correcta": true},
+        {"opcion": "Sólido, líquido y plasma", "correcta": false},
+        {"opcion": "Líquido, gaseoso y plasma", "correcta": false},
+        {"opcion": "Sólido, líquido y sólido amorfo", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué objetos están en estado sólido según el texto?",
+      "opciones": [
+        {"opcion": "Hielo y roca", "correcta": true},
+        {"opcion": "Agua de un lago y aceite", "correcta": false},
+        {"opcion": "Aire encerrado en un globo y burbujas de gaseosas", "correcta": false},
+        {"opcion": "Todos los anteriores", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cómo adoptan los líquidos su forma?",
+      "opciones": [
+        {"opcion": "Tienen una forma propia", "correcta": false},
+        {"opcion": "Adoptan la forma del recipiente que los contiene", "correcta": true},
+        {"opcion": "Siempre tienen la misma forma", "correcta": false},
+        {"opcion": "Pueden adoptar cualquier forma", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cómo adoptan los líquidos su forma?",
+      "opciones": [
+        {"opcion": "Tienen una forma propia", "correcta": false},
+        {"opcion": "Adoptan la forma del recipiente que los contiene", "correcta": true},
+        {"opcion": "Siempre tienen la misma forma", "correcta": false},
+        {"opcion": "Pueden adoptar cualquier forma", "correcta": false}
+      ]
+    },
+     {
+      "pregunta": "¿Cuál es la propiedad de los gases que permite comprimirlos?",
+      "opciones": [
+        {"opcion": "Tienen volumen propio", "correcta": false},
+        {"opcion": "Tienen forma propia", "correcta": false},
+        {"opcion": "No tienen forma ni volumen propios", "correcta": false},
+        {"opcion": "Son compresibles", "correcta": true}
+      ]
+    },
+     {
+      "pregunta": "¿Qué sucede con el volumen de un gas cuando se lo comprime?",
+      "opciones": [
+        {"opcion": "Aumenta", "correcta": false},
+        {"opcion": "Permanece constante", "correcta": false},
+        {"opcion": "Disminuye", "correcta": true},
+        {"opcion": "Depende del gas en cuestión", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué propiedad comparten los cuerpos sólidos y líquidos?",
+      "opciones": [
+        {"opcion": "Son fáciles de comprimir", "correcta": false},
+        {"opcion": "Tienen forma propia", "correcta": true},
+        {"opcion": "No tienen volumen propio", "correcta": false},
+        {"opcion": "Tienen volumen y forma propios", "correcta": false}
+      ]
+    },
+    {
+
+
+"pregunta": "¿Cuál de los siguientes estados de la materia tiene forma y volumen propios?",
+"opciones": [
+{"opcion": "Estado sólido", "correcta": true},
+{"opcion": "Estado líquido", "correcta": false},
+{"opcion": "Estado gaseoso", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál de los siguientes cuerpos está en estado líquido?",
+"opciones": [
+{"opcion": "El hielo", "correcta": false},
+{"opcion": "El agua de un lago", "correcta": true},
+{"opcion": "El aire encerrado dentro de un globo", "correcta": false}
+]
+},
+{
+"pregunta": "¿Cuál de los siguientes estados de la materia tiene volumen propio pero no forma propia?",
+"opciones": [
+{"opcion": "Estado sólido", "correcta": false},
+{"opcion": "Estado líquido", "correcta": false},
+{"opcion": "Estado gaseoso", "correcta": true}
+]
+},
+  {
+"pregunta": "¿Cuál de los siguientes cuerpos está en estado gaseoso?",
+"opciones": [
+{"opcion": "El aceite con el que cocinamos", "correcta": false},
+{"opcion": "El aire encerrado dentro de un globo", "correcta": true},
+{"opcion": "El hielo", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál de las siguientes afirmaciones es cierta acerca de los cuerpos líquidos?",
+"opciones": [
+{"opcion": "Tienen forma y volumen propios", "correcta": false},
+{"opcion": "Tienen volumen propio pero no forma propia", "correcta": true},
+{"opcion": "No tienen ni forma ni volumen propios", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál de las siguientes afirmaciones es cierta acerca de los cuerpos sólidos?",
+"opciones": [
+{"opcion": "Tienen forma y volumen propios", "correcta": true},
+{"opcion": "Tienen volumen propio pero no forma propia", "correcta": false},
+{"opcion": "No tienen ni forma ni volumen propios", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál de las siguientes afirmaciones es cierta acerca de los cuerpos sólidos?",
+"opciones": [
+{"opcion": "Tienen forma y volumen propios", "correcta": true},
+{"opcion": "Tienen volumen propio pero no forma propia", "correcta": false},
+{"opcion": "No tienen ni forma ni volumen propios", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál de los siguientes cuerpos es difícil de comprimir?",
+"opciones": [
+{"opcion": "El hielo", "correcta": true},
+{"opcion": "El agua de un lago", "correcta": true},
+{"opcion": "El aire encerrado dentro de un globo", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál es uno de los estados fundamentales de la materia?",
+"opciones": [
+{"opcion": "Plasma", "correcta": false},
+{"opcion": "Líquido", "correcta": true},
+{"opcion": "Superfluido", "correcta": false},
+{"opcion": "Cristal líquido", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Qué es el estado sólido?",
+"opciones": [
+{"opcion": "Un estado en el que los cuerpos tienen volumen propio, pero no forma definida", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos tienen forma y volumen propios", "correcta": true},
+{"opcion": "Un estado en el que los cuerpos no tienen forma ni volumen propios", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen volumen propio, pero sí forma definida", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Qué sucede con la forma de los líquidos?",
+"opciones": [
+{"opcion": "Adoptan la forma del recipiente que los contiene", "correcta": true},
+{"opcion": "Mantienen la misma forma aunque se cambie de recipiente", "correcta": false},
+{"opcion": "No tienen forma definida", "correcta": false},
+{"opcion": "Adoptan la forma de su entorno", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Qué es el estado gaseoso?",
+"opciones": [
+{"opcion": "Un estado en el que los cuerpos tienen volumen propio, pero no forma definida", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen forma ni volumen propios", "correcta": true},
+{"opcion": "Un estado en el que los cuerpos tienen forma y volumen propios", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen volumen propio, pero sí forma definida", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál es uno de los estados fundamentales de la materia?",
+"opciones": [
+{"opcion": "Plasma", "correcta": false},
+{"opcion": "Líquido", "correcta": true},
+{"opcion": "Superfluido", "correcta": false},
+{"opcion": "Cristal líquido", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué es el estado sólido?",
+"opciones": [
+{"opcion": "Un estado en el que los cuerpos tienen volumen propio, pero no forma definida", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos tienen forma y volumen propios", "correcta": true},
+{"opcion": "Un estado en el que los cuerpos no tienen forma ni volumen propios", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen volumen propio, pero sí forma definida", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué sucede con la forma de los líquidos?",
+"opciones": [
+{"opcion": "Adoptan la forma del recipiente que los contiene", "correcta": true},
+{"opcion": "Mantienen la misma forma aunque se cambie de recipiente", "correcta": false},
+{"opcion": "No tienen forma definida", "correcta": false},
+{"opcion": "Adoptan la forma de su entorno", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué es el estado gaseoso?",
+"opciones": [
+{"opcion": "Un estado en el que los cuerpos tienen volumen propio, pero no forma definida", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen forma ni volumen propios", "correcta": true},
+{"opcion": "Un estado en el que los cuerpos tienen forma y volumen propios", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen volumen propio, pero sí forma definida", "correcta": false}
+]
+},
+{
+"pregunta": "¿Cómo se comportan los gases cuando se los presiona o comprime?",
+"opciones": [
+{"opcion": "Su forma cambia, pero su volumen no", "correcta": false},
+{"opcion": "Su volumen se reduce", "correcta": true},
+{"opcion": "Se transforman en un estado líquido", "correcta": false},
+{"opcion": "Se expanden", "correcta": false}
+]
+},
+  {
+"pregunta": "¿Cuál es uno de los estados fundamentales de la materia?",
+"opciones": [
+{"opcion": "Plasma", "correcta": false},
+{"opcion": "Líquido", "correcta": true},
+{"opcion": "Superfluido", "correcta": false},
+{"opcion": "Cristal líquido", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué es el estado sólido?",
+"opciones": [
+{"opcion": "Un estado en el que los cuerpos tienen volumen propio, pero no forma definida", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos tienen forma y volumen propios", "correcta": true},
+{"opcion": "Un estado en el que los cuerpos no tienen forma ni volumen propios", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen volumen propio, pero sí forma definida", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué sucede con la forma de los líquidos?",
+"opciones": [
+{"opcion": "Adoptan la forma del recipiente que los contiene", "correcta": true},
+{"opcion": "Mantienen la misma forma aunque se cambie de recipiente", "correcta": false},
+{"opcion": "No tienen forma definida", "correcta": false},
+{"opcion": "Adoptan la forma de su entorno", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué es el estado gaseoso?",
+"opciones": [
+{"opcion": "Un estado en el que los cuerpos tienen volumen propio, pero no forma definida", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen forma ni volumen propios", "correcta": true},
+{"opcion": "Un estado en el que los cuerpos tienen forma y volumen propios", "correcta": false},
+{"opcion": "Un estado en el que los cuerpos no tienen volumen propio, pero sí forma definida", "correcta": false}
+]
+},
+{
+"pregunta": "¿Cómo se comportan los gases cuando se los presiona o comprime?",
+"opciones": [
+{"opcion": "Su forma cambia, pero su volumen no", "correcta": false},
+{"opcion": "Su volumen se reduce", "correcta": true},
+{"opcion": "Se transforman en un estado líquido", "correcta": false},
+{"opcion": "Se expanden", "correcta": false}
+]
+},
+{
+"pregunta": "¿Qué sucede con los gases cuando no están contenidos en un recipiente?",
+"opciones": [
+{"opcion": "Ocupan un volumen definido", "correcta": false},
+{"opcion": "Ocupan el mayor espacio posible", "correcta": true},
+{"opcion": "Adoptan la forma del recipiente que los contiene", "correcta": false},
+{"opcion": "No pueden existir sin estar contenidos en un recipiente", "correcta": false}
+]
+}
+]
+}

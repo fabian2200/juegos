@@ -1,0 +1,174 @@
+[
+  {
+    "pregunta": "¿Cuál de las siguientes no es una propiedad física de la materia?",
+    "opciones": [
+      {"opcion": "Punto de fusión", "correcta": false},
+      {"opcion": "Solubilidad", "correcta": true},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Reactividad", "correcta": false}
+    ],
+    "imagen": "images/prueba.png"
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades no puede ser observada sin cambiar la identidad de la sustancia?",
+    "opciones": [
+      {"opcion": "Punto de ebullición", "correcta": false},
+      {"opcion": "Color", "correcta": false},
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Comportamiento químico", "correcta": true}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades es una propiedad intensiva de la materia?",
+    "opciones": [
+      {"opcion": "Volumen", "correcta": false},
+      {"opcion": "Densidad", "correcta": true},
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Punto de ebullición", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes no es una propiedad química de la materia?",
+    "opciones": [
+      {"opcion": "Combustibilidad", "correcta": true},
+      {"opcion": "Reactividad", "correcta": false},
+      {"opcion": "Punto de fusión", "correcta": false},
+      {"opcion": "Inestabilidad", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades es una propiedad extensiva de la materia?",
+    "opciones": [
+      {"opcion": "Dureza", "correcta": false},
+      {"opcion": "Densidad", "correcta": true},
+      {"opcion": "Temperatura de ebullición", "correcta": false},
+      {"opcion": "Viscosidad", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué propiedad de la materia se refiere a la cantidad de materia que contiene un objeto?",
+    "opciones": [
+      {"opcion": "Masa", "correcta": true},
+      {"opcion": "Volumen", "correcta": false},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Peso", "correcta": false}
+    ]
+  },{
+    "pregunta": "¿Qué propiedad de la materia se refiere a la facilidad con la que un líquido fluye?",
+    "opciones": [
+      {"opcion": "Viscosidad", "correcta": true},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Punto de fusión", "correcta": false},
+      {"opcion": "Punto de ebullición", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué propiedad de la materia se refiere a la cantidad de espacio que ocupa un objeto?",
+    "opciones": [
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Volumen", "correcta": true},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Peso", "correcta": false}
+    ]
+  },
+  
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades es una propiedad física y química de la materia?",
+    "opciones": [
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Solubilidad", "correcta": true},
+      {"opcion": "Punto de ebullición", "correcta": false},
+      {"opcion": "Reactividad", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades puede ser observada sin cambiar la identidad de la sustancia?",
+    "opciones": [
+      {"opcion": "Comportamiento químico", "correcta": false},
+      {"opcion": "Punto de fusión", "correcta": true},
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Color", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades es una propiedad intensiva de la materia?",
+    "opciones": [
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Dureza", "correcta": false},
+      {"opcion": "Punto de fusión", "correcta": true},
+      {"opcion": "Volumen", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades es una propiedad extensiva de la materia?",
+    "opciones": [
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Temperatura de ebullición", "correcta": true},
+      {"opcion": "Viscosidad", "correcta": false},
+      {"opcion": "Punto de fusión", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué propiedad de la materia se refiere a la resistencia de un objeto a cambiar su forma?",
+    "opciones": [
+      {"opcion": "Dureza", "correcta": false},
+      {"opcion": "Viscosidad", "correcta": false},
+      {"opcion": "Elasticidad", "correcta": true},
+      {"opcion": "Reactividad", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades puede ser usada para identificar una sustancia química?",
+    "opciones": [
+      {"opcion": "Punto de fusión", "correcta": true},
+      {"opcion": "Viscosidad", "correcta": false},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Comportamiento químico", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades puede variar según la cantidad de materia presente?",
+    "opciones": [
+      {"opcion": "Punto de ebullición", "correcta": false},
+      {"opcion": "Dureza", "correcta": false},
+      {"opcion": "Masa", "correcta": true},
+      {"opcion": "Solubilidad", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué propiedad de la materia se refiere a la capacidad de un objeto de disolverse en un líquido?",
+    "opciones": [
+      {"opcion": "Punto de fusión", "correcta": false},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Solubilidad", "correcta": true},
+      {"opcion": "Reactividad", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes propiedades puede variar dependiendo de la temperatura y la presión?",
+    "opciones": [
+      {"opcion": "Densidad", "correcta": true},
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Punto de ebullición", "correcta": false},
+      {"opcion": "Dureza", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué propiedad de la materia se refiere a la cantidad de materia que está presente en un objeto?",
+    "opciones": [
+      {"opcion": "Peso", "correcta": false},
+      {"opcion": "Masa", "correcta": true},
+      {"opcion": "Densidad", "correcta": false},
+      {"opcion": "Volumen", "correcta": false}
+    ]
+  },
+  {
+    "pregunta": "¿Qué propiedad de la materia se refiere a la cantidad de materia por unidad de volumen?",
+    "opciones": [
+      {"opcion": "Densidad", "correcta": true},
+      {"opcion": "Masa", "correcta": false},
+      {"opcion": "Peso", "correcta": false},
+      {"opcion": "Volumen", "correcta": false}
+    ]
+  }
+]  

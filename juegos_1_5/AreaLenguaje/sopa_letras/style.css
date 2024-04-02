@@ -1,0 +1,146 @@
+/**
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+*/
+body{
+	background: url(../portadas/sopa_letras.png);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 100vh;
+	text-align: center;
+	color: #262626;
+}
+
+p {
+  font: 22pt sans-serif;
+  margin: 20px 20px 0px 20px;
+}
+
+/**
+* Styles for the puzzle
+*/
+#juego {
+  border: 1px solid black;
+  padding: 20px;
+  float: left;
+  margin: 0px 20px;
+  border-radius: 10px !important;
+}
+
+#juego div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* style for each square in the puzzle */
+#juego .puzzleSquare {
+  height: 33px;
+  width: 33px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 1em sans-serif;
+  font-size: 18px;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicates when a square has been selected */
+#juego .selected {
+  background-color: orange;
+}
+
+/* indicates that the square is part of a word that has been found */ 
+#juego .found {
+  background-color: blue;
+  color: white;
+}
+
+#juego .solved {
+  background-color: purple;
+  color: white;
+}
+
+/* indicates that all words have been found */
+#juego .complete {
+  background-color: green;
+}
+
+
+#Palabras {
+  padding-top: 10px;
+}
+#Palabras ul {
+  list-style-type: none;
+}
+
+#Palabras li {
+  padding: 3px 0;
+  font: 1em sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* indicates that the word has been found */
+#Palabras .wordFound {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.swal2-html-container {
+  overflow: hidden;
+}
+
+.col-md-6 {
+  padding-top: 10px;
+}
+
+.col-md-6 button {
+  width: 100% !important;
+}
+
+.opciones button {
+  width: 130px;
+  font-size: 14px !important;
+  padding: 5px !important;
+  margin-bottom: 6px !important;
+  border-radius: 15px !important;
+}
+
+.opciones{
+  width: 100%;
+  padding: 19px;
+  padding-top: 10px !important;
+  background-color: #7dcdcb;
+  border-radius: 10px;
+}
+
+#pal{
+  padding: 19px;
+  padding-top: 10px !important;
+  background-color: #a7d165;
+  border-radius: 10px;
+}
+
+#Palabras ul {
+  padding-left: 0px;
+}
+
+.tit {
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 3px 3px 5px #ffffff;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: inherit;
+  color: #6e296f;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Juego de preguntas con imágenes de lugares</title>
+
+        <link rel="stylesheet" href="../../bootstrap/all.css">
+        <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+        <script src="../../bootstrap/jquery.min.js"></script>
+        <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+        <script src="../../bootstrap/sweetalert.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="principal">
+            <div class="row text-center" style="margin-top: 20px;">
+                <div class="col-10" style="display: flex;align-items: center;justify-content: center;">
+                    <h1 class="borde3" style="color: #e23564;" id="categoria"></h1>
+                </div>
+                <div class="col-2">
+                    <button onclick="history.back()" class="btn btn-danger">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <br>
+
+            <div id="opcion1" style="display: none; margin-top: 52px;" class="row">
+                <div class="col-12 text-center">
+                    <div class="centra-habitad">
+                        <div id="pisoTermicoCat1">
+                            <div id="puntoCat1_1" class="puntoCate1">
+                                <li data-id="nieve" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="puntoCat1_2" class="puntoCate1">
+                                <li data-id="paramo" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="puntoCat1_3" class="puntoCate1">
+                                <li data-id="frio" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="puntoCat1_4" class="puntoCate1">
+                                <li data-id="templado" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+                            <div id="puntoCat1_5" class="puntoCate1">
+                                <li data-id="calido" class="fa-solid fa-bullseye" aria-hidden="true"></li>
+                            </div>
+
+                            <div id="pisorTermicoCat1"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="opcion2" class="row" style="display: none;  margin-top: 52px;">
+                <div class="col-12 text-center">
+                    <div class="centra-habitad">
+                        <div id="pisoTermicoCat2">
+                            <div id="puntoCat2_1" class="puntoCate2">
+                                <li data-id="nieve" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_2" class="puntoCate2">
+                                <li data-id="nieve" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_3" class="puntoCate2">
+                                <li data-id="paramo" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_4" class="puntoCate2">
+                                <li data-id="paramo" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_5" class="puntoCate2">
+                                <li data-id="frio" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_6" class="puntoCate2">
+                                <li data-id="frio" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_7" class="puntoCate2">
+                                <li data-id="templado" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_8" class="puntoCate2">
+                                <li data-id="templado" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_9" class="puntoCate2">
+                                <li data-id="calido" class="fa-solid fa-bullseye"></li>
+                            </div>
+                            <div id="puntoCat2_10" class="puntoCate2">
+                                <li data-id="calido" class="fa-solid fa-bullseye"></li>
+                            </div>
+
+                            <div id="pisorTermicoCat2"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="divGenio">
+                <img width="300" id="img-mascota" src="../../images/pensando.gif"></div>
+        </div>
+
+        
+    
+    <div style="display: none" class="overlay">
+        <div class="nube">
+            <p class="borde2" id="bienvenida"></p>
+        </div>
+        <div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;">
+            <button onclick="cerrar_anuncio()" id="btnomitir"  class="btn btn-warning" style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+    </div>
+  
+    <div style="display: none; background-color: rgba(255, 255, 255, 0.664); width: 100%; height: 100%; position: fixed; z-index: 100;" id="fondo_blanco"></div>
+  
+    <div style="display: none; text-align: center;" id="final" class="final">
+        <h1 style="font-size: 25pt; padding-top: 24%" class="borde2" id="texto_final"></h1>
+        <hr>
+        <div class="row">
+            <div class="col-12" style="padding-bottom: 10pt">
+                <h1 style="font-size: 25pt;" class="borde2">¿Quieres jugar nuevamente?</h1>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3 text-center">
+                <button style="width: 80%;border-radius: 20pt;" onclick="window.location.reload(1)" class="btn btn-success">Si, jugar</button>
+            </div>
+            <div class="col-3 text-center">
+                <button style="width: 80%; border-radius: 20pt;" onclick="history.back()" class="btn btn-danger">No, salir</button>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+  
+
+        <script src="game.js"></script>
+    </body>
+</html></body></html>

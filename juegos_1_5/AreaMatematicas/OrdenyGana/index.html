@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap/all.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <script src="../../bootstrap/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+    <script src="../../bootstrap/sweetalert.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    </link>
+</head>
+
+<body>
+    <div style="display: none" class="overlay">
+        <div class="nube">
+            <p class="borde2" id="bienvenida"></p>
+        </div>
+        <div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;">
+            <button onclick="cerrar_anuncio()" id="btnomitir"  class="btn btn-warning"
+                style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i
+                    style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div style="display: none; background-color: rgba(255, 255, 255, 0.664); width: 100%; height: 100%; position: fixed; z-index: 100;"
+        id="fondo_blanco">
+
+    </div>
+
+    <div style="display: none; text-align: center;" id="final" class="final">
+        <h1 style="font-size: 25pt; padding-top: 326pt; padding-bottom: 0px;" class="borde2" id="texto_final"></h1>
+        <hr>
+        <div class="row">
+            <div class="col-12" style="padding-bottom: 0pt; margin-top: 0px;">
+                <h1 style="font-size: 25pt; padding: 12px;" class="borde2">¿Quieres jugar nuevamente?</h1>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3 text-center">
+                <button style="width: 80%;border-radius: 20pt; font-size: 23px;" onclick="window.location.reload(1)"
+                    class="btn btn-success">Si, jugar</button>
+            </div>
+            <div class="col-3 text-center">
+                <button style="width: 80%; border-radius: 20pt; font-size: 23px;" onclick="history.back()"
+                    class="btn btn-danger">No,
+                    salir</button>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <div id="principal" class="container" style="padding-top: 100px; max-width: 1250px !important;">
+        <div class="row" style="padding-left: 110px;padding-right: 45px;">
+            <div class="col-lg-12">
+                <div class="card" style="background-color: transparent; border: none">
+                    <div class="row">
+                        <div class="col-10">
+                            <h2 style="background-color: transparent; border: none; padding-left: 58pt !important;"
+                                class="card-header">Ordene los numeros de Mayor a Menor</h2>
+                        </div>
+                        <div class="col-1">
+                            <button onclick="history.back()" class="btn btn-danger"><i class="fa fa-arrow-left"
+                                    aria-hidden="true"></i></button>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="card-body">
+                        <p style="padding-left: 76pt;" class="sub">Mueve los elementos al lugar correspondiente</p>
+                        <br>
+                        <div style="padding-left: 38pt;" class="row sortable">
+                            <div class="data cursorImg" data-id="1">
+                                <img src="img/1.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="2">
+                                <img src="img/2.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="3">
+                                <img src="img/3.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="4">
+                                <img src="img/4.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="5">
+                                <img src="img/5.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="6">
+                                <img src="img/6.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="7">
+                                <img src="img/7.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="8">
+                                <img src="img/8.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="9">
+                                <img src="img/9.png" height="115px" alt="">
+                            </div>
+                            <div class="data cursorImg" data-id="10">
+                                <img src="img/10.png" width="144px" height="115px" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Sortable.min.js"></script>
+    <script>
+
+        var items = document.querySelector('.sortable');
+        Sortable.create(items, {
+            animation: 150,
+            chosenClass: "chosen",
+            ghostClass: "ghost",
+            dragClass: "drag",
+            onEnd: () => {
+                let orden_correcto = ['10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
+                let orden = document.getElementsByClassName("data");
+                let orden_actual = [];
+                for (let index = 0; index < orden.length; index++) {
+                    const element = orden[index];
+                    let id = element.dataset.id
+                    orden_actual.push(id);
+                }
+
+                if (orden_correcto.toString() === orden_actual.toString()) {
+                    $('#principal').fadeToggle(500);
+                    setTimeout(() => {
+                        $('#final').fadeToggle(1000);
+                    }, 500)
+
+                    document.getElementById("final").style.backgroundImage = "url(../../images/victoria.gif)";
+
+                    document.getElementById("texto_final").innerText = "Felicitaciones, lo has logrado"
+
+                    var audio = new Audio('../../sounds/victory.mp3');
+                    audio.play();
+                }
+            },
+            group: "cards",
+            store: {
+                set: (sortable) => {
+                    const orden = sortable.toArray();
+                },
+                //obtener orden de la lista
+                get: (sortable) => {
+                    let orden = ['10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
+                    orden = orden.sort(function () { return Math.random() - 0.5 });
+                    return orden;
+                }
+            }
+        });
+
+        $(document).ready(function () {
+            
+            setTimeout(() => {
+                $('#principal').fadeToggle(1000);
+                $('#fondo_blanco').fadeToggle(3000);
+                setTimeout(() => {
+                    const divAnimado = document.querySelector('.overlay');
+                    divAnimado.style.animationName = 'moverDerecha';
+                    divAnimado.style.animationDirection = 'normal';
+                    divAnimado.style.display = 'block';
+                    setTimeout(() => {
+                        const divAnimado2 = document.querySelector('.nube');
+                        divAnimado2.style.animationName = 'moverArriba';
+                        divAnimado2.style.animationDirection = 'normal';
+                        divAnimado2.style.display = 'block';
+                        setTimeout(() => {
+                            divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
+                            maquina2("bienvenida", 'Hola, soy Genio. <br> Ordena los numeros de menor a mayor para ganar. <br> ¡eres un ganador!', 50, 1);
+                        }, 3000)
+                    }, 2000)
+                })
+            }, 200)
+        });
+
+        function maquina2(contenedor, texto, intervalo, n) {
+            var i = 0,
+                // Creamos el timer
+                timer = setInterval(function () {
+                    if (i < texto.length) {
+                        // Si NO hemos llegado al final del texto..
+                        // Vamos añadiendo letra por letra y la _ al final.
+                        $("#" + contenedor).html(texto.substr(0, i++) + "_");
+                    } else {
+                        // En caso contrario..
+                        // Salimos del Timer y quitamos la barra baja (_)
+                        clearInterval(timer);
+                        $("#" + contenedor).html(texto);
+                        if (!cerrardo) {
+                            document.querySelector('#btnomitir').style.display = "none";
+                            setTimeout(() => {
+                                cerrar_anuncio();
+                            }, 3000)
+                        }
+                        // Auto invocamos la rutina n veces (0 para infinito)
+                        if (--n != 0) {
+                            setTimeout(function () {
+                                maquina2(contenedor, texto, intervalo, n);
+                            }, 3600);
+                        }
+                    }
+                }, intervalo);
+        }
+
+        let cerrardo = false;
+        function cerrar_anuncio() {
+            if(!cerrardo){
+                let audio2 = new Audio('../../sounds/fondo.mp3');
+                audio2.play();
+                audio2.volume = 0.2;
+
+                let audio = new Audio('../../sounds/ordenar_numeros.mp3');
+                audio.play();
+
+                
+                cerrardo = true;
+                const divAnimado2 = document.querySelector('.nube');
+                divAnimado2.style.animationName = 'moverabajo';
+                const divAnimado = document.querySelector('.overlay');
+                divAnimado.style.backgroundImage = "url(../../images/normal1.gif)";
+                $('#fondo_blanco').fadeToggle(3000);
+                setTimeout(function () {
+                    divAnimado.style.animationName = 'moverIzquierda';
+                    divAnimado.style.animationDirection = 'normal';
+                    setTimeout(() => {
+                        $('#principal').fadeToggle(1000);
+                    }, 2000)
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+
+</html>
