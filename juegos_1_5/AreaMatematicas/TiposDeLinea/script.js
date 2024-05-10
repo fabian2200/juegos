@@ -63,7 +63,7 @@ const drop = (e) => {
         //Insert new img element
         currentDrop[1].insertAdjacentHTML(
           "afterbegin",
-          `<img class='img_drag' style='height: 131pt; width: 128pt; position: absolute; top: 58px;' src="bb.png">`
+          `<img class='img_drag' style='height: 100pt; width: 118pt; position: absolute; top: 48px;' src="bb.png">`
         ); 
         cont++;
         correctas++;
@@ -72,7 +72,7 @@ const drop = (e) => {
         currentDrop[1].innerHTML = ``;
         currentDrop[1].insertAdjacentHTML(
           "afterbegin",
-          `<img class='img_drag' style='height: 131pt; width: 128pt; position: absolute; top: 58px;' src="bm.png">`
+          `<img class='img_drag' style='height: 100pt; width: 118pt; position: absolute; top: 48px;' src="bm.png">`
         ); 
         cont++;
       }
@@ -165,11 +165,11 @@ const creator = () => {
   if(isTouchDevice()){
 
     for (let index = 0; index < 6; index++) {
-      array_divs.push("<div class='draggable-image miDiv'  draggable='true'><img class='img_drag' data-id='recta' style='height: 70pt; width: auto; border: 1px solid grey; border-radius: 10px;' id='gaseoso_" + recta_random[index] + "' src='img/rectas/" + recta_random[index] + ".png' alt='prueba.png'></div>")
+      array_divs.push("<div class='draggable-image miDiv'  draggable='true'><img class='img_drag' data-id='recta' style='height: 70pt; width: 100pt; border: 1px solid grey; border-radius: 10px;' id='gaseoso_" + recta_random[index] + "' src='img/rectas/" + recta_random[index] + ".png' alt='prueba.png'></div>")
     }
   
     for (let index = 0; index < 6; index++) {
-      array_divs.push("<div class='draggable-image miDiv'  draggable='true'><img class='img_drag' data-id='curva' style='height: 70pt; width: auto; border: 1px solid grey; border-radius: 10px;' id='liquido_" + curva_random[index] + "' src='img/curvas/" + curva_random[index] + ".png' alt='prueba.png'></div>")
+      array_divs.push("<div class='draggable-image miDiv'  draggable='true'><img class='img_drag' data-id='curva' style='height: 70pt; width: 100pt; border: 1px solid grey; border-radius: 10px;' id='liquido_" + curva_random[index] + "' src='img/curvas/" + curva_random[index] + ".png' alt='prueba.png'></div>")
     }
 
   }else{
@@ -195,7 +195,7 @@ const creator = () => {
 
     var imagenes = document.getElementsByClassName("miDiv");
 
-    let top = 115;
+    let top = 80;
     let left = 155;
     let aux = 0;
     for (let index = 1; index <= imagenes.length; index++) {
@@ -205,7 +205,7 @@ const creator = () => {
       element.style.left = left + "px";
 
 
-      if(aux < 2){
+      if(aux < 3){
         left += 170;
         aux++;
       }else{
@@ -350,9 +350,6 @@ function cerrar_anuncio() {
     audio.play();
     audio.volume = 0.2;
 
-    var audio_2 = new Audio('../../sounds/la_materia.mp3');
-    audio_2.play();
-    
     cerrardo = true;
     const divAnimado2 = document.querySelector('.nube');
     divAnimado2.style.animationName = 'moverabajo';

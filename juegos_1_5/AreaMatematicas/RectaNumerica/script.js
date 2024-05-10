@@ -14,7 +14,7 @@ $(document).ready(function () {
                 divAnimado2.style.display = 'block';
                 setTimeout(() => {
                     divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
-                    maquina2("bienvenida", 'Hola, soy Genio. <br> A continuación se te presentarán 10 intervalos, en las cuales deberás llevar el astronauta al mundo que tenga los números correctos, responde mas de 6 preguntas correctamente para ganar el juego. <br> ¡Tú Puedes!', 50, 1);
+                    maquina2("bienvenida", 'Hola, soy Genio. <br> A continuación se te presentará una recta numérica incompleta, en las cuales deberás llevar el astronauta al mundo que tenga el numero correcto, responde mas de 6 preguntas correctamente para ganar el juego. <br> ¡Tú Puedes!', 50, 1);
                 }, 3000)
             }, 2000)
         })
@@ -244,6 +244,15 @@ function handleClickOrTouch(event) {
     }
 }
 
+function mover_izquierda(){
+    astronauta.style.transition = "left .5s linear";
+    astronauta.style.left = (astronauta.offsetLeft - 50) + "px";
+}
+
+function mover_derecha(){
+    astronauta.style.transition = "left .5s linear";
+    astronauta.style.left = (astronauta.offsetLeft + 50) + "px";
+}
 
 document.addEventListener('mousemove', function (event) {
     var body = document.querySelector('body');

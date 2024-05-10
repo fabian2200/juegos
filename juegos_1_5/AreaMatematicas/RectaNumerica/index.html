@@ -13,6 +13,33 @@
 	<script src="../../bootstrap/sweetalert.js"></script>
 	<script src="../../bootstrap/jquery.min.js"></script>
 	<link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+	<style>
+		.btn_left {
+			width: 100px;
+			height: 100px;
+			background-color: rgba(255, 255, 255, 0.384);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			position: absolute;
+			top: 40%;
+			left: 31px;
+		}
+
+		.btn_right {
+			width: 100px;
+			height: 100px;
+			background-color: rgba(255, 255, 255, 0.384);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			position: absolute;
+			top: 40%;
+			right: 31px;
+		}
+	</style>
 </head>
 
 <body style="overflow: hidden;">
@@ -68,6 +95,12 @@
 						class="fa-solid fa-arrow-left"></i></button></div>
 		</div>
 		<hr>
+		<div class="btn_left" onclick="mover_izquierda()">
+			<i class="fas fa-chevron-left fa-4x"></i>
+		</div>
+		<div class="btn_right" onclick="mover_derecha()">
+			<i class="fas fa-chevron-right fa-4x"></i>
+		</div>
 		<div id="myDiv"></div>
 		<div id="astronauta"></div>
 		<div class="recta">

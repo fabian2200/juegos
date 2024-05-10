@@ -311,7 +311,7 @@ const creator = () => {
       for (let index = pregunta_actual; index < pregunta_actual + 3; index++) {
         array_divs.push(
           "<div class='draggable-image miDiv text-center' draggable='true'>"+
-            "<img class='img_drag' data-id='"+profesiones[index].lugar+"' style='height: 130pt; width: auto;  border-radius: 10px;  border: 1px dashed; padding: 18px;' id='imagen_"+profesiones[index].imagen+ "' src='profesiones/"+profesiones[index].imagen+"' alt='prueba.png'>"+
+            "<img class='img_drag' data-id='"+profesiones[index].lugar+"' style='height: 90pt; width: auto;  border-radius: 10px;  border: 1px dashed; padding: 18px;' id='imagen_"+profesiones[index].imagen+ "' src='profesiones/"+profesiones[index].imagen+"' alt='prueba.png'>"+
           "</div>"
         );
         ids.push(profesiones[index].lugar);

@@ -296,7 +296,7 @@ function calificar() {
     setTimeout(() => {
         $('#final').fadeToggle(1000);
     }, 500)
-    if (buenas < 6) {
+    if (buenas < 4) {
         document.getElementById("final").style.backgroundImage = "url(../../images/derrota.gif)";
     } else {
         document.getElementById("final").style.backgroundImage = "url(../../images/victoria.gif)";
