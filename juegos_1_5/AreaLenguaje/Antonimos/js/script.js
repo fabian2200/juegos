@@ -44,9 +44,23 @@ function iniciar() {
 
     for (let i = 0; i < palabras.length; i++) {
         let palabra = palabras[i];
-        if (antonimos_o.includes(palabra.toLowerCase())) {
-            palabras[i] = '<span class="borde" style="color: orange;">' + palabra + '</span>';
-        }
+        if(palabra.includes('.')){
+            var minuscu = palabra.split(".")[0].toLowerCase();
+            if (antonimos_o.includes(minuscu)) {
+                palabras[i] = '<span class="borde" style="color: #fb078c;">' + palabra + '</span>';
+            }
+        }else{
+            if(palabra.includes(',')){
+                var minuscu = palabra.split(",")[0].toLowerCase();
+                if (antonimos_o.includes(minuscu)) {
+                    palabras[i] = '<span class="borde" style="color: #fb078c;">' + palabra + '</span>';
+                }
+            }else{
+                if (antonimos_o.includes(palabra.toLowerCase())) {
+                    palabras[i] = '<span class="borde" style="color: #fb078c;">' + palabra + '</span>';
+                }
+            }
+        }       
     }
 
     textoResaltado = palabras.join(' ');
@@ -60,8 +74,8 @@ function iniciar() {
     var i = 0;
     antonimos.forEach(element => {
         div += "<div class='col-6' style='display: flex; justify-content: center; align-items: center'>"+
-                    "<label class='label_letra'>"+element[0]+"</label>"+"<input onclick='openModal("+i+")' id='input"+i+"' data-id='"+element[1]+"' type='' class='form-control input_letra'>"+
-                "</div>";
+                "<label class='label_letra'>"+element[0]+"</label>"+"<span style='height: 57px !important' onclick='openModal("+i+")' id='input"+i+"' data-id='"+element[1]+"' class='form-control input_letra'>"+
+            "</div>";
         i++;
     });
 
@@ -94,7 +108,7 @@ function seleccionarOpcion(boton){
     numero_selecciones++;
     var input = document.getElementById("input"+seleccionado__input) 
     var valor = boton.getAttribute('data-id');
-    input.value  = valor;
+    input.innerText  = valor;
 
     var clases = boton.classList;
     clases.remove(...clases);
@@ -117,7 +131,7 @@ function calificar(){
 
     for (let index = 0; index < inputs.length; index++) {
         const element = inputs[index];
-        if (element.getAttribute("data-id") == element.value) {
+        if (element.getAttribute("data-id") == element.innerText) {
             element.style.backgroundColor = "#238d23";
             element.style.borderColor = "#238d23";
             element.style.color = "#ffff";

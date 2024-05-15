@@ -10,4 +10,8 @@
 <h4>Juegos Segundo </h4>
 <li><strong>Área Lengua Castellana: </strong> (Antónimos,  Uso de la mayúscula, Parts of the body)</li>
 <li><strong>Área Matemáticas: </strong> (Recta numérica, Tipos de linea, Unidad de Medida)</li>
-<li><strong>Área Ciencias Naturales: </strong> (Clasificacion Animal Alimentacion)</li>
+<li><strong>Área Ciencias Naturales: </strong> (Clasificación Animal Alimentación, iman, sonido animal)</li>
+<li><strong>Área Ciencias Naturales: </strong> (El Clima Escucha El Clima, La escuela)</li>
+<hr>
+<h4>Juegos Tercero </h4>
+<li><strong>Área Lengua Castellana: </strong> (Antónimos y Sinónimos)</li>

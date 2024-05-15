@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../bootstrap/all.css">
+	<link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+	<script src="../../bootstrap/jquery.min.js"></script>
+	<link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+	<script src="../../bootstrap/sweetalert.js"></script>
+	<link rel="stylesheet" href="style.css">
+	</link>
+</head>
+
+<body>
+	<div style="display: none" class="overlay">
+		<div class="nube">
+			<p class="borde2" id="bienvenida"></p>
+		</div>
+		<div style="z-index: 1003;position: absolute;top: 20pt;left: 20pt;" id="div-btnOmitir">
+			<button onclick="cerrar_anuncio()" id="btnomitir" class="btn btn-warning"
+				style="width: auto; padding: 4pt; border-radius: 8pt; font-size: 30px; color: black;">Omitir <i
+					style="color: black" class="fa fa-forward" aria-hidden="true"></i></button>
+		</div>
+	</div>
+
+	<div style="display: none; background-color: rgba(255, 255, 255, 0.664); width: 100%; height: 100%; position: fixed; z-index: 100;"
+		id="fondo_blanco">
+
+	</div>
+
+	<div style="display: none; text-align: center;" id="final" class="final">
+		<h1 style="font-size: 25pt; padding-top: 250pt; padding-bottom: 0px;" class="borde2" id="texto_final"></h1>
+		<hr>
+		<div class="row">
+			<div class="col-12" style="padding-bottom: 0pt; margin-top: 0px;">
+				<h1 style="font-size: 25pt; padding: 12px;" class="borde2">¿Quieres jugar nuevamente?</h1>
+			</div>
+			<div class="col-3"></div>
+			<div class="col-3 text-center">
+				<button style="width: 80%;border-radius: 20pt; font-size: 23px;" onclick="window.location.reload(1)"
+					class="btn btn-success">Si, jugar</button>
+			</div>
+			<div class="col-3 text-center">
+				<button style="width: 80%; border-radius: 20pt; font-size: 23px;" onclick="history.back()"
+					class="btn btn-danger">No,
+					salir</button>
+			</div>
+			<div class="col-3"></div>
+		</div>
+	</div>
+	<div id="principal" class="container" style="margin-top: 5px">
+		<div class="row">
+			<div class="col-11" style="display: flex;align-items: center;justify-content: center;">
+				<h1 style="color: #e23564;" id="titiJuego">Identifica el sonido del animal de </h1>
+			</div>
+			<div class="col-1"><button onclick="cerrarJuego();" class="btn btn-danger"><i class="fa fa-arrow-left"
+						aria-hidden="true"></i></button></div>
+		</div>
+		<div id="play-btn" style="cursor: pointer; position: absolute;">
+			<img src="img/sonido.png">
+		</div>
+		<div id="granja" class="divGranja">
+			<div id="Vaca" onclick="verfAnimal(this);" class="animales" data-tipo="Vaca" > 
+				<img src="img/vaca.png" alt="">
+			</div>
+			<div id="Gallina" onclick="verfAnimal(this);" class="animales" data-tipo="Gallina" >
+				<img src="img/gallina.png" alt="">
+			</div>
+			<div id="Cerdo" onclick="verfAnimal(this);" class="animales" data-tipo="Cerdo" > 
+				<img src="img/cerdo.png" alt="">
+			</div>
+			<div id="Oveja" onclick="verfAnimal(this);" class="animales" data-tipo="Oveja" > 
+				<img src="img/oveja.png" alt="">
+			</div>
+			<div id="Pato" onclick="verfAnimal(this);" class="animales" data-tipo="Pato" > 
+				<img src="img/pato.png" alt="">
+			</div>
+			<div id="Gato" onclick="verfAnimal(this);" class="animales" data-tipo="Gato" > 
+				<img src="img/gato.png" alt="">
+			</div>
+			<div id="Perro" onclick="verfAnimal(this);" class="animales" data-tipo="Perro" > 
+				<img src="img/perro.png" alt="">
+			</div>
+			<div id="Caballo" onclick="verfAnimal(this);" class="animales" data-tipo="Caballo" > 
+				<img src="img/caballo.png" alt="">
+			</div>
+			<div id="Ganso" onclick="verfAnimal(this);" class="animales" data-tipo="Ganso" > 
+				<img src="img/ganso.png" alt="">
+			</div>
+			<div id="Burro" onclick="verfAnimal(this);" class="animales" data-tipo="Burro" >
+				<img src="img/burro.png" alt="">
+			</div>
+		</div>
+		<div id="bosque" class="divBosque">
+			<div id="Ardilla" onclick="verfAnimal(this);" class="animales" data-tipo="Ardilla" > 
+				<img src="img/ardilla.png" alt="">
+			</div>
+			<div id="Ciervo" onclick="verfAnimal(this);" class="animales" data-tipo="Ciervo" >
+				<img src="img/ciervo.png" alt="">
+			</div>
+			<div id="Buho" onclick="verfAnimal(this);" class="animales" data-tipo="Buho" > 
+				<img src="img/buho.png" alt="">
+			</div>
+			<div id="Zorro" onclick="verfAnimal(this);" class="animales" data-tipo="Zorro" > 
+				<img src="img/zorro.png" alt="">
+			</div>
+			<div id="Oso" onclick="verfAnimal(this);" class="animales" data-tipo="Oso" > 
+				<img src="img/oso.png" alt="">
+			</div>
+			<div id="Mapache" onclick="verfAnimal(this);" class="animales" data-tipo="Mapache" > 
+				<img src="img/mapache.png" alt="">
+			</div>
+			<div id="Rana" onclick="verfAnimal(this);" class="animales" data-tipo="Rana" > 
+				<img src="img/rana.png" alt="">
+			</div>
+			<div id="Topo" onclick="verfAnimal(this);" class="animales" data-tipo="Topo" > 
+				<img src="img/topo.png" alt="">
+			</div>
+			<div id="Jabali" onclick="verfAnimal(this);" class="animales" data-tipo="Jabali" > 
+				<img src="img/jabali.png" alt="">
+			</div>
+			<div id="Zorrillo" onclick="verfAnimal(this);" class="animales" data-tipo="Zorrillo" >
+				<img src="img/zorrillo.png" alt="">
+			</div>
+		</div>
+		<div id="selva" class="divSelva">
+			<div id="Tigre" onclick="verfAnimal(this);" class="animales" data-tipo="Tigre" > 
+				<img src="img/tigre.png" alt="">
+			</div>
+			<div id="Mono" onclick="verfAnimal(this);" class="animales" data-tipo="Mono" >
+				<img src="img/mono.png" alt="">
+			</div>
+			<div id="Loro" onclick="verfAnimal(this);" class="animales" data-tipo="Loro" > 
+				<img src="img/loro.png" alt="">
+			</div>
+			<div id="Jaguar" onclick="verfAnimal(this);" class="animales" data-tipo="Jaguar" > 
+				<img src="img/jaguar.png" alt="">
+			</div>
+			<div id="Elefante" onclick="verfAnimal(this);" class="animales" data-tipo="Elefante" > 
+				<img src="img/elefante.png" alt="">
+			</div>
+			<div id="Serpiente" onclick="verfAnimal(this);" class="animales" data-tipo="Serpiente" > 
+				<img src="img/serpiente.png" alt="">
+			</div>
+			<div id="Hipopotamo" onclick="verfAnimal(this);" class="animales" data-tipo="Hipopotamo" > 
+				<img src="img/hipopotamo.png" alt="">
+			</div>
+			<div id="Lemur" onclick="verfAnimal(this);" class="animales" data-tipo="Lemur" > 
+				<img src="img/lemur.png" alt="">
+			</div>
+			<div id="Gorila" onclick="verfAnimal(this);" class="animales" data-tipo="Gorila" > 
+				<img src="img/gorila.png" alt="">
+			</div>
+			<div id="Leon" onclick="verfAnimal(this);" class="animales" data-tipo="Leon" >
+				<img src="img/leon.png" alt="">
+			</div>
+		</div>	
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

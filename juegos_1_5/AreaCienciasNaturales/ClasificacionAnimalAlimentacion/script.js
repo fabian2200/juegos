@@ -1,192 +1,249 @@
-var txt1 = document.getElementById("tipo_imagen");
-var txt2 = document.getElementById("tipo_imagen2");
-var txt3 = document.getElementById("tipo_imagen3");
+let score = 0;
+let cantidad = 0;
+let cuerpoSel;
+let parteMostrada = [];
 
-var tipoFigura = 0;
-var figura_ok = 0;
+let animales  = [
+  // Carnívoros
+  { nombre: "León", imagen: "leon.png", clasificacion: "Carnivoro" },
+  { nombre: "Tigre", imagen: "tigre.png", clasificacion: "Carnivoro" },
+  { nombre: "Lobo", imagen: "lobo.png", clasificacion: "Carnivoro" },
+  { nombre: "Águila", imagen: "aguila.png", clasificacion: "Carnivoro" },
+  {
+    nombre: "Cocodrilo",
+    imagen: "cocodrilo.png",
+    clasificacion: "Carnivoro",
+  },
+  {
+    nombre: "Leopardo",
+    imagen: "leopardo.png",
+    clasificacion: "Carnivoro",
+  },
+  { nombre: "Águila", imagen: "aguila.png", clasificacion: "Carnivoro" },
+  { nombre: "Tiburón", imagen: "tiburon.png", clasificacion: "Carnivoro" },
+  { nombre: "Pantera", imagen: "pantera.png", clasificacion: "Carnivoro" },
+  { nombre: "Hiena", imagen: "hiena.png", clasificacion: "Carnivoro" },
+
+  // Herbívoros
+  {
+    nombre: "Elefante",
+    imagen: "elefante.png",
+    clasificacion: "Herbivoro",
+  },
+  { nombre: "Jirafa", imagen: "jirafa.png", clasificacion: "Herbivoro" },
+  { nombre: "Cebra", imagen: "cebra.png", clasificacion: "Herbivoro" },
+  { nombre: "Koala", imagen: "koala.png", clasificacion: "Herbivoro" },
+  { nombre: "Tortuga", imagen: "tortuga.png", clasificacion: "Herbivoro" },
+  {
+    nombre: "Hipopótamo",
+    imagen: "hipopotamo.png",
+    clasificacion: "Herbivoro",
+  },
+  { nombre: "Canguro", imagen: "canguro.png", clasificacion: "Herbivoro" },
+  { nombre: "Ciervo", imagen: "ciervo.png", clasificacion: "Herbivoro" },
+  { nombre: "Gorila", imagen: "gorila.png", clasificacion: "Herbivoro" },
+  {
+    nombre: "Rinoceronte",
+    imagen: "rinoceronte.png",
+    clasificacion: "Herbivoro",
+  },
+
+  // Omnívoros
+  { nombre: "Oso", imagen: "oso.png", clasificacion: "Omnivoro" },
+  { nombre: "Cerdo", imagen: "cerdo.png", clasificacion: "Omnivoro" },
+  { nombre: "Mapache", imagen: "mapache.png", clasificacion: "Omnivoro" },
+  { nombre: "Panda", imagen: "panda.png", clasificacion: "Omnivoro" },
+  { nombre: "Mono", imagen: "mono.png", clasificacion: "Omnivoro" },
+  { nombre: "Erizo", imagen: "erizo.png", clasificacion: "Omnivoro" },
+  { nombre: "Ardilla", imagen: "ardilla.png", clasificacion: "Omnivoro" },
+  { nombre: "Perro", imagen: "perro.png", clasificacion: "Omnivoro" },
+  { nombre: "Gallina", imagen: "gallina.png", clasificacion: "Omnivoro" },
+];
+
+var clasificacion = ["Carnivoro", "Herbivoro", "Omnivoro"];
 
 
-var figuras = ["CARNÍVOROS", "HERBÍVOROS", "OMNÍVOROS"];
+let clasif;
 
-function comenzar(){
-	let div_imagenes = document.getElementById("figuras_geometricas");
-	div_imagenes.innerHTML = "";
+ // Seleccionar 5 animales aleatorios de cada grupo
+ var animalesCarnivoros = seleccionarAleatoriosUnicos(animales.filter(animal => animal.clasificacion === "Carnivoro"), 5);
+ var animalesHerbivoros = seleccionarAleatoriosUnicos(animales.filter(animal => animal.clasificacion === "Herbivoro"), 5);
+ var animalesOmnivoros = seleccionarAleatoriosUnicos(animales.filter(animal => animal.clasificacion === "Omnivoro"), 5);
 
-	tipoFigura = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+ // Combinar los animales seleccionados en un solo array
+ var animalesSeleccionados = [...animalesCarnivoros, ...animalesHerbivoros, ...animalesOmnivoros];
 
-	var imagenes = [];
 
-	var max = 0;
-	var min = 0;
 
-	min = 1;
-	max = 21;
-	
-	for (let index = min; index <= max; index++) {
-		imagenes.push({
-			ruta: "CARNIVOROS/"+index+".png",
-			tipo: "CARNÍVOROS"
-		});
-	}
+function inicioJuego() {
+  crearDivs();
 
-	min = 1;
-	max = 23;
+  clasif = obtenerIndiceAleatorio();
+  
+  document.getElementById("tiCate").innerHTML = "Identifica a los animales "+ clasif;
 
-	for (let index = min; index <= max; index++) {
-		imagenes.push({
-			ruta: "HERBIVOROS/"+index+".png",
-			tipo: "HERBÍVOROS"
-		});
-	}
-
-	min = 1;
-	max = 24;
-	for (let index = min; index <= max; index++) {
-		imagenes.push({
-			ruta: "OMNIVOROS/"+index+".png",
-			tipo: "OMNÍVOROS"
-		});
-	}
-
-	var div = "";
-	while(figura_ok <= 3){
-		figura_ok = 0;
-		imagenes = randomValueGenerator(imagenes);
-		div = "";
-		for (let index = 0; index < 18; index++) {
-			if(figuras[tipoFigura] == imagenes[index].tipo){
-				figura_ok++;
-			}
-
-		    div += '<div style="cursor: pointer; height: 150px; margin-top: 10px; margin-bottom: 10px; text-align: center" class="col-lg-2 d-flex align-items-center justify-content-center">'+
-				'<img style="max-width: 100%; position: relative" onclick="controlarRespuesta(\''+imagenes[index].tipo+'\', this)"  src="'+imagenes[index].ruta+'" alt="'+imagenes[index].ruta+'">'+
-			'</div>';
-		}
-	}
-
-	document.getElementById("tip_figura").innerText = figuras[tipoFigura];
-	
-	div_imagenes.innerHTML = div;
 }
 
-function randomValueGenerator(vector) {
-    return vector.sort(function () { return Math.random() - 0.5 });
-};
-
-var seleccionadoCorrecto = null;
-function controlarRespuesta(respuesta, elemento){
-	if(figuras[tipoFigura] == respuesta){
-		elemento.style.display = "none";
-		var audio = new Audio('../../sounds/ok.mp3');
-    	audio.play(); 
-		seleccionadoCorrecto++;
-		if(seleccionadoCorrecto == figura_ok){
-			terminarJuego();
-		}
-	}else{
-		var audio = new Audio('../../sounds/over.mp3');
-		elemento.classList.add('titilar');
-
-		setTimeout(function() {
-			elemento.classList.remove('titilar');
-		}, 800);
-
-    	audio.play(); 
-	}
+function seleccionarAleatoriosUnicos(array, n) {
+  const arrayCopy = [...array];
+  const resultados = [];
+  for (let i = 0; i < n && arrayCopy.length > 0; i++) {
+    const index = Math.floor(Math.random() * arrayCopy.length);
+    resultados.push(arrayCopy.splice(index, 1)[0]);
+  }
+  return resultados;
 }
 
-function terminarJuego(){
-	$('#principal').fadeToggle(1000);
-	setTimeout(()=>{
-		$('#final').fadeToggle(1000);
-	}, 1000)
-	
-	document.getElementById("final").style.backgroundImage = "url(../../images/victoria.gif)";
-	document.getElementById("texto_final").innerText = "Felicitaciones, haz encontrado todos los "+figuras[tipoFigura];
 
-	var audio = new Audio('../../sounds/victory.mp3');
-	audio.play();
-}
+function crearDivs() {
+  
+  var container = document.getElementById("animalContainer");
 
-function cambiar_color(elemento){
-	elemento.style.backgroundColor = "green";
-}
+  animalesSeleccionados.forEach(function(animal) {
+    var div = document.createElement("div");
+    div.className = "animal-div";
+    div.setAttribute("data-clasif" , animal.clasificacion)
+    var img = document.createElement("img");
+    img.className = "animal-img";
+    img.src = "img/"+animal.imagen;
+    img.alt = animal.nombre;
 
-$(document).ready(function() {
-	setTimeout(() => {
-        $("#principal").fadeToggle(1000);
-        $("#fondo_blanco").fadeToggle(3000);
+    div.addEventListener("click", function() {
+      if(animal.clasificacion == clasif){
+        score++;
+        this.classList.add("desintegrar");
         setTimeout(() => {
-            const divAnimado = document.querySelector(".overlay");
-            divAnimado.style.animationName = "moverDerecha";
-            divAnimado.style.animationDirection = "normal";
-            divAnimado.style.display = "block";
+          container.removeChild(this);
+        },500)
+
+          if(score == 5){
             setTimeout(() => {
-                const divAnimado2 = document.querySelector(".nube");
-                divAnimado2.style.animationName = "moverArriba";
-                divAnimado2.style.animationDirection = "normal";
-                divAnimado2.style.display = "block";
-                setTimeout(() => {
-                    divAnimado.style.backgroundImage =
-                        "url(../../images/normal2.gif)";
-                    maquina2(
-                        "bienvenida",
-                        "Hola, soy Genio. <br> En este juego deberás seleccionar todas las imagenes de la figura geométrica que se te indique.<br> ¡Tu puedes!",
-                        50,
-                        1
-                    );
-                }, 3000);
-            }, 2000);
-        });
-    }, 200);
+              $("#principal").fadeToggle(1000);
+              $("#final").fadeToggle(1000);
+              document.getElementById("final").style.backgroundImage =
+          "url(../../images/victoria.gif)";
+      var audio = new Audio("../../sounds/victory.mp3");
+      audio.play();
+      document.getElementById("texto_final").innerText =
+          "Has logrado identificar a todos los animales "+ clasif;
+            },700)
+          }
+        
+      }else{
+        this.classList.add("incorrecta");
+        setTimeout(() => {
+          this.classList.remove("incorrecta");
+        },800);
+
+        setTimeout(() => {
+          $("#principal").fadeToggle(1000);
+          $("#final").fadeToggle(1000);
+          var audio = new Audio("../../sounds/game_over.mp3");
+          audio.play();
+          document.getElementById("final").style.backgroundImage =
+              "url(../../images/derrota.gif)";
+          document.getElementById("texto_final").innerText =
+              "No has logrado obtener ningún punto";
+        },1000)
+      }
+    });
+    
+    div.appendChild(img);
+    container.appendChild(div);
+  });
+}
+
+function obtenerIndiceAleatorio() {
+  let indice = Math.floor(Math.random() * clasificacion.length);
+  return clasificacion[indice];
+}
+
+function updateTimer() {
+  document.getElementById(
+    "timer_sec"
+  ).innerText = `Tiempo restante: ${timer} s`;
+}
+
+$(document).ready(function () {
+  setTimeout(function () {
+    let audio2 = new Audio("sounds/enunciado.mp3");
+    audio2.playbackRate = 0.8;
+    audio2.play();
+  }, 4500);
+
+  setTimeout(() => {
+    $("#principal").fadeToggle(1000);
+    $("#fondo_blanco").fadeToggle(3000);
+    setTimeout(() => {
+      const divAnimado = document.querySelector(".overlay");
+      divAnimado.style.animationName = "moverDerecha";
+      divAnimado.style.animationDirection = "normal";
+      divAnimado.style.display = "block";
+      setTimeout(() => {
+        const divAnimado2 = document.querySelector(".nube");
+        divAnimado2.style.animationName = "moverArriba";
+        divAnimado2.style.animationDirection = "normal";
+        divAnimado2.style.display = "block";
+        setTimeout(() => {
+          divAnimado.style.backgroundImage = "url(../../images/normal2.gif)";
+          maquina2(
+            "bienvenida",
+            "Hola!, Soy genio, en este juego deberás identificar con que parte de tu cuerpo realizas las acciones mostradas. Tu puedes!!!",
+            100,
+            1
+          );
+        }, 3000);
+      }, 2000);
+    });
+  }, 200);
 });
 
 function maquina2(contenedor, texto, intervalo, n) {
-    var i = 0,
-	timer = setInterval(function () {
-		if (i < texto.length) {
-			$("#" + contenedor).html(texto.substr(0, i++) + "_");
-		} else {
-			clearInterval(timer);
-			$("#" + contenedor).html(texto);
-			if (!cerrardo) {
-				document.querySelector('#btnomitir').style.display = "none";
-				setTimeout(() => {
-					cerrar_anuncio();
-				}, 3000)
-			}
-			if (--n != 0) {
-				setTimeout(function () {
-					maquina2(contenedor, texto, intervalo, n);
-				}, 3600);
-			}
-		}
-	}, intervalo);
+  var i = 0,
+    // Creamos el timer
+    timer = setInterval(function () {
+      if (i < texto.length) {
+        // Si NO hemos llegado al final del texto..
+        // Vamos añadiendo letra por letra y la _ al final.
+        $("#" + contenedor).html(texto.substr(0, i++) + "_");
+      } else {
+        // En caso contrario..
+        // Salimos del Timer y quitamos la barra baja (_)
+        clearInterval(timer);
+        $("#" + contenedor).html(texto);
+        if (!cerrardo) {
+          document.querySelector("#btnomitir").style.display = "none";
+          setTimeout(() => {
+            cerrar_anuncio();
+          }, 3000);
+        }
+        // Auto invocamos la rutina n veces (0 para infinito)
+        if (--n != 0) {
+          setTimeout(function () {
+            maquina2(contenedor, texto, intervalo, n);
+          }, 3600);
+        }
+      }
+    }, intervalo);
 }
 
 let cerrardo = false;
 function cerrar_anuncio() {
-	if(!cerrardo) {
-		let audio2 = new Audio('../../sounds/fondo.mp3');
-		audio2.play(); 
-		audio2.volume = 0.2;
-
-		let audio = new Audio('../../sounds/identificaFiguras.mp3');
-		audio.play(); 
-
-		cerrardo = true;
-		const divAnimado2 = document.querySelector('.nube');
-		divAnimado2.style.animationName = 'moverabajo';
-		const divAnimado = document.querySelector('.overlay');
-		divAnimado.style.backgroundImage = "url(../../images/normal1.gif)";
-		$('#fondo_blanco').fadeToggle(3000);
-		setTimeout(function () {
-			divAnimado.style.animationName = 'moverIzquierda';
-			divAnimado.style.animationDirection = 'normal';
-			setTimeout(() => {
-				$('#principal').fadeToggle(1000);
-				comenzar();
-			}, 2000)
-		}, 2000);
-	}
+  let audio2 = new Audio("../../sounds/fondo.mp3");
+  audio2.play();
+  audio2.volume = 0.2;
+  cerrardo = true;
+  const divAnimado2 = document.querySelector(".nube");
+  divAnimado2.style.animationName = "moverabajo";
+  const divAnimado = document.querySelector(".overlay");
+  divAnimado.style.backgroundImage = "url(../../images/normal1.gif)";
+  $("#fondo_blanco").fadeToggle(3000);
+  setTimeout(function () {
+    divAnimado.style.animationName = "moverIzquierda";
+    divAnimado.style.animationDirection = "normal";
+    setTimeout(() => {
+      $("#principal").fadeToggle(1000);
+      inicioJuego();
+    }, 2000);
+  }, 2000);
 }
