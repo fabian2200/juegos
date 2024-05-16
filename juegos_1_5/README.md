@@ -14,4 +14,4 @@
 <li><strong>Área Ciencias Naturales: </strong> (El Clima Escucha El Clima, La escuela)</li>
 <hr>
 <h4>Juegos Tercero </h4>
-<li><strong>Área Lengua Castellana: </strong> (Antónimos y Sinónimos)</li>
+<li><strong>Área Lengua Castellana: </strong> (Antónimos y Sinónimos, miembros de la familia en ingles y adjetivos calificativos)</li>
