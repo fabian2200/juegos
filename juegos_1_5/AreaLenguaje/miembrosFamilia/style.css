@@ -7,13 +7,33 @@
     transition: all 0.5s;
 }
 
+.nino {
+    z-index: -3;
+    position: absolute;
+    width: auto;
+    height: 47vh;
+    bottom: 50%;
+    left: 40%;
+    animation: moveninio 2s infinite linear
+}
+
+@keyframes moveninio {
+    0% {
+        left: 40%;
+    }
+    50% {
+        left: 38%;
+    }
+    100% {
+        left: 40%;
+    }
+}
 
 body {
     padding: 0;
     margin: 0;
-    -webkit-perspective: 1000;
     background: url(img/fondo.png);
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center center;
     background-attachment: fixed;
     color: #fff;

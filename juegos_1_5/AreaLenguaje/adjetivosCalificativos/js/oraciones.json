@@ -1,0 +1,514 @@
+[
+  {
+    "oracion": "Mi gato es <div class='signo'></div>",
+    "respuestas": ["juguetón", "cariñoso", "perezoso", "curioso"]
+  },
+  {
+    "oracion": "El niño estaba <div class='signo'></div> tras recibir su regalo.",
+    "respuestas": ["emocionado", "agradecido", "sorprendido", "feliz"]
+  },
+  {
+    "oracion": "La película era <div class='signo'></div>",
+    "respuestas": ["emocionante", "divertida", "impactante", "inquietante"]
+  },
+  {
+    "oracion": "El restaurante tiene una atmósfera muy <div class='signo'></div>",
+    "respuestas": ["acogedora", "elegante", "relajante", "animada"]
+  },
+  {
+    "oracion": "El libro es <div class='signo'></div>",
+    "respuestas": ["interesante", "emotivo", "intrigante", "educativo"]
+  },
+  {
+    "oracion": "El clima hoy está muy <div class='signo'></div>",
+    "respuestas": ["caluroso", "fresco", "agradable", "húmedo"]
+  },
+  {
+    "oracion": "La comida en este restaurante es <div class='signo'></div>",
+    "respuestas": ["deliciosa", "sabrosa", "exquisita", "apetitosa"]
+  },
+  {
+    "oracion": "El bebé está <div class='signo'></div> en su cuna.",
+    "respuestas": ["tranquilo", "dormido", "inquieto", "contento"]
+  },
+  {
+    "oracion": "La ciudad tiene un aspecto muy <div class='signo'></div> de noche.",
+    "respuestas": ["impresionante", "hermoso", "iluminado", "misterioso"]
+  },
+  {
+    "oracion": "El mar se veía <div class='signo'></div> desde la playa.",
+    "respuestas": ["majestuoso", "sereno", "inmenso", "brillante"]
+  },
+  {
+    "oracion": "El concierto fue <div class='signo'></div>",
+    "respuestas": ["fantástico", "emotivo", "inolvidable", "sensacional"]
+  },
+  {
+    "oracion": "El bosque está <div class='signo'></div> en otoño.",
+    "respuestas": ["hermoso", "colorido", "mágico", "encantador"]
+  },
+  {
+    "oracion": "La habitación está <div class='signo'></div>",
+    "respuestas": ["ordenada", "limpia", "acogedora", "cómoda"]
+  },
+  {
+    "oracion": "El pastel tiene un sabor <div class='signo'></div>",
+    "respuestas": ["delicioso", "dulce", "exquisito", "tentador"]
+  },
+  {
+    "oracion": "El viaje fue <div class='signo'></div>",
+    "respuestas": ["aventurero", "increíble", "inesperado", "maravilloso"]
+  },
+  {
+    "oracion": "El día está <div class='signo'></div>",
+    "respuestas": ["soleado", "brillante", "agradable", "radiante"]
+  },
+  {
+    "oracion": "El reloj en la pared es <div class='signo'></div>",
+    "respuestas": ["antiguo", "elegante", "preciso", "decorativo"]
+  },
+  {
+    "oracion": "El río tiene un sonido muy <div class='signo'></div>",
+    "respuestas": ["relajante", "tranquilo", "armonioso", "sereno"]
+  },
+  {
+    "oracion": "La clase de yoga es muy <div class='signo'></div>",
+    "respuestas": ["relajante", "energizante", "beneficiosa", "reconfortante"]
+  },
+  {
+    "oracion": "El vestido de novia es <div class='signo'></div>",
+    "respuestas": ["elegante", "hermoso", "espectacular", "romántico"]
+  },
+  {
+    "oracion": "El parque es un lugar muy <div class='signo'></div> para pasear.",
+    "respuestas": ["tranquilo", "apacible", "agradable", "relajante"]
+  },
+  {
+    "oracion": "El trabajo fue muy <div class='signo'></div>",
+    "respuestas": ["exigente", "estresante", "productivo", "satisfactorio"]
+  },
+  {
+    "oracion": "La conversación fue muy <div class='signo'></div>",
+    "respuestas": ["interesante", "amena", "enriquecedora", "divertida"]
+  },
+  {
+    "oracion": "El vestido de fiesta es muy <div class='signo'></div>",
+    "respuestas": ["elegante", "deslumbrante", "sofisticado", "llamativo"]
+  },
+  {
+    "oracion": "La noche está <div class='signo'></div>",
+    "respuestas": ["estrellada", "oscura", "tranquila", "misteriosa"]
+  },
+  {
+    "oracion": "El perfume tiene un aroma muy <div class='signo'></div>",
+    "respuestas": ["seductor", "envolvente", "intenso", "delicioso"]
+  },
+  {
+    "oracion": "La carretera está <div class='signo'></div>",
+    "respuestas": ["despejada", "congestionada", "tranquila", "peligrosa"]
+  },
+  {
+    "oracion": "La maestra es muy <div class='signo'></div> con sus alumnos.",
+    "respuestas": ["comprensiva", "amable", "dedicada", "paciente"]
+  },
+  {
+    "oracion": "El piano tiene un sonido muy <div class='signo'></div>",
+    "respuestas": ["melódico", "suave", "armonioso", "profundo"]
+  },
+  {
+    "oracion": "La ciudad está <div class='signo'></div> en Navidad.",
+    "respuestas": ["iluminada", "decorada", "alegre", "festiva"]
+  },
+  {
+    "oracion": "El arte callejero es muy <div class='signo'></div>",
+    "respuestas": ["creativo", "impresionante", "innovador", "expresivo"]
+  },
+  {
+    "oracion": "La fruta fresca tiene un sabor muy <div class='signo'></div>",
+    "respuestas": ["delicioso", "dulce", "refrescante", "jugoso"]
+  },
+  {
+    "oracion": "El parque de atracciones es muy <div class='signo'></div>",
+    "respuestas": ["divertido", "emocionante", "entretenido", "colorido"]
+  },
+  {
+    "oracion": "El invierno es una estación muy <div class='signo'></div>",
+    "respuestas": ["fría", "nevosa", "acogedora", "festiva"]
+  },
+  {
+    "oracion": "El profesor es muy <div class='signo'></div> con sus estudiantes.",
+    "respuestas": ["motivador", "comprensivo", "inspirador", "dedicado"]
+  },
+  {
+    "oracion": "El mercado está <div class='signo'></div> por la mañana.",
+    "respuestas": ["animado", "bullicioso", "oloroso", "colorido"]
+  },
+  {
+    "oracion": "El proyecto fue muy <div class='signo'></div>",
+    "respuestas": ["exitoso", "desafiante", "creativo", "innovador"]
+  },
+  {
+    "oracion": "La caminata por el bosque fue muy <div class='signo'></div>",
+    "respuestas": ["relajante", "agradable", "serena", "aventurera"]
+  },
+  {
+    "oracion": "El perfume tiene un aroma muy <div class='signo'></div>",
+    "respuestas": ["envolvente", "seductor", "fresco", "delicioso"]
+  },
+  {
+    "oracion": "La casa está <div class='signo'></div>",
+    "respuestas": ["cómoda", "espaciosa", "acogedora", "bien iluminada"]
+  },
+  {
+    "oracion": "La ciudad se ve muy <div class='signo'></div> desde lo alto.",
+    "respuestas": ["impresionante", "hermosa", "vibrante", "iluminada"]
+  },
+  {
+    "oracion": "El restaurante tiene un ambiente muy <div class='signo'></div>",
+    "respuestas": ["acogedor", "romántico", "festivo", "animado"]
+  },
+  {
+    "oracion": "La obra de arte es muy <div class='signo'></div>",
+    "respuestas": ["creativa", "expresiva", "impactante", "innovadora"]
+  },
+  {
+    "oracion": "El sonido de la cascada es muy <div class='signo'></div>",
+    "respuestas": ["relajante", "armonioso", "envolvente", "poderoso"]
+  },
+  {
+    "oracion": "El aroma de las flores es muy <div class='signo'></div>",
+    "respuestas": ["embriagador", "fragante", "delicioso", "sutil"]
+  },
+  {
+    "oracion": "El camino está <div class='signo'></div> después de la lluvia.",
+    "respuestas": ["fango", "resbaladizo", "húmedo", "enlodado"]
+  },
+  {
+    "oracion": "La ciudad está <div class='signo'></div> en la noche.",
+    "respuestas": ["iluminada", "oscura", "silenciosa", "tranquila"]
+  },
+  {
+    "oracion": "La torta de chocolate es muy <div class='signo'></div>",
+    "respuestas": ["deliciosa", "tentadora", "esponjosa", "sabrosa"]
+  },
+  {
+    "oracion": "El bebé tiene una sonrisa muy <div class='signo'></div>",
+    "respuestas": ["cálida", "dulce", "contagiosa", "alegre"]
+  },
+  {
+    "oracion": "La tarde está <div class='signo'></div> para salir a caminar.",
+    "respuestas": ["apacible", "soleada", "agradable", "brillante"]
+  },
+  {
+    "oracion": "El pájaro tiene un canto muy <div class='signo'></div>",
+    "respuestas": ["melódico", "hermoso", "armonioso", "alegre"]
+  },
+  {
+    "oracion": "La novela es muy <div class='signo'></div>",
+    "respuestas": ["emocionante", "intrigante", "envolvente", "apasionante"]
+  },
+  {
+    "oracion": "La plaza está llena de <div class='signo'></div> en primavera.",
+    "respuestas": ["flores", "niños", "música", "colores"]
+  },
+  {
+    "oracion": "La charla fue muy <div class='signo'></div> e informativa.",
+    "respuestas": ["interesante", "educativa", "didáctica", "entretenida"]
+  },
+  {
+    "oracion": "El viento está muy <div class='signo'></div> hoy.",
+    "respuestas": ["fuerte", "suave", "revigorante", "persistente"]
+  },
+  {
+    "oracion": "La película de terror es muy <div class='signo'></div>",
+    "respuestas": ["aterradora", "escalofriante", "impactante", "perturbadora"]
+  },
+  {
+    "oracion": "La exposición de arte es muy <div class='signo'></div>",
+    "respuestas": ["innovadora", "inspiradora", "creativa", "fascinante"]
+  },
+  {
+    "oracion": "La cena estuvo muy <div class='signo'></div>",
+    "respuestas": ["sabrosa", "exquisita", "deliciosa", "apetitosa"]
+  },
+  {
+    "oracion": "El perfume tiene un olor muy <div class='signo'></div>",
+    "respuestas": ["embriagador", "envolvente", "seductor", "delicioso"]
+  },
+  {
+    "oracion": "El paseo por el parque es muy <div class='signo'></div>",
+    "respuestas": ["agradable", "relajante", "refrescante", "divertido"]
+  },
+  {
+    "oracion": "La cama es muy <div class='signo'></div>",
+    "respuestas": ["cómoda", "acogedora", "suave", "espaciosa"]
+  },
+  {
+    "oracion": "La tormenta fue muy <div class='signo'></div>",
+    "respuestas": ["intensa", "impresionante", "furiosa", "destructiva"]
+  },
+  {
+    "oracion": "La sonrisa de mi abuela es muy <div class='signo'></div>",
+    "respuestas": ["cálida", "dulce", "radiante", "acogedora"]
+  },
+  {
+    "oracion": "El abrazo de mi mejor amigo es muy <div class='signo'></div>",
+    "respuestas": [" reconfortante", "cálido", "afectuoso", "sincero"]
+  },
+  {
+    "oracion": "La biblioteca es un lugar muy <div class='signo'></div>",
+    "respuestas": ["tranquilo", "silencioso", "acogedor", "intelectual"]
+  },
+  {
+    "oracion": "El plato está muy <div class='signo'></div>",
+    "respuestas": ["apetitoso", "sabroso", "delicioso", "atractivo"]
+  },
+  {
+    "oracion": "El amanecer es un momento muy <div class='signo'></div>",
+    "respuestas": ["mágico", "esplendoroso", "inspirador", "pintoresco"]
+  },
+  {
+    "oracion": "El gato tiene un comportamiento muy <div class='signo'></div>",
+    "respuestas": ["independiente", "juguetón", "curioso", "doméstico"]
+  },
+  {
+    "oracion": "El mar tiene un color muy <div class='signo'></div>",
+    "respuestas": ["azul", "turquesa", "verde", "profundo"]
+  },
+  {
+    "oracion": "La vista desde la montaña es muy <div class='signo'></div>",
+    "respuestas": ["impresionante", "majestuosa", "espectacular", "panorámica"]
+  },
+  {
+    "oracion": "El perfume tiene una fragancia muy <div class='signo'></div>",
+    "respuestas": ["envolvente", "seductora", "aromática", "exótica"]
+  },
+  {
+    "oracion": "La historia es muy <div class='signo'></div>",
+    "respuestas": ["interesante", "fascinante", "sorprendente", "emotiva"]
+  },
+  {
+    "oracion": "El festival está muy <div class='signo'></div>",
+    "respuestas": ["animado", "festivo", "colorido", "concurrido"]
+  },
+  {
+    "oracion": "La chimenea emite un calor muy <div class='signo'></div>",
+    "respuestas": ["acogedor", "confortable", "reconfortante", "intenso"]
+  },
+  {
+    "oracion": "La música tiene un ritmo muy <div class='signo'></div>",
+    "respuestas": ["pegajoso", "cadencioso", "envolvente", "emocionante"]
+  },
+  {
+    "oracion": "La playa es un lugar muy <div class='signo'></div> para relajarse.",
+    "respuestas": ["tranquilo", "apacible", "encantador", "sereno"]
+  },
+  {
+    "oracion": "El trabajo fue muy <div class='signo'></div>",
+    "respuestas": ["productivo", "eficiente", "satisfactorio", "estresante"]
+  },
+  {
+    "oracion": "La conversación fue muy <div class='signo'></div>",
+    "respuestas": ["amena", "interesante", "enriquecedora", "divertida"]
+  },
+  {
+    "oracion": "La pintura tiene colores muy <div class='signo'></div>",
+    "respuestas": ["vibrantes", "llamativos", "intensos", "expresivos"]
+  },
+  {
+    "oracion": "El rincón del jardín es muy <div class='signo'></div>",
+    "respuestas": ["tranquilo", "acogedor", "encantador", "apacible"]
+  },
+  {
+    "oracion": "El pastel de chocolate es <div class='signo'></div>",
+    "respuestas": ["delicioso", "tentador", "exquisito", "sabroso"]
+  },
+  {
+    "oracion": "El bosque en otoño es <div class='signo'></div>",
+    "respuestas": ["colorido", "encantador", "mágico", "hermoso"]
+  },
+  {
+    "oracion": "La música en vivo es <div class='signo'></div>",
+    "respuestas": ["emocionante", "envolvente", "energizante", "electrizante"]
+  },
+  {
+    "oracion": "El atardecer en la playa es <div class='signo'></div>",
+    "respuestas": ["impresionante", "hermoso", "romántico", "espectacular"]
+  },
+  {
+    "oracion": "La ciudad de noche es <div class='signo'></div>",
+    "respuestas": ["deslumbrante", "brillante", "vibrante", "atractiva"]
+  },
+  {
+    "oracion": "El sendero en la montaña es <div class='signo'></div>",
+    "respuestas": ["escarpado", "pintoresco", "sinuoso", "majestuoso"]
+  },
+  {
+    "oracion": "El abrazo de un amigo es <div class='signo'></div>",
+    "respuestas": ["cálido", "afectuoso", "sincero", "reconfortante"]
+  },
+  {
+    "oracion": "La noche de luna llena es <div class='signo'></div>",
+    "respuestas": ["mágica", "fascinante", "hechizante", "misteriosa"]
+  },
+  {
+    "oracion": "El aroma de las flores es <div class='signo'></div>",
+    "respuestas": ["embriagador", "suave", "aromático", "sutil"]
+  },
+  {
+    "oracion": "El cuadro en la galería es <div class='signo'></div>",
+    "respuestas": ["llamativo", "contemplativo", "provocativo", "expresivo"]
+  },
+  {
+    "oracion": "La conversación con un viejo amigo es <div class='signo'></div>",
+    "respuestas": ["emotiva", "nostálgica", "gratificante", "conmovedora"]
+  },
+  {
+    "oracion": "El café en la mañana es <div class='signo'></div>",
+    "respuestas": ["aromático", "estimulante", "reconfortante", "necesario"]
+  },
+  {
+    "oracion": "El río en primavera es <div class='signo'></div>",
+    "respuestas": ["caudaloso", "revuelto", "brillante", "impetuoso"]
+  },
+  {
+    "oracion": "El libro que estoy leyendo es <div class='signo'></div>",
+    "respuestas": ["fascinante", "intrigante", "adictivo", "intenso"]
+  },
+  {
+    "oracion": "La puesta de sol en la montaña es <div class='signo'></div>",
+    "respuestas": ["espectacular", "soberbia", "majestuosa", "sobrecogedora"]
+  },
+  {
+    "oracion": "El aroma del pan recién horneado es <div class='signo'></div>",
+    "respuestas": ["tentador", "delicioso", "irresistible", "aromático"]
+  },
+  {
+    "oracion": "La película que vi anoche fue <div class='signo'></div>",
+    "respuestas": ["impactante", "emotiva", "sorprendente", "intensa"]
+  },
+  {
+    "oracion": "La sonrisa de un niño es <div class='signo'></div>",
+    "respuestas": ["pura", "contagiosa", "dulce", "alegre"]
+  },
+  {
+    "oracion": "La lluvia en verano es <div class='signo'></div>",
+    "respuestas": ["refrescante", "bienvenida", "necesaria", "abundante"]
+  },
+  {
+    "oracion": "El jardín en primavera es <div class='signo'></div>",
+    "respuestas": ["exuberante", "colorido", "vibrante", "fragante"]
+  },
+  {
+    "oracion": "El concierto de música clásica fue <div class='signo'></div>",
+    "respuestas": ["sofisticado", "elegante", "emocionante", "impresionante"]
+  },
+  {
+    "oracion": "La sensación de libertad es <div class='signo'></div>",
+    "respuestas": ["gratificante", "embriagadora", "liberadora", "abrumadora"]
+  },
+  {
+    "oracion": "La vista desde la montaña es <div class='signo'></div>",
+    "respuestas": ["panorámica", "espectacular", "deslumbrante", "asombrosa"]
+  },
+  {
+    "oracion": "El olor de la lluvia es <div class='signo'></div>",
+    "respuestas": ["refrescante", "limpio", "reconfortante", "delicioso"]
+  },
+  {
+    "oracion": "La casa en la colina es <div class='signo'></div>",
+    "respuestas": ["pintoresca", "acogedora", "encantadora", "apacible"]
+  },
+  {
+    "oracion": "El momento de la siesta es <div class='signo'></div>",
+    "respuestas": ["relajante", "reconfortante", "necesario", "placentero"]
+  },
+  {
+    "oracion": "La brisa del mar es <div class='signo'></div>",
+    "respuestas": ["refrescante", "suave", "tranquilizadora", "revitalizante"]
+  },
+  {
+    "oracion": "El paseo por el campo es <div class='signo'></div>",
+    "respuestas": ["agradable", "relajante", "placentero", "sereno"]
+  },
+  {
+    "oracion": "El aroma del café es <div class='signo'></div>",
+    "respuestas": ["intenso", "aromático", "delicioso", "tentador"]
+  },
+  {
+    "oracion": "La vista desde el mirador es <div class='signo'></div>",
+    "respuestas": [
+      "impresionante",
+      "espectacular",
+      "majestuosa",
+      "sobrecogedora"
+    ]
+  },
+  {
+    "oracion": "La melodía de la música es <div class='signo'></div>",
+    "respuestas": ["armoniosa", "envolvente", "emotiva", "soothing"]
+  },
+  {
+    "oracion": "El baño caliente es <div class='signo'></div>",
+    "respuestas": ["reconfortante", "relajante", "placentero", "delicioso"]
+  },
+  {
+    "oracion": "La vista desde el mirador es <div class='signo'></div>",
+    "respuestas": [
+      "impresionante",
+      "espectacular",
+      "majestuosa",
+      "sobrecogedora"
+    ]
+  },
+  {
+    "oracion": "La melodía de la música es <div class='signo'></div>",
+    "respuestas": ["armoniosa", "envolvente", "emotiva", "relajante"]
+  },
+  {
+    "oracion": "El baño caliente es <div class='signo'></div>",
+    "respuestas": ["reconfortante", "relajante", "placentero", "revitalizante"]
+  },
+  {
+    "oracion": "La vista desde el balcón es <div class='signo'></div>",
+    "respuestas": ["panorámica", "espectacular", "asombrosa", "deslumbrante"]
+  },
+  {
+    "oracion": "La caricia de un ser querido es <div class='signo'></div>",
+    "respuestas": ["suave", "cálida", "afectuosa", "reconfortante"]
+  },
+  {
+    "oracion": "La fragancia de las rosas es <div class='signo'></div>",
+    "respuestas": ["embriagadora", "exquisita", "deliciosa", "aromática"]
+  },
+  {
+    "oracion": "La sensación de éxito es <div class='signo'></div>",
+    "respuestas": ["gratificante", "satisfactoria", "motivadora", "eufórica"]
+  },
+  {
+    "oracion": "La vista desde la cima de la montaña es <div class='signo'></div>",
+    "respuestas": [
+      "majestuosa",
+      "impresionante",
+      "espectacular",
+      "sobrecogedora"
+    ]
+  },
+  {
+    "oracion": "La brisa otoñal es <div class='signo'></div>",
+    "respuestas": ["refrescante", "suave", "melancólica", "aromática"]
+  },
+  {
+    "oracion": "La lectura de un buen libro es <div class='signo'></div>",
+    "respuestas": [
+      "enriquecedora",
+      "reconfortante",
+      "inspiradora",
+      "apasionante"
+    ]
+  },
+  {
+    "oracion": "La calma del atardecer es <div class='signo'></div>",
+    "respuestas": ["tranquilizadora", "serena", "placentera", "apacible"]
+  }
+]
