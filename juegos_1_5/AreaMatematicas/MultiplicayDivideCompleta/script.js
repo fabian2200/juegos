@@ -53,7 +53,7 @@ $(document).ready(function() {
                         "url(../../images/normal2.gif)";
                     maquina2(
                         "bienvenida",
-                        "Hola, soy Genio. <br> En este juego deberas seleccionar la operación matemática con la que quieres jugar y luego realizar la operación que se te muestra para luego completar los espacios en blanco. <br> ¡Tu puedes!",
+                        "Hola, soy Genio. <br> En este juego deberás seleccionar la operación matemática con la que quieres jugar y luego realizar la operación que se te muestra para luego completar los espacios en blanco. <br> ¡Tu puedes!",
                         50,
                         1
                     );
@@ -338,36 +338,44 @@ function pintar(operaciones, cociente){
 function verificar_div(){
 	let buenas1 = 0;
 	let buenas2 = 0;
+	let cociente_bien = cociente_g.split("");
 
 	for (let index = 0; index < operaciones_g.length; index++) {
 		let producto_bien = operaciones_g[index].num_2.toString().split("");
 		let producto = document.getElementsByClassName("producto_"+index);
+		var correctos_coci = 0;
 		for (let index2 = 0; index2 < producto_bien.length; index2++) {
 			let element = parseInt(producto[index2].value);
 			let element2 = parseInt(producto_bien[index2]);
 			if(element == element2){
 				producto[index2].classList.add("bien")
 				producto[index2].classList.remove("error")
+				correctos_coci++;
 			}else{
 				producto[index2].classList.add("error")
 				producto[index2].classList.remove("bien")
 			}
-		}     
+		}   
 		
-		let cociente_bien = cociente_g.split("");
-		var cociente = document.getElementsByClassName("cociente_d");
-		for (let index2 = 0; index2 < cociente_bien.length; index2++) {
-			let element = parseInt(cociente[index2].value);
-			let element2 = parseInt(cociente_bien[index2]);
-			if(element == element2){
-				cociente[index2].classList.add("bien")
-				cociente[index2].classList.remove("error")
-			}else{
-				cociente[index2].classList.add("error")
-				cociente[index2].classList.remove("bien")
-			}
-		}  
+		if(correctos_coci == producto_bien.length){
+			buenas1++;
+		}
 	}
+
+	cociente_bien = cociente_g.split("");
+	var cociente = document.getElementsByClassName("cociente_d");
+	for (let index2 = 0; index2 < cociente_bien.length; index2++) {
+		let element = parseInt(cociente[index2].value);
+		let element2 = parseInt(cociente_bien[index2]);
+		if(element == element2){
+			cociente[index2].classList.add("bien")
+			cociente[index2].classList.remove("error")
+			buenas2 += 1;
+		}else{
+			cociente[index2].classList.add("error")
+			cociente[index2].classList.remove("bien")
+		}
+	}  
 
 	if(buenas2 == cociente_bien.length && buenas1 == operaciones_g.length){
 		

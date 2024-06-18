@@ -20,7 +20,7 @@ $(document).ready(function () {
                 divAnimado2.style.display = 'block';
                 setTimeout(() => {
                     divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
-                    maquina2("bienvenida", 'Hola, soy Genio. <br> A continuación se te presentaran 10 enunciados, en las cuales deberás  llevar el tren a la estación que tenga la respuesta correcta, deberas llevar mas de 6 trenes a la estación adecuada para ganar. <br> ¡Tú Puedes!', 50, 1);
+                    maquina2("bienvenida", 'Hola, soy Genio. <br> A continuación se te presentaran 10 enunciados, en las cuales deberás  llevar el tren a la estación que tenga la respuesta correcta, deberás llevar mas de 6 trenes a la estación adecuada para ganar. <br> ¡Tú Puedes!', 50, 1);
                 }, 3000)
             }, 2000)
         })

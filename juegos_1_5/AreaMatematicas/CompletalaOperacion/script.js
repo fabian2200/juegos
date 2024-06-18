@@ -112,7 +112,7 @@ $(document).ready(function () {
             "url(../../images/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas completar la operación matemática con el signo que corresonda ( + , - , x ) y hayar el resultado final. <br> ¡Tu puedes!",
+            "Hola, soy Genio. <br> En este juego deberás completar la operación matemática con el signo que corresonda ( + , - , x ) y hayar el resultado final. <br> ¡Tu puedes!",
             50,
             1
           );

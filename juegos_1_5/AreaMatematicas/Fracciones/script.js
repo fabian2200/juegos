@@ -41,7 +41,7 @@ $(document).ready(function () {
             "url(../../images/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas indicar que fracción representa la parte coloreada que se te muestra en la imagen de la izquierda. <br> ¡Tu puedes!",
+            "Hola, soy Genio. <br> En este juego deberás indicar que fracción representa la parte coloreada que se te muestra en la imagen de la izquierda. <br> ¡Tu puedes!",
             50,
             1
           );

@@ -230,7 +230,7 @@ $(document).ready(function () {
             "url(../../images/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas tomar la imagen como pìsta, y debes ordenar la frase para poder ganar. <br> ¡Tú Puedes!",
+            "Hola, soy Genio. <br> En este juego deberás tomar la imagen como pìsta, y debes ordenar la frase para poder ganar. <br> ¡Tú Puedes!",
             50,
             1
           );

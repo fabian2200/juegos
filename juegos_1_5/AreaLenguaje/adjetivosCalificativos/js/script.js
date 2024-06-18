@@ -378,7 +378,7 @@ $(document).ready(function () {
                         "url(../../images/normal2.gif)";
                     maquina2(
                         "bienvenida",
-                        "Hola, soy Genio. <br> En este juego debes clasificar los objetos del hogar, moviendo las imagenes al lugar correspondiente.",
+                        "Hola, soy Genio. <br> En este juego debes arrastrar cada objetivo calificativo a su lugar correspondiente, moviendo las palabras al cajon correcto.",
                         100,
                         1
                     );

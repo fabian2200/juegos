@@ -29,7 +29,7 @@ $(document).ready(function () {
             "url(../../images/ciencia/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas llegar primero a la meta, para esto debes responder correctamente las preguntas relacionadas al tema DESCRIBING PEOPLE: APPEARANCE, para poder tomar la delantera.  <br> ¡Tú Puedes!",
+            "Hola, soy Genio. <br> En este juego deberás llegar primero a la meta, para esto debes responder correctamente las preguntas relacionadas al tema DESCRIBING PEOPLE: APPEARANCE, para poder tomar la delantera.  <br> ¡Tú Puedes!",
             50,
             1
           );

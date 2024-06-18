@@ -306,7 +306,7 @@ $(document).ready(function () {
                         "url(../../images/normal2.gif)";
                     maquina2(
                         "bienvenida",
-                        "Hola, soy Genio. <br> En este juego deberas arrastrar el signo de ( mayor que, menor que o igual ) al lugar correspondiente. <br> ¡Tu puedes!",
+                        "Hola, soy Genio. <br> En este juego deberás arrastrar el signo de ( mayor que, menor que o igual ) al lugar correspondiente. <br> ¡Tu puedes!",
                         50,
                         1
                     );

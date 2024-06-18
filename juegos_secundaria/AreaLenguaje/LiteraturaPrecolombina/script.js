@@ -16,7 +16,7 @@ $(document).ready(function () {
           divAnimado.style.backgroundImage = "url(../../images/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas abrir cada una de las puertas de los ascensores que se encuentran, al abrir las puertas debes responder la pregunta que se muestra. <br> ¡Tu Puedes!",
+            "Hola, soy Genio. <br> En este juego deberás abrir cada una de las puertas de los ascensores que se encuentran, al abrir las puertas debes responder la pregunta que se muestra. <br> ¡Tu Puedes!",
             50,
             1
           );

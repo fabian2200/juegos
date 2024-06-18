@@ -21,7 +21,7 @@ $(document).ready(function () {
                 divAnimado2.style.display = 'block';
                 setTimeout(() => {
                     divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
-                    maquina2("bienvenida", 'Hola, soy Genio. <br> En este juego deberas lanzar el dado y responder la pregunta correctamente para poder avanzar, debes acertar mas del 60% de las preguntas que se te presenten para ganar. <br> ¡Tú Puedes!', 50, 1);
+                    maquina2("bienvenida", 'Hola, soy Genio. <br> En este juego deberás lanzar el dado y responder la pregunta correctamente para poder avanzar, debes acertar mas del 60% de las preguntas que se te presenten para ganar. <br> ¡Tú Puedes!', 50, 1);
                 }, 3000)
             }, 2000)
         })

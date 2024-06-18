@@ -34,7 +34,7 @@ $(document).ready(function () {
                 divAnimado2.style.display = 'block';
                 setTimeout(() => {
                     divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
-                    maquina2("bienvenida", 'Hola, soy Genio. <br> En este juego deberas ubicar en cada espacio en blanco, el signo que creas correcto, debes acertar mas del 60% para ganar. <br> ¡Tú Puedes!', 50, 1);
+                    maquina2("bienvenida", 'Hola, soy Genio. <br> En este juego deberás ubicar en cada espacio en blanco, el signo que creas correcto, debes acertar mas del 60% para ganar. <br> ¡Tú Puedes!', 50, 1);
                 }, 3000)
             }, 2000)
         })

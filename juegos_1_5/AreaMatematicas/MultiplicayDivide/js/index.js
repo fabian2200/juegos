@@ -397,7 +397,7 @@ $(document).ready(function() {
                         "url(../../images/normal2.gif)";
                     maquina2(
                         "bienvenida",
-                        "Hola, soy Genio. <br> En este juego deberas realizar la operación matemática que se te muestra y luego seleccionar la respuesta correcta. <br> ¡Tu puedes!",
+                        "Hola, soy Genio. <br> En este juego deberás realizar la operación matemática que se te muestra y luego seleccionar la respuesta correcta. <br> ¡Tu puedes!",
                         50,
                         1
                     );

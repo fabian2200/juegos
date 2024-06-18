@@ -22,7 +22,7 @@ $(document).ready(function() {
         divAnimado2.style.display = 'block';
         setTimeout(()=>{
           divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
-          maquina2("bienvenida",'Hola, soy Genio. <br> En este juego, deberas completar la tabla de frecuencia y hayar las medidas de tendencia central, tomando como base los datos que se te dan a continuacion. <br> ¡Tu Puedes!',50,1);
+          maquina2("bienvenida",'Hola, soy Genio. <br> En este juego, deberás completar la tabla de frecuencia y hayar las medidas de tendencia central, tomando como base los datos que se te dan a continuacion. <br> ¡Tu Puedes!',50,1);
         }, 3000)
       }, 2000)
     })

@@ -413,7 +413,7 @@ $(document).ready(function () {
           divAnimado.style.backgroundImage = "url(../../images/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas seleccionar la categoria, y luego se te dara una frase la cual debes ordenar y asi poder ganar. <br> ¡Tu puedes!",
+            "Hola, soy Genio. <br> En este juego deberás seleccionar la categoria, y luego se te dara una frase la cual debes ordenar y asi poder ganar. <br> ¡Tu puedes!",
             50,
             1
           );

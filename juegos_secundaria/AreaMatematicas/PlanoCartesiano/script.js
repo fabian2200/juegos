@@ -14,7 +14,7 @@ $(document).ready(function () {
                 divAnimado2.style.display = 'block';
                 setTimeout(() => {
                     divAnimado.style.backgroundImage = "url(../../images/normal2.gif)"
-                    maquina2("bienvenida", 'Hola, soy Genio. <br> A continuación se te presentaran 10 coordenadas, las cuales deberas ubicar en el plano cartesiano, responde mas de 6 preguntas correctamente para ganar el juego. <br> ¡Tú Puedes!', 50, 1);
+                    maquina2("bienvenida", 'Hola, soy Genio. <br> A continuación se te presentaran 10 coordenadas, las cuales deberás ubicar en el plano cartesiano, responde mas de 6 preguntas correctamente para ganar el juego. <br> ¡Tú Puedes!', 50, 1);
                 }, 3000)
             }, 2000)
         })

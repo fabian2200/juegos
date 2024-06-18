@@ -36,7 +36,7 @@ $(document).ready(function () {
             "url(../../images/ciencia/normal2.gif)";
           maquina2(
             "bienvenida",
-            "Hola, soy Genio. <br> En este juego deberas salir del laboratorio, para esto deberas recorrer sus pasillos y responder las preguntas que se mostraran cuando llegues a cada punto marcado con un Matraz, al hacerlo la puerta se abrira automatcamente y podras salir.!",
+            "Hola, soy Genio. <br> En este juego deberás salir del laboratorio, para esto deberás recorrer sus pasillos y responder las preguntas que se mostraran cuando llegues a cada punto marcado con un Matraz, al hacerlo la puerta se abrira automatcamente y podras salir.!",
             50,
             1
           );
