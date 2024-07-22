@@ -24,18 +24,13 @@ const drop = (e) => {
             );
             correctas++;
             cont++;
+            top_o = 0;
+            left_o = 0;
         }else{
-            currentDrop[1].classList.add("error");
-            //hide actual image
-            currentElement.classList.add("hide");
-            currentDrop[1].innerHTML = ``;
-            //Insert new img element
-            currentDrop[1].insertAdjacentHTML(
-                "afterbegin",
-                `<img class='img_drag' style='height: 85pt; width: 80%' src="img/${id1}/${currentElement.id.split("_")[1]}.png">`
-            );
-
-            cont++;
+          var off = document.getElementById(id_sel).parentElement;
+          off.style.position = "absolute",
+          off.style.top = top_o;
+          off.style.left = left_o;
         }
     } else {
         //Access data
@@ -77,7 +72,7 @@ const drop = (e) => {
         setTimeout(()=>{
           $('#final').fadeToggle(1000);
         }, 500)
-        if (correctas <= 12) {
+        if (correctas <= 6) {
             var audio = new Audio("../../sounds/game_over.mp3");
             audio.play();
             document.getElementById("final").style.backgroundImage =
@@ -230,16 +225,27 @@ function dragStart(e) {
     }
 }
 
-//For touchscreen movement
 var initialXx = 0;
 var initialYy = 0;
 
-function mover_tactil(event) {
-    event.preventDefault();
-    // Obtener la posición inicial del dedo
-    initialXx = event.touches[0].clientX - event.target.parentElement.offsetLeft;
-    initialYy = event.touches[0].clientY - event.target.parentElement.offsetTop;
+var top_o = 0;
+var left_o = 0;
+var id_sel = "";
+function mover_tactil (event) {
+  event.preventDefault();
+  // Obtener la posición inicial del dedo
+  initialXx = event.touches[0].clientX - event.target.parentElement.offsetLeft;
+  initialYy = event.touches[0].clientY - event.target.parentElement.offsetTop;
+
+
+  if(id_sel != event.target.id){
     currentElement = event.target;
+    id_sel = currentElement.id;
+    var offsets = document.getElementById(id_sel).parentElement;
+    top_o = offsets.style.top;
+    left_o = offsets.style.left;
+  }
+
 }
 
 function mover_tactil2(event) {

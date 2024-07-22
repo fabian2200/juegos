@@ -29,7 +29,7 @@ h1{
 
 .izquierdo{
 	width: 95%;
-	font-size: 80px;
+	font-size: 60px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -48,7 +48,7 @@ h1{
 	justify-content: center;
 }
 .opcion{
-	width: 80px;
+	width: 100px;
 	height: 80px;
 	border: 1px solid  #612e82 ;
 	font-size: 40px;
@@ -98,7 +98,7 @@ h1{
 
 .titulo {
 	text-align: center;
-    font-size: 32px;
+    font-size: 37px;
     text-shadow: 3px 3px 10px #ffffff;
     width: 650px;
     margin: auto;

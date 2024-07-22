@@ -165,11 +165,7 @@ function updateTimer() {
 }
 
 $(document).ready(function () {
-  setTimeout(function () {
-    let audio2 = new Audio("sounds/enunciado.mp3");
-    audio2.playbackRate = 0.8;
-    audio2.play();
-  }, 4500);
+
 
   setTimeout(() => {
     $("#principal").fadeToggle(1000);

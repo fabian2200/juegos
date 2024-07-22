@@ -13,7 +13,7 @@ body{
 }
 
 .main-container {
-  max-width: 950px;
+  max-width: 85%;
   margin: auto;
 }
 
@@ -33,7 +33,7 @@ body{
 .subtitulo {
   text-align: center;
   font-size: 40px;
-  width: 400px;
+  width: 100%;
   margin: auto;
   font-weight: bold;
   font-family: inherit;

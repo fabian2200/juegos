@@ -55,7 +55,7 @@ const drop = (e) => {
         cont++;
     }
 
-    if (cont == 24) {
+    if (cont == 20) {
 
         $('#principal').fadeToggle(500);
         setTimeout(()=>{
@@ -91,7 +91,7 @@ const creator = () => {
     let array_divs = [];
 
     if (isTouchDevice()) {
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='draggable-image miDiv text-center' draggable='true'><img class='img_drag' data-id='ático' style='height: 55pt; width: 55pt;  border-radius: 10px;  border: 1px dashed;' id='atico_" +
                 atico_ramdom[index] +
@@ -101,7 +101,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='draggable-image miDiv text-center' draggable='true'><img class='img_drag' data-id='baño' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='banio_" +
                 banio_ramdom[index] +
@@ -111,7 +111,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='draggable-image miDiv text-center' draggable='true'><img class='img_drag' data-id='cocina' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='cocina_" +
                 cocina_ramdom[index] +
@@ -121,7 +121,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='draggable-image miDiv text-center' draggable='true'><img class='img_drag' data-id='dormitorio' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='dormitorio_" +
                 dormitorio_ramdom[index] +
@@ -131,7 +131,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='draggable-image miDiv text-center' draggable='true'><img class='img_drag' data-id='sala' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='sala_" +
                 sala_ramdom[index] +
@@ -141,7 +141,7 @@ const creator = () => {
             );
         }
     } else {
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='col-2 draggable-image text-center' draggable='true'><img class='img_drag' data-id='ático' style='height: 55pt; width: 55pt;  border-radius: 10px;  border: 1px dashed;' id='atico_" +
                 atico_ramdom[index] +
@@ -151,7 +151,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='col-2 draggable-image text-center' draggable='true'><img class='img_drag' data-id='baño' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='banio_" +
                 banio_ramdom[index] +
@@ -161,7 +161,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='col-2 draggable-image text-center' draggable='true'><img class='img_drag' data-id='cocina' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='cocina_" +
                 cocina_ramdom[index] +
@@ -171,7 +171,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='col-2 draggable-image text-center' draggable='true'><img class='img_drag' data-id='dormitorio' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='dormitorio_" +
                 dormitorio_ramdom[index] +
@@ -181,7 +181,7 @@ const creator = () => {
             );
         }
 
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 4; index++) {
             array_divs.push(
                 "<div class='col-2 draggable-image text-center' draggable='true'><img class='img_drag' data-id='sala' style='height: 55pt; width: 55pt; border-radius: 10px;  border: 1px dashed;' id='sala_" +
                 sala_ramdom[index] +

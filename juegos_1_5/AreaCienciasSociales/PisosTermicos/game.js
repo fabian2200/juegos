@@ -234,7 +234,7 @@ const drop = (e) => {
         if (cont == 5) {
             $("#principal").fadeToggle(1000);
             $("#final").fadeToggle(1000);
-            if (correctas <= 6) {
+            if (correctas <= 3) {
                 var audio = new Audio("../../sounds/game_over.mp3");
                 audio.play();
                 document.getElementById("final").style.backgroundImage = "url(../../images/derrota.gif)";

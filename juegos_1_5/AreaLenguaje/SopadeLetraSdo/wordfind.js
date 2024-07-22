@@ -349,8 +349,8 @@
           }
 
           if (!puzzle) {
-            options.height = 13;
-            options.width = 13;
+            options.height = 12;
+            options.width = 12;
             attempts = 0;
           }
         }

@@ -103,8 +103,6 @@ function controlarRespuesta(opcionElegida){
 	opcionElegida.style.backgroundColor = "black";
 
 	if(respuesta == opcionElegida.innerHTML){
-		txt_msj.innerHTML = "Excelente !";
-		txt_msj.style.color="green";
 		document.getElementById("preg_"+preg).innerHTML = "<i style='color: green' class='fa-sharp fa-solid fa-face-smile fa-2x'></i>";
 		setTimeout(limpiar, 1500);
 		setTimeout(comenzar, 1500);
@@ -112,8 +110,6 @@ function controlarRespuesta(opcionElegida){
     	audio.play(); 
 		buenas += 1;
 	}else{
-		txt_msj.innerHTML = "Respuesta Incorrecta !";
-		txt_msj.style.color="red";
 		setTimeout(limpiar, 1500);
 		setTimeout(comenzar, 1500);
 		document.getElementById("preg_"+preg).innerHTML = "<i style='color: red' class='fa-solid fa-face-sad-tear fa-2x'></i>";

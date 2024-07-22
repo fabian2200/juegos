@@ -195,7 +195,7 @@ const creator = () => {
   if (isTouchDevice()) {
     document.getElementById("pregunta_actual_movil").innerHTML = cont;
     document.getElementById("ubi_movil").innerText = ubi_random;
-    div = "<div class='miDiv draggable-image text-center' style='position: absolute; top: 28%; display: flex; left: 32%; align-items: center; justify-content: center;' draggable='true'><img class='img_drag' data-id='" + img_random + "' style='height: 85px; width: auto; max-width: 100%' id='" + ubi_random + "' src='img/" + img_random + ".png' alt='prueba.png'></div>";
+    div = "<div class='miDiv draggable-image text-center' style='position: absolute; top: 32%; display: flex; left: 32%; align-items: center; justify-content: center;' draggable='true'><img class='img_drag' data-id='" + img_random + "' style='height: 85px; width: auto; max-width: 100%' id='" + ubi_random + "' src='img/" + img_random + ".png' alt='prueba.png'></div>";
     document.getElementById("imagenes_movil").innerHTML = "";
     document.getElementById("imagenes_movil").innerHTML = div;
   } else {

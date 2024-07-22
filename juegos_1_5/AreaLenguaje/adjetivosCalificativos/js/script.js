@@ -49,13 +49,13 @@ const drop = (e) => {
         }
     }
 
-    if (cont == 8) {
+    if (cont == 6) {
 
         $('#principal').fadeToggle(500);
         setTimeout(()=>{
           $('#final').fadeToggle(1000);
         }, 500)
-        if (correctas <= 8) {
+        if (correctas <= 5) {
             var audio = new Audio("../../sounds/game_over.mp3");
             audio.play();
             document.getElementById("final").style.backgroundImage =
@@ -66,7 +66,7 @@ const drop = (e) => {
             var audio = new Audio("../../sounds/victory.mp3");
             audio.play();
         }
-        document.getElementById("texto_final").innerText = "Has obtenido " + correctas + " de 8 puntos posibles";
+        document.getElementById("texto_final").innerText = "Has obtenido " + correctas + " de 6 puntos posibles";
     }
 };
 

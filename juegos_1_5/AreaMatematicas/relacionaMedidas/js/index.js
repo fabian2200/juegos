@@ -24,40 +24,43 @@ function verificar(elemento){
 		correctas++;
 		setTimeout(()=>{
 			var audio = new Audio('../../sounds/ok.mp3');
-			audio.play(); 
+			audio.play();
 		}, 2500)
 	}else{
 		elemento.style.animation = "titileo2 3s forwards";
 		setTimeout(()=>{
 			var audio = new Audio('../../sounds/over.mp3');
-			audio.play(); 
+			audio.play();
 		}, 2500)
 	}
 
+	numero_respuestas++;
 	setTimeout(()=>{
 		elemento.style.backgroundColor = "#24b9fb";
-		numero_respuestas++;
 		ocultarOpciones(1, 3);
-	}, 3100)
-
-	if(numero_respuestas == 10){
-		$('#principal').fadeToggle(1000);
 		setTimeout(()=>{
-            $('#final').fadeToggle(1000);
-        }, 1000)
-		
-		if(correctas < 6 ){
-		    document.getElementById("final").style.backgroundImage = "url(../../images/derrota.gif)";
-			var audio = new Audio('../../sounds/game_over.mp3');
-            audio.play();
-		}else{
-		    document.getElementById("final").style.backgroundImage = "url(../../images/victoria.gif)";
-			var audio = new Audio('../../sounds/victory.mp3');
-            audio.play();
-		}
+			if(numero_respuestas < 10){
+				crearJuego();
+			}else{
+			    $('#principal').fadeToggle(1000);
+                setTimeout(()=>{
+                    $('#final').fadeToggle(1000);
+                }, 1000)
 
-		document.getElementById("texto_final").innerText = "Has contestado correctamente "+correctas+" preguntas de 10"
-	}
+                if(correctas < 6 ){
+                    document.getElementById("final").style.backgroundImage = "url(../../images/derrota.gif)";
+                    var audio = new Audio('../../sounds/game_over.mp3');
+                    audio.play();
+                }else{
+                    document.getElementById("final").style.backgroundImage = "url(../../images/victoria.gif)";
+                    var audio = new Audio('../../sounds/victory.mp3');
+                    audio.play();
+                }
+
+                document.getElementById("texto_final").innerText = "Has contestado correctamente "+correctas+" preguntas de 10"
+			}
+		}, 2000)
+	}, 3100)
 }
 
 function ocultarOpciones(posActual, posFinal){
@@ -132,12 +135,12 @@ let cerrardo = false;
 function cerrar_anuncio() {
 	if(!cerrardo) {
 		let audio2 = new Audio('../../sounds/fondo.mp3');
-		audio2.play(); 
+		audio2.play();
 		audio2.volume = 0.2;
 
 		let audio = new Audio('../../sounds/sumayresta.mp3');
-		audio.play(); 
-		
+		audio.play();
+
 		cerrardo = true;
 		const divAnimado2 = document.querySelector('.nube');
 		divAnimado2.style.animationName = 'moverabajo';
@@ -158,7 +161,7 @@ function cerrar_anuncio() {
 
 function crearJuego(){
 	var numero_aleatorio = Math.floor(Math.random() * (4 - 1 + 1) + 1);
-	
+
 	var num1 = Math.floor(Math.random() * (10 - 2 + 1) + 2);
 	var resultado_correcto = 0;
 	var unidaddestino = '';
@@ -261,7 +264,7 @@ function crearJuego(){
 		}
 	}
 
-	
+
 	if(unidaddestino == "quintal"){
 		document.getElementById("ud").innerText = unidaddestino+"es";
 	}else{
@@ -271,7 +274,7 @@ function crearJuego(){
 			document.getElementById("ud").innerText = unidaddestino+"s";
 		}
 	}
-	
+
 	document.getElementById("num").innerText = num1;
 
 	var num_res = resultado_correcto[0];

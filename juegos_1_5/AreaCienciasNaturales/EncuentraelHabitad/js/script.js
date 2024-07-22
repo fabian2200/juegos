@@ -128,16 +128,27 @@ const creator = () => {
 };
 
 
-//For touchscreen movement
 var initialXx = 0;
 var initialYy = 0;
 
-function mover_tactil(event) {
-    event.preventDefault();
-    // Obtener la posición inicial del dedo
-    initialXx = event.touches[0].clientX - event.target.offsetLeft;
-    initialYy = event.touches[0].clientY - event.target.offsetTop;
+var top_o = 0;
+var left_o = 0;
+var id_sel = "";
+
+function mover_tactil (event) {
+  event.preventDefault();
+  initialXx = event.touches[0].clientX - event.target.offsetLeft;
+  initialYy = event.touches[0].clientY - event.target.offsetTop;
+  if(id_sel != event.target.id){
     currentElement = event.target;
+    id_sel = currentElement.id;
+    var offsets = document.getElementById(id_sel);
+    top_o = offsets.style.top;
+    left_o = offsets.style.left;
+  }
+
+  event.target.style.width = "40px";
+  event.target.style.height = "40px";
 }
 
 function mover_tactil2(event) {
@@ -149,9 +160,6 @@ function mover_tactil2(event) {
     // Actualizar la posición de la div
     event.target.style.left = currentX + 'px';
     event.target.style.top = currentY + 'px';
-
-    event.target.style.width = "40px";
-    event.target.style.height = "40px";
 }
 
 const drop = (e) => {
@@ -159,32 +167,37 @@ const drop = (e) => {
     const pos = currentElement.getBoundingClientRect();
     const currentDrop = document.elementsFromPoint(pos.left, pos.top);
 
-    let id1 = currentElement.getAttribute("data-id");
-    let id2 = currentDrop[0].children[0].getAttribute("data-id");
-    
-    if (id1 == id2) {
-        //hide actual image
-        currentElement.classList.add("hide");
-        currentDrop[0].innerHTML = ``;
-        //Insert new img element
-        currentDrop[0].insertAdjacentHTML(
-            "afterbegin",
-            `<img class='img_drag' style='width: 60px' src="${currentElement.src}">`
-        );
+    if(currentDrop[0].children[0] != undefined){
+        let id2 = currentDrop[0].children[0].getAttribute("data-id");
+        let id1 = currentElement.getAttribute("data-id");
+        if (id1 == id2) {
+            currentElement.classList.add("hide");
+            currentDrop[0].innerHTML = ``;
+            currentDrop[0].insertAdjacentHTML(
+                "afterbegin",
+                `<img class='img_drag' style='width: 60px' src="${currentElement.src}">`
+            );
 
-        document.getElementById("img-mascota").src = "../../images/ciencia/correcto.gif";
-        correctas++;
-        cont++;
-    } else {
-        currentElement.classList.add("hide");
-        currentDrop[0].innerHTML = ``;
-        //Insert new img element
-        currentDrop[0].insertAdjacentHTML(
-            "afterbegin",
-            `<img class='img_drag' style='width: 60px' src="${currentElement.src}">`
-        );
-        document.getElementById("img-mascota").src = "../../images/ciencia/incorrecto.gif";
-        cont++;
+            document.getElementById("img-mascota").src = "../../images/ciencia/correcto.gif";
+            correctas++;
+            cont++;
+            top_o = 0;
+            left_o = 0;
+        }else{
+            var off = document.getElementById(id_sel);
+            off.style.position = "absolute",
+            off.style.top = top_o;
+            off.style.left = left_o;
+            off.style.width = "60px";
+            off.style.height = "auto";
+        }
+    }else{
+        var off = document.getElementById(id_sel);
+        off.style.position = "absolute",
+        off.style.top = top_o;
+        off.style.left = left_o;
+        off.style.width = "60px";
+        off.style.height = "auto";
     }
 
     setTimeout(()=>{

@@ -1,5 +1,6 @@
 let cont = 0;
 let correctas = 0;
+let cont_total = 0;
 const drop = (e) => {
     e.preventDefault();
     //For touch screen
@@ -13,6 +14,7 @@ const drop = (e) => {
                 currentElement.classList.add("hide");
                 signo.innerHTML += `<div class="dropped"><img class='img_drag' style='height: auto; width: 50pt' src="profesiones/${currentElement.id.split("_")[1]}"></div>`;
                 cont++;
+                cont_total++;
                 correctas++;
                 top_o = 0;
                 left_o = 0;
@@ -60,11 +62,12 @@ const drop = (e) => {
     
     if(cont % 3 === 0 && cont != 0){
       setTimeout(()=>{
+        cont = 0;
         startGame();
       }, 1200);
     }
 
-    if (cont == 15) {
+    if (cont_total == 15) {
         $('#principal').fadeToggle(500);
         setTimeout(()=>{
           $('#final').fadeToggle(1000);
