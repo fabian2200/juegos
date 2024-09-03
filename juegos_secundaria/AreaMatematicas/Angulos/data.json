@@ -8,7 +8,7 @@
                 "correcta": false
             },
             {
-                "opcion": "90 grados",
+                "opcion": "8 grados",
                 "correcta": true
             },
             {
@@ -1021,7 +1021,7 @@
             },
             {
                 "opcion": "180 grados",
-                "correcta": true
+                "correcta": false
             },
             {
                 "opcion": "270 grados",
@@ -1029,7 +1029,7 @@
             },
             {
                 "opcion": "360 grados",
-                "correcta": false
+                "correcta": true
             }
         ]
     },
@@ -1096,28 +1096,6 @@
             {
                 "opcion": "180 grados",
                 "correcta": false
-            }
-        ]
-    },
-    {
-        "pregunta": "¿Qué tipo de ángulo se forma en el vértice de un triángulo isósceles?",
-        "imagen": "",
-        "opciones": [
-            {
-                "opcion": "Ángulo recto",
-                "correcta": false
-            },
-            {
-                "opcion": "Ángulo agudo",
-                "correcta": false
-            },
-            {
-                "opcion": "Ángulo obtuso",
-                "correcta": false
-            },
-            {
-                "opcion": "Ángulo igual a los otros dos",
-                "correcta": true
             }
         ]
     },

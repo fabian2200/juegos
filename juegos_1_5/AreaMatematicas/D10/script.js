@@ -76,7 +76,7 @@ function tipo_1(){
 
 	let centenas = Math.round(Math.random() * (1 - 1) + 1);
 	let decenas =  Math.round(Math.random() * (2 - 0) + 0);
-	let docenas =  Math.round(Math.random() * (2 - 0) + 0);
+	let docenas =  Math.round(Math.random() * (2 - 1) + 0);
 	let unidades =  Math.round(Math.random() * (2 - 0) + 0);
 
 	div = "";
@@ -133,9 +133,9 @@ function tipo_1(){
 function tipo_2(){
 
 	document.getElementById("titulo").innerText = "¿Que número es?"
-	let centenas = Math.round(Math.random() * (1 - 0) + 0);
+	let centenas = Math.round(Math.random() * (1 - 1) + 0);
 	let decenas =  Math.round(Math.random() * (2 - 0) + 0);
-	let docenas =  Math.round(Math.random() * (2 - 0) + 0);
+	let docenas =  Math.round(Math.random() * (2 - 1) + 0);
 	let unidades =  Math.round(Math.random() * (2 - 0) + 0);
 
 	let numero = 0;
